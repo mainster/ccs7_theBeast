@@ -44,6 +44,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.277320002" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH.1597499327" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/headers/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/common/include&quot;"/>
 								</option>
