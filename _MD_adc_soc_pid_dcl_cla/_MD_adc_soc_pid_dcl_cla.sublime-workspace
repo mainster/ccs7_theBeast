@@ -1,0 +1,1848 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"md_circ_buff",
+				"md_circ_buffer.h\tFile"
+			],
+			[
+				"wh",
+				"whole"
+			],
+			[
+				"boun",
+				"boundary"
+			],
+			[
+				"func",
+				"funcHead"
+			],
+			[
+				"run",
+				"run_command"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"Ex",
+				"ExpandSelectionToBlockCommand"
+			],
+			[
+				"subli",
+				"sublime_plugin"
+			],
+			[
+				"mo",
+				"move"
+			],
+			[
+				"spl",
+				"splitext"
+			],
+			[
+				"slu",
+				"slugify"
+			],
+			[
+				"repl",
+				"replace"
+			],
+			[
+				"str",
+				"strval"
+			],
+			[
+				"remo",
+				"remove_non_ascii"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"call",
+				"caller_method"
+			],
+			[
+				"DO",
+				"DO_CHAPTER_COMPILE"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"font",
+				"font-size-doc-table"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"sub",
+				"sublime_plugin"
+			],
+			[
+				"revers",
+				"reversed〔class〕"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"Dia",
+				"Diagrammen"
+			],
+			[
+				"UML-Diagrammh",
+				"UML-Diagrammhierarchie_Mdb.svg\tFile"
+			],
+			[
+				"ELT",
+				"ELT131_Praktikum_upw:EZ3:47\\K.pdf\tFile"
+			],
+			[
+				"tmp",
+				"tmplen"
+			],
+			[
+				"De",
+				"Deutsche_Telekom_Root_CA_2"
+			],
+			[
+				"ss",
+				"ssl/\tDir"
+			],
+			[
+				"ref",
+				"make_reference\tfunction"
+			],
+			[
+				"L",
+				"Lumpy\tclass"
+			],
+			[
+				"ins",
+				"insert\t(MarkdownPreview.py)"
+			],
+			[
+				"Arch",
+				"Architekturen"
+			],
+			[
+				"Base",
+				"BaseClassA"
+			],
+			[
+				"Architek",
+				"Architektur"
+			],
+			[
+				"Arc",
+				"Architektur"
+			],
+			[
+				"Modell",
+				"Modellierungssprache"
+			],
+			[
+				"Archite",
+				"Architektur"
+			],
+			[
+				"La",
+				"Language_"
+			],
+			[
+				"Model",
+				"Modeling"
+			],
+			[
+				"buff",
+				"buffName"
+			],
+			[
+				"alter",
+				"alterDir"
+			],
+			[
+				"ce",
+				"center\tTag"
+			],
+			[
+				"pro",
+				"produces"
+			],
+			[
+				"Th",
+				"This"
+			],
+			[
+				"specif",
+				"specified\t(MarkdownPreview.py)"
+			],
+			[
+				"subs",
+				"substitutes\t(MarkdownPreview.py)"
+			],
+			[
+				"MarkdownPre",
+				"MarkdownPreview.sublime-settings"
+			],
+			[
+				"se",
+				"settings"
+			],
+			[
+				"suff",
+				"suffix"
+			],
+			[
+				"diag",
+				"diagFilePath"
+			],
+			[
+				"dia",
+				"diag"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"gett",
+				"gettempdir"
+			],
+			[
+				"export",
+				"exportDir"
+			],
+			[
+				"img",
+				"img_tag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"width",
+				"width: 〔property〕"
+			],
+			[
+				"defau",
+				"defaultDict"
+			],
+			[
+				"defA",
+				"defAttrsDict"
+			],
+			[
+				"attr",
+				"attr_dict"
+			],
+			[
+				"next",
+				"next_line"
+			],
+			[
+				"first",
+				"first_line_after_block"
+			],
+			[
+				"firs",
+				"first_line_after_block"
+			],
+			[
+				"err",
+				"errMsg\tstatement"
+			],
+			[
+				"defa",
+				"defas\tstatement"
+			],
+			[
+				"bla",
+				"blah_name\tstatement"
+			],
+			[
+				"__a",
+				"__name__\tinstance"
+			],
+			[
+				"all",
+				"allfound"
+			],
+			[
+				"caller",
+				"caller_class"
+			],
+			[
+				"loca",
+				"locals\tfunction"
+			],
+			[
+				"blk",
+				"blk_attr"
+			],
+			[
+				"get_att",
+				"get_attr_region"
+			],
+			[
+				"att",
+				"attr_reg"
+			],
+			[
+				"defaul",
+				"default_style"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"def",
+				"defas"
+			],
+			[
+				"inla",
+				"inlas"
+			],
+			[
+				"inli",
+				"inline_attrs"
+			],
+			[
+				"default",
+				"default_attrs"
+			],
+			[
+				"inl",
+				"inlineAttrs\tstatement"
+			],
+			[
+				"inline",
+				"inlineAttrs"
+			],
+			[
+				"pass",
+				"passedDict"
+			],
+			[
+				"gro",
+				"groups\tfunction"
+			],
+			[
+				"debu",
+				"debug_levels"
+			],
+			[
+				"keys",
+				"keys"
+			],
+			[
+				"deb",
+				"debug_levels"
+			],
+			[
+				"debug",
+				"debug_lvls"
+			],
+			[
+				"Test",
+				"TestClassNewprint"
+			],
+			[
+				"key",
+				"keys\t(MarkdownPreview.py)"
+			],
+			[
+				"the_",
+				"the_class"
+			],
+			[
+				"num",
+				"numFiles"
+			],
+			[
+				"copyF",
+				"copyFilesWithProgress"
+			],
+			[
+				"Progr",
+				"ProgressBar"
+			],
+			[
+				"whz",
+				"whzHome"
+			],
+			[
+				"obje",
+				"object"
+			],
+			[
+				"Markdow",
+				"MarkdownPreview"
+			],
+			[
+				"Mar",
+				"MarkdownPreview"
+			],
+			[
+				"class",
+				"classname"
+			],
+			[
+				"basi",
+				"basicConfig"
+			],
+			[
+				"floa",
+				"float\t(styleMdb.css)"
+			],
+			[
+				"diagr",
+				"diagram_files"
+			],
+			[
+				"attribute_",
+				"attribute_region"
+			],
+			[
+				"default_s",
+				"default_style_str"
+			],
+			[
+				"attrs",
+				"attrs_dict"
+			],
+			[
+				"genera",
+				"generate_inline_placement"
+			],
+			[
+				"spli",
+				"split"
+			],
+			[
+				"get",
+				"get_attr\tfunction"
+			],
+			[
+				"uml_bl",
+				"uml_blocks"
+			],
+			[
+				"uml_b",
+				"uml_blocks"
+			],
+			[
+				"set_",
+				"set_diagram"
+			],
+			[
+				"uml",
+				"uml_blocks"
+			],
+			[
+				"processor",
+				"processors\t(merged.mmd)"
+			],
+			[
+				"get_bl",
+				"get_blk_str"
+			],
+			[
+				"blk_",
+				"blk_str"
+			],
+			[
+				"ori",
+				"orig_src"
+			],
+			[
+				"typ",
+				"type\t(styleMdb.css)"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"base",
+				"basename\tfunction"
+			],
+			[
+				"loa",
+				"load_utf8"
+			],
+			[
+				"cop",
+				"copy2"
+			],
+			[
+				"pres",
+				"preserve_extension"
+			],
+			[
+				"pre",
+				"preserve_extension"
+			],
+			[
+				"src",
+				"src_file_name"
+			],
+			[
+				"new",
+				"new_view"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "md_circ_buffer.c",
+			"settings":
+			{
+				"buffer_size": 3477,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "md_beast_uart.c",
+			"settings":
+			{
+				"buffer_size": 4473,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/ExpandRegion.py",
+			"settings":
+			{
+				"buffer_size": 5904,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "md_circ_buffer.h",
+			"settings":
+			{
+				"buffer_size": 2312,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "md_beast_uart.h",
+			"settings":
+			{
+				"buffer_size": 2484,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/markdownChapters.sublime-build",
+					""
+				],
+				[
+					"Packages/User/mkDoxy.sublime-build",
+					""
+				],
+				[
+					"Packages/User/udev_reload.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/markdownChapters.sublime-build",
+					""
+				],
+				[
+					"Packages/User/mkDoxy.sublime-build",
+					""
+				],
+				[
+					"Packages/User/udev_reload.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "trail",
+		"selected_items":
+		[
+			[
+				"trail",
+				"Trimmer: Trim trailing whitespace."
+			],
+			[
+				"lead",
+				"Trimmer: Trim leading whitespace."
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"expand",
+				"ExpandRegion"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"",
+				"Clear Console"
+			],
+			[
+				"expa",
+				"ExpandRegion"
+			],
+			[
+				"cle",
+				"Clear Console"
+			],
+			[
+				"set syn c",
+				"Set Syntax: C Improved"
+			],
+			[
+				"trim",
+				"Trimmer: Trim trailing whitespace."
+			],
+			[
+				"asty",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"set syn py",
+				"Set Syntax: Python"
+			],
+			[
+				"lore",
+				"Add some Lorem Gibson"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"set mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"set syn ma",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"anac d",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"set py",
+				"Set Syntax: Python"
+			],
+			[
+				"anaco",
+				"Anaconda: Disable linting on this file"
+			],
+			[
+				"tri",
+				"Trimmer: Trim trailing whitespace."
+			],
+			[
+				"trimm",
+				"Trimmer: Trim trailing whitespace."
+			],
+			[
+				"ana",
+				"Anaconda: Set Python interpreter"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"debu",
+				"Plugin Debugger: run debug_example (opens Debugger)"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"cl",
+				"Clear Console"
+			],
+			[
+				"set syn pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"dia",
+				"Diagram: Generate Diagrams for Active View"
+			],
+			[
+				"clea",
+				"Clear Console"
+			],
+			[
+				"clear",
+				"Clear Console"
+			],
+			[
+				"set sy ic",
+				"Set Syntax: iCalendar"
+			],
+			[
+				"yum",
+				"yUML: Open Diagram in Browser"
+			],
+			[
+				"syntax uml",
+				"Set Syntax: yUML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"synta per",
+				"Set Syntax: Perl"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"run",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"url",
+				"Open URL"
+			],
+			[
+				"tras",
+				"DoxyDoxygen: Translate Selection To..."
+			],
+			[
+				"pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"goto",
+				"GotoLineEnhanced: Prompt goto line"
+			],
+			[
+				"disa pa",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"trans",
+				"DoxyDoxygen: Translate Selection To..."
+			],
+			[
+				"tra",
+				"DoxyDoxygen: Translate Selection To..."
+			],
+			[
+				"markd ",
+				"MarkdownEditing: New Reference"
+			],
+			[
+				"markdow url",
+				"MarkdownEditing: Fix Underlined Headers"
+			],
+			[
+				"set syn jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"trans ",
+				"DoxyDoxygen: Translate Selection To..."
+			],
+			[
+				"col",
+				"Color Picker"
+			],
+			[
+				"syn bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"lor",
+				"Add some Lorem Gibson"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"loe",
+				"File: Locate"
+			],
+			[
+				"open",
+				"Open URL"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"toc",
+				"MarkdownTOC:Update TOC"
+			],
+			[
+				"set mar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"mark",
+				"Markdown HTML Preview"
+			],
+			[
+				"synta mark",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"markd",
+				"Markdown HTML Preview"
+			],
+			[
+				"tran",
+				"DoxyDoxygen: Translate Selection To..."
+			],
+			[
+				"set syn diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"set sy lo",
+				"Set Syntax: log2"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"subl syna",
+				"Plugin Development: Convert Syntax to .sublime-syntax"
+			],
+			[
+				"synta",
+				"Plugin Development: Convert Syntax to .sublime-syntax"
+			],
+			[
+				"set mult",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"set synmar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"shell",
+				"shell_mdmerge"
+			],
+			[
+				"shell_md",
+				"shell_mdmerge"
+			],
+			[
+				"mark pre",
+				"Markdown HTML Preview"
+			],
+			[
+				"mar",
+				"Markdown HTML Preview"
+			],
+			[
+				"md",
+				"shell_mdmerge"
+			],
+			[
+				"glue",
+				"Glue - Launch"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Table Editor: Disable for current syntax"
+			],
+			[
+				"mark prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdownEd",
+				"MarkdownEditing: Fold Level 4 Sections"
+			],
+			[
+				"syntax ma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"syntax c",
+				"Set Syntax: C"
+			],
+			[
+				"foot",
+				"MarkdownEditing: New Footnote"
+			],
+			[
+				"markdown link",
+				"Snippet: Markdown Hyperlink"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"diag",
+				"Diagram: Generate Diagrams for Active View"
+			],
+			[
+				"add repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"markdow",
+				"Markdown HTML Preview"
+			]
+		],
+		"width": 629.0
+	},
+	"console":
+	{
+		"height": 178.0,
+		"history":
+		[
+			"sels[-3]",
+			"sels[-2]",
+			"sels[-]",
+			"sels[-1]",
+			"sels.append('D')",
+			"sels.append('C')",
+			"sels.append('B')",
+			"sels=['A']",
+			"view.run_command(\"expand_region\")",
+			"ss=view.sel()",
+			"view.run_command(\"expand_region\")",
+			"view.fold(view.sel())",
+			"view.fold()",
+			"view.run_command(\"fold\")",
+			"view.fold(view.sel())",
+			"view.fold()",
+			"view.run_command(\"fold\")",
+			"sublime.run_command(\"fold\")",
+			"view.sel().add(o)",
+			"view.sel().clear()",
+			"o=view.sel()[0]",
+			"view.sel().add()",
+			"view.sel().clear()",
+			"sublime.log_commands(False)",
+			"rr",
+			"rr=view.sel()[0]",
+			"sublime.Region(view.sel()[0])",
+			"view.sel()[0]",
+			"out",
+			"out=view.run_command(\"expand_region\")",
+			"view.run_command(\"expand_region\")",
+			"lan, reg=view.run_command(\"expand_region\")",
+			"(lan, reg)=view.run_command(\"expand_region\")",
+			"view.run_command(\"expand_region\")",
+			"view.expand_region()",
+			"sublime.log_commands(False)",
+			"from mdLibs import mdosd as osd",
+			"from mdosd import mdosd as osd",
+			"osd.info(\"dd\").send()",
+			"from mdLibs import mdosd as osd",
+			"form mdLib import mdosd as osd",
+			"form mdLibs import mdosd as osd",
+			"dd",
+			"dd=view.run_command(\"fold_all\")",
+			"view.run_command(\"fold_all\")",
+			"view.fold_all()",
+			"sublime.log_commands(True)",
+			"view.unfold(view.sel())",
+			"view.fold(view.sel())",
+			"view.run_command(\"fold\")",
+			"re=view.run_command(\"unfold\")",
+			"view.run_command(\"toggle_fold\")",
+			"view.run_command(\"fold\",{\"all\": False})",
+			"view.run_command(\"fold\")",
+			"view.run_command(\"goto_next_function\")",
+			"view.run_command(\"goto_next_heading\", {\"same_level\": True})",
+			"view.run_command(\"goto_next_heading\", {\"same_level\": true})",
+			"view.run_command(\"goto_next_heading\", {\"same_level\": False})",
+			"view.run_command(\"unfold_all\")",
+			"view.run_command(\"fold_all\")",
+			"view.run_command(\"unfold_all\")",
+			"view.run_command(\"unfold\")",
+			"view.run_command(\"global_unfold\")",
+			"view.run_command(\"fold\")",
+			"view.run_command(\"unfold\")",
+			"view.run_command('unfold')",
+			"view.run_command('fold')",
+			"files",
+			"[files.append(os.path.join(os.getcwd(), cf)) for cf in list(filter(lambda x: 'pdf' in x, os.listdir(os.getcwd())))]",
+			"files=[]",
+			"os.path.join(os.getcwd(), files[2])",
+			"files",
+			"files=os.listdir(os.getcwd())",
+			"files=os.listdir.abspath(os.getcwd())",
+			"os.getcwd()",
+			"os.listdir.abspath(os.getcwd())",
+			"os.listdir(os.getcwd())",
+			"os.chdir('/media/data/ti/TMS320F28379D_docs')",
+			"os.listdir(os.getcwd())",
+			"import os",
+			"os.listdir(os.getcwd())",
+			"os.listdir(os.getcwd()))",
+			"os.listdir(os.getcwd())))",
+			"fn.replace('TMS', 'ä')",
+			"fn.replace('TMS', 'ä', fn)",
+			"re.findall('TMS', fn)",
+			"re.match('TMS', fn).group()",
+			"re.match('TMS', fn).groups()",
+			"re.match('TMS', fn)",
+			"import re",
+			"re.match('TMS', fn)",
+			"fn.index('TMS')",
+			"'TMS' in fn",
+			"fn.finds('TMS')",
+			"fn",
+			"fn.find('TMS')",
+			"fn.dind('TMS')",
+			"fn='TMS320F28379D_TMS320F28377D_TMS320F28376D_TMS320F28375D_TMS320F28374D_Dual-Core_DelfinoMicrocontrollers_Rev_G'",
+			"os.listdir(os.getcwd())",
+			"os.getcwd()",
+			"os.cwd",
+			"os.cwd()",
+			"os.pwd()",
+			"os.pwd",
+			"list(filter(lambda x: 'pdf' in x, os.listdir()))",
+			"os.listdir()",
+			"os.chdir('/media/data/ti/TMS320F28379D_docs')",
+			"os.chdir(ir'/media/data/ti/TMS320F28379D_docs')",
+			"os.cdh(ir'/media/data/ti/TMS320F28379D_docs')",
+			"os.cd('/media/data/ti/TMS320F28379D_docs')",
+			"os.listdir()",
+			"os.path.ls()",
+			"os.path.dir()",
+			"os.path()",
+			"import os",
+			"os.path()",
+			"pp(dir(argparse))",
+			"pp(dir(argparser))",
+			"from pprint import pprint as pp",
+			"import argparse",
+			"print('toc_ref \"{}\"'.format(mode))",
+			"print('toc_ref \"%s\"'.format(mode))",
+			"mode='insert'",
+			"settings.get(\"chapter_compile\")",
+			"settings.get(\"inline_diagram\")",
+			"settings.has(\"inline_diagram\")",
+			"settings = sublime.load_settings('MarkdownPreview.sublime-settings')",
+			"view.run_command('align_markdown_table')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/media/data/CODES/ccs7_theBeast/_MD_adc_soc_pid_dcl_cla"
+	],
+	"file_history":
+	[
+		"/home/mainster/.config/sublime-text-3/Packages/User/realToggleFoldCommand.py",
+		"/home/mainster/.config/sublime-text-3/Packages/User/SublimeMdbToolbox.py",
+		"/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/ExpandRegion.py",
+		"/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/expand_region_handler.py",
+		"/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/expand_region_handler",
+		"/media/data/CODES/ccs7_theBeast/_MD_adc_soc_pid_dcl_cla/md_circ_buffer.h",
+		"/home/mainster/.config/sublime-text-3/Packages/ToggleFold/ToggleFold.py",
+		"/media/data/CODES/ccs7_theBeast/_MD_adc_soc_pid_dcl_cla/md_circ_buffer.c",
+		"/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/ExpandRegion.sublime-settings",
+		"/home/mainster/.config/sublime-text-3/Packages/User/ExpandRegion.sublime-settings",
+		"/home/mainster/.config/sublime-text-3/Packages/SyntaxFold/syntax_fold.sublime-settings",
+		"/home/mainster/.config/sublime-text-3/Packages/Default/set_unsaved_view_name.py",
+		"/home/mainster/.config/sublime-text-3/Packages/",
+		"/home/mainster/.config/sublime-text-3/Packages/User/syntax_fold.sublime-settings",
+		"/home/mainster/.config/sublime-text-3/Packages/SublimeGDB/sublimegdb.py",
+		"/home/mainster/CODES_local/pythons/pdfTitleExtractor.py",
+		"/tmp/refs.mmd",
+		"/tmp/06_Terminologie.mmd",
+		"/media/data/whz/projectGalvoDocu/starUML_workspace/DateClass.cpp",
+		"/home/mainster/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
+		"/home/mainster/.config/sublime-text-3/Packages/User/snipsMdb/pyTemplate.sublime-snippet",
+		"/tmp/texasinstrumentsc2000.mlpkginstall",
+		"/media/mainster/P2/syslinux.cfg",
+		"/media/mainster/extdata/PXEboot/pxelinux.cfg/default",
+		"/media/data/whz/projectGalvoDocu/chapters/10_Softwarearchitektur.html",
+		"/media/data/whz/projectGalvoDocu/merged.html",
+		"/tmp/styleMdb_projectGalvoDocu.css",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.py",
+		"/media/data/whz/projectGalvoDocu/chapters/11_Plattform.mmd",
+		"/media/data/whz/projectGalvoDocu/chapters/10_Softwarearchitektur.mmd",
+		"/home/mainster/.config/sublime-text-3/Packages/User/styleMdb.css",
+		"/media/data/CODES/ccs7_workspace/MD_F2833x_LIB/styleMdb_ccsMd.css",
+		"/media/data/whz/projectGalvoDocu/merged.mmd",
+		"/media/data/whz/projectGalvoDocu/chapters/00_TOC.mmd",
+		"/media/data/CODES/ccs7_workspace/MD_F2833x_LIB/documentation/styleMdb_ccsMd.css",
+		"/home/mainster/CODES_local/pythons/subprocess_clipboard.py",
+		"/media/data/CODES/ccs7_workspace/MD_F2833x_LIB/documentation/DIMM100_pinout.md",
+		"/home/mainster/.config/sublime-text-3/Packages/User/MarkdownPreview.sublime-settings",
+		"/home/mainster/scripts/meminfo.sh",
+		"/home/mainster/.config/sublime-text-3/Packages/User/CalcIrqIdCommand.py",
+		"/home/mainster/scripts/qemuWin7.sh",
+		"/home/mainster/scripts/unspace",
+		"/home/mainster/compiledStuff/PCGU1000driver_2009-07-13/Komponente/libusb.pp",
+		"/media/data/CODES/ccs7_workspace/MD_F2833x_LIB/PIEINT_vectTable.md",
+		"/home/mainster/CODES_local/ccs7_workspace/MD_F2833x_LIB/PIEINT_vectTable.md",
+		"/usr/bin/miniterm.py",
+		"/media/data/whz/projectGalvoDocu/chapters/pics/UML-Diagrammhierarchie_Mdb.svg",
+		"/home/mainster/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/tmp/titi",
+		"/home/mainster/compiledStuff/pdfcrack/Makefile.patch",
+		"/home/mainster/compiledStuff/pdfcrack/Makefile.orig",
+		"/home/mainster/compiledStuff/pdfcrack/Makefile",
+		"/media/data/CODES/ccs7_workspace/MD_F2833x_LIB/documentation/PIEINT_vectTable.md",
+		"/media/data/whz/projectGalvoDocu/chapters/pics/UML-Diagrammhierarchie_Mdb1.svg",
+		"/tmp/titi3",
+		"/media/data/CODES/ccs7_workspace3/MD_BSP_EXPLORER_F28335/.DIMM100_pinout.md.html",
+		"/home/mainster/CODES_local/ccs7_workspace3/eclipseGfmMarkdownPlugin_mdbStyles.css",
+		"/media/data/CODES/ccs7_workspace3/MD_BSP_EXPLORER_F28335/DIMM100_pinout.md",
+		"/opt/ti/ccsv7/tirex/ti-rex-core/public/stylesheets/markdown.css",
+		"/home/mainster/CODES_local/ccs7_workspace2/ELT131_01/main.c",
+		"/media/data/whz/projectGalvoDocu/chapters/05_Projektziel_und_Anforderungskatalog.mmd",
+		"/media/data/whz/projectGalvoDocu/README.md",
+		"/media/data/whz/reports/ELT131/out.tex",
+		"/media/data/whz/reports/ELT131/ELT131_LAB_01/out.tex",
+		"/media/data/whz/projectGalvoDocu/sources/gnuTrans.c",
+		"/media/data/CODES/ccs6_workspaces/ELT131_F28335_workspace/ELT131_01/main.c",
+		"/media/data/CODES/ccs7_workspace2/ELT131_01/main.c",
+		"/media/data/CODES/ccs7_workspaces/ELT131_01/main.c",
+		"/media/data/whz/modulunterlagen/ELT131_Mikroprozessor-Betriebssysteme/2017/ELT131_Praktikum.pdf.bat",
+		"/home/mainster/.config/sublime-text-3/Packages/User/example_command.py",
+		"/usr/bin/vpnWhz2.sh",
+		"/media/data/whz/zki-script.sh",
+		"/media/data/whz/zki-script.sh.py",
+		"/media/data/whz/projectGalvoDocu/trytry.py",
+		"/home/mainster/scripts/VpnWhzOpenconnect.sh",
+		"/media/data/whz/projectGalvoDocu/pics/UML-Diagrammhierarchie_Mdb.svg",
+		"/home/mainster/CODES_local/dia_diagram_workspace/pyumltest.py",
+		"/home/mainster/.pythonrc",
+		"/media/data/whz/projectGalvoDocu/projectGalvoDocu.sublime-project",
+		"/media/data/whz/projectGalvoDocu/svgCoord.py",
+		"/media/data/whz/projectGalvoDocu/pics/gnus2/gnu_flatten.svg",
+		"/home/mainster/.config/sublime-text-3/Packages/anaconda/Context.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/Anaconda/Main.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/anaconda/Main.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/Anaconda/Context.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/DoxyDoxygen (evolution)/Context.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/DoxyDoxygen (evolution)/Main.sublime-menu",
+		"/home/mainster/.config/sublime-text-3/Packages/DoxyDoxygen (evolution)/*.menu",
+		"/opt/sublime_text/sublime_plugin.py",
+		"/opt/sublime_text/sublime.py",
+		"/media/data/CODES/dia_diagram_workspace/UML-Diagrammhierarchie_Mdb.py",
+		"/media/data/CODES/dia_diagram_workspace/UML-Diagrammhierarchie_Mdb.cxx",
+		"/media/data/CODES/pythons/lumyTest.py",
+		"/media/data/whz/projectGalvoDocu/pics/uml_diagrams_strukt.dia",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown/MultiMarkdown.sublime-syntax",
+		"/home/mainster/.config/sublime-text-3/Packages/Python/Python.sublime-syntax",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown Extended/Syntaxes/Markdown Extended.sublime-syntax",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown/Markdown.sublime-syntax",
+		"/home/mainster/.config/sublime-text-3/Packages/SmartMarkdown/Default.sublime-keymap",
+		"/tmp/.fr-kokbVJ/Readme.txt",
+		"/home/mainster/compiledStuff/pyNsource-1.61-src/src/pyNsourceGui.py",
+		"/media/data/CODES/papyrus_uml_workspace/firstUml/the2model.uml",
+		"/media/data/CODES/papyrus_uml_workspace/firstUml/theModel.uml",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown Preview/README.md",
+		"/home/mainster/.config/sublime-text-3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/media/data/whz/gcalcli_emv_pr",
+		"/tmp/tmp7xeowg.md",
+		"/tmp/newname",
+		"/home/mainster/.config/sublime-text-3/Packages/User/testpy",
+		"/home/mainster/.config/sublime-text-3/Packages/User/debug_example.py",
+		"/home/mainster/.config/sublime-text-3/Packages/Plugin Debugger/README.rst",
+		"/media/data/whz/projectGalvoDocu/test.py",
+		"/media/data/whz/treeInfo5",
+		"/tmp/term",
+		"/media/data/CODES/googleAPI/client_id.json",
+		"/media/data/whz/trees",
+		"/tmp/sum#",
+		"/media/data/whz/projectGalvoDocu/handyshay",
+		"/home/mainster/CODES_local/pythons/wrapperForPrint.py",
+		"/home/mainster/scripts/syncFromOther_whz",
+		"/media/data/CODES/pythons/folderSync_dispatch/dispatch.py",
+		"/home/mainster/CODES_local/pythons/moveCopyWithProgressBar.py",
+		"/tmp/frames",
+		"/home/mainster/.config/sublime-text-3/Packages/sublime_diagram_plugin/diagram/base.py",
+		"/home/mainster/.config/sublime-text-3/Packages/sublime_diagram_plugin/diagram/__init__.py",
+		"/home/mainster/.config/sublime-text-3/Packages/sublime_diagram_plugin/diagram/plantuml.py",
+		"/media/data/whz/zki-script_spawn.sh",
+		"/media/data/whz/vpnWhz2.sh"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"self\\.view",
+			"print\\(.*\\)",
+			"expand_region_handler",
+			"print\\(.*\\)",
+			"fold",
+			"ORIGINAL_PROJECT_ROOT",
+			"<!",
+			"inspect",
+			"CodeImport",
+			"chapter_compile",
+			"settings\\.get\\(\\\".*\\\"\\)",
+			"temp_toc_refs",
+			"refere",
+			"get_contents",
+			"get_references",
+			"openNav",
+			"scrip",
+			"Portfolio",
+			"^",
+			"??? Signalkonditionierung",
+			"\\si",
+			"uml",
+			"@uml",
+			"figure-to-img-margin-top",
+			"table",
+			" \\-",
+			"^(\\|.[^\\|]*\\|.[^\\|]*\\|.[^\\|]*)",
+			"^(\\|.[^\\|]*\\|.[^\\|]*)",
+			"    ",
+			"INTx",
+			"\\|\\-(\\-+)\\-\\|",
+			"-----------",
+			"   \\|$",
+			"\\| ~",
+			"@",
+			"(.*)",
+			".*",
+			" ",
+			"^([^IG])",
+			"Ext\\. int\\. ([0-9]+)",
+			"^(\\|[^IG])",
+			"\\:",
+			"\\\"",
+			"_-_",
+			"_{2,}",
+			" ",
+			"(.*)([0-9]+) \\- ([0-9]+)",
+			"[0-9]\\.",
+			"–",
+			"--\n\n",
+			"\n",
+			"\nSiehe TI-RTOS_Kernel_Workshop_Student_Guide_rev4.00_1.pdf Seiten",
+			"figure",
+			"eq",
+			"\\\\",
+			"C:\\TI\\",
+			"\\/source\\/",
+			"\\\\",
+			"C:\\TI\\controlSUITE\\device_support\\f2833x\\v141\\DSP2833x_common",
+			"C\\:\\\\.*",
+			"codecs",
+			"\\\\",
+			"\\\\(.[^ \\(\\)]*)",
+			"    ",
+			" \\\\",
+			"entry",
+			",",
+			"\\n",
+			"#-",
+			"##",
+			"sett",
+			"\\s",
+			"import",
+			"WINDOW_SIZE",
+			"@startuml",
+			"get_replace_reg",
+			"create_temporary_copy",
+			"digram_file",
+			"os.path.splitext",
+			"splitext",
+			"osd",
+			"block",
+			"defaultAttrsDict",
+			"defAttrsDict",
+			"extract_diagram_attrs",
+			"gen_image_tag",
+			"attrsDict",
+			"imgStyle",
+			"imgAttrs",
+			"get_replace_reg",
+			"diagAttrs",
+			"extract_diagram_attr",
+			"first_line_after_block",
+			"extract_diagram_attr",
+			"gen_image_tag",
+			"extract_diagram_attr",
+			"UmlBlock",
+			"attr_reg",
+			"UmlBlock",
+			"attr_reg",
+			"gen_image_tag",
+			"set_diag",
+			"blk.get",
+			"self\\.region",
+			"attribute_dict",
+			"gen_image_tag",
+			"extract_diagram_attr",
+			"dprint",
+			"Debug\\(.*",
+			"sublime_diagram_plugin",
+			"(EMV I Pr V.)",
+			"10:00",
+			"gen_image_tag",
+			"extract_diagram_attr",
+			"gen_image_tag",
+			"blk_attr",
+			"extract_diagram_attr",
+			"Debug",
+			"##\\s+",
+			"InlineUmlDiagram",
+			"UmlBlock",
+			"gen_image_tag",
+			"imgTag",
+			"re.sub",
+			"strt",
+			"key",
+			"extract_diagram_attr",
+			"inlineAttrs"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"view",
+			"//",
+			"\n-",
+			"\\1  ",
+			"|:\\1:|",
+			":---------:",
+			"",
+			"|  ",
+			"|",
+			"|\\1|",
+			"@",
+			"~ \\1",
+			"Ext-Int_\\1",
+			"|~\\1",
+			"\\t",
+			"",
+			"-",
+			"_",
+			"\"\\1\":\"\\2-\\3\"",
+			"",
+			"-",
+			"",
+			"/",
+			"",
+			"/",
+			"",
+			"/",
+			"\\",
+			"attrEntry",
+			", \\\n",
+			"\n",
+			"# ",
+			"#",
+			", ",
+			"",
+			"splitext",
+			"uml_block",
+			"defaultDict",
+			"defaultAttrsDict",
+			"attrsObj",
+			"imgStyleStr",
+			"imgAttrsStr",
+			"attrsDict",
+			"next_line",
+			"__attr_reg",
+			"self.blk_reg",
+			"get_attr_dict",
+			"",
+			"\\1 UHRZEIT?",
+			"13:30",
+			"",
+			"imgAttrs",
+			"imgTag",
+			"pair[0]",
+			"inlas",
+			"defas",
+			"defa",
+			"defaultAttrs",
+			"inlineAttrs",
+			"img_tag",
+			"defTag",
+			"gen_image_tag",
+			"img_attrs",
+			"img_tag",
+			"dprint",
+			",\\t'",
+			"",
+			"print(\\1)",
+			"print",
+			"",
+			"print",
+			"d.print",
+			"extract_diagram_attr",
+			"undo_inline_subst",
+			"attr_reg",
+			"self.attrs_dict",
+			"extract_inline_block_attr",
+			"default_style",
+			"blocks",
+			"self.view",
+			"preserve_ext",
+			"_FILE_",
+			"self.file",
+			"locate_code_blocks",
+			"dfile",
+			"srcFile",
+			" -->",
+			"diags",
+			"inline_diagram",
+			"regsEnd",
+			"regsStart",
+			"cRegs",
+			"uml",
+			"Regs",
+			"endCharNums",
+			"startCharNums",
+			"startOrEnd",
+			"end",
+			"\\t-",
+			"- ",
+			"\\1\n",
+			"\n",
+			"\\1\n",
+			"",
+			"x",
+			"pI",
+			"nRows",
+			"pGnuTrans",
+			" * ",
+			"nRows",
+			"{ \\1, \\2 },",
+			"<figcaption>ENTER CAPTION</figcaption>",
+			"<figcaption><yelBg>ENTER CAPTION</yelBg></figcaption>",
+			"<figure>\\1<figcaption></figcaption></figure>",
+			"incfile",
+			"{{\\1, \\2}, {\\3, \\4}}",
+			"<figure><img",
+			" floatr",
+			".floatl",
+			".floatr",
+			".botal",
+			".topal",
+			"\\1box",
+			".\\1",
+			"invEl",
+			"logfile",
+			"infile",
+			"print(\"\\1\")"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "md_circ_buffer.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1284,
+								1284
+							]
+						],
+						"settings":
+						{
+							"expand_region_settings": "{\"stack\": [{\"start\": 3308, \"end\": 3636}, {\"start\": 3307, \"end\": 3637}], \"hash\": \"c3ef07f226b816bcc652ab21a9cea93a\"}",
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "md_beast_uart.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1741,
+								1741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/mainster/.config/sublime-text-3/Packages/ExpandRegion/ExpandRegion.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"expand_region_settings": "{\"stack\": [{\"start\": 580, \"end\": 947}, {\"start\": 573, \"end\": 947}, {\"start\": 257, \"end\": 947}, {\"start\": 202, \"end\": 947}, {\"start\": 193, \"end\": 947}], \"hash\": \"41b8a70b771de224064d274920ad9af6\"}",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "md_circ_buffer.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1377,
+								1377
+							]
+						],
+						"settings":
+						{
+							"expand_region_settings": "{\"stack\": [{\"start\": 710, \"end\": 712}, {\"start\": 697, \"end\": 759}], \"hash\": \"5474689d4715671f401de1591863a57d\"}",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "md_beast_uart.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1638,
+								1638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.ShellCommand":
+	{
+		"height": 173.0
+	},
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_panel":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "_MD_adc_soc_pid_dcl_cla.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
