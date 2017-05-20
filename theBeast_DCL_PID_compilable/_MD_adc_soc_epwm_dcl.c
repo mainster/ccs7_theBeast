@@ -35,8 +35,12 @@
 //!< adc_soc_epwm_cpu01
 #include "F28x_Project.h"
 #include "F2837xD_GlobalPrototypes.h"
-#include "md_beast_uart.h"
 #include "DCL.h"
+
+//#include "DSP28x_Project.h"
+
+#include "md_globals.h"
+#include "md_beast_uart.h"
 
 volatile struct DAC_REGS* DAC_PTR[4] = {
 		0x0, &DacaRegs, &DacbRegs, &DaccRegs
@@ -96,6 +100,13 @@ const char * msg = "Good morning\n";
  */
 void main(void) {
 	InitSysCtrl();
+
+#ifdef _FLASH
+	//!< Initialize the FLASH
+    memcpy(&RamfuncsRunStart, &RamfuncsLoadStart, (unsigned long)(&RamfuncsLoadSize));
+    InitFlash();
+#endif
+
 	InitGpio();
 	DINT;
 	//!< Disable CPU interrupts

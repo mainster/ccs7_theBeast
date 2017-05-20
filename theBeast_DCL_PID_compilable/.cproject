@@ -38,8 +38,10 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL.1142685987" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL.2" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH.1045282080" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${C2000WARE_F2837XD_ROOT1}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${C2000WARE_F2837XD_ROOT2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${C2000WARE_DLIB_ROOT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${C2000WARE_DCL_INCLUDE_ROOT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 								</option>
@@ -61,7 +63,10 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.ADVICE__PERFORMANCE.87609582" name="Provide advice on optimization techniques (--advice:performance)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.ADVICE__PERFORMANCE" value="--advice:performance=all" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.1309240323" name="Floating Point mode (--fp_mode)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.441780546" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.C99" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.1423227092" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED._none" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.1423227092" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNDEFINE.602146409" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNDEFINE" valueType="stringList">
+									<listOptionValue builtIn="false" value="_FLASH"/>
+								</option>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS.1547135543" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS.1146217160" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS.101773354" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS"/>
@@ -93,7 +98,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="theBeast_DCL_PID_compilable.c|linker/2837xD_FLASH_lnk_cpu1.cmd|linker/F2837xD_DCL_cpu1.cmd|linker/F2837xD_Headers_nonBIOS_cpu2.cmd|linker/2837xD_FLASH_CLA_lnk_cpu1.cmd|linker/F28069_stdmem.cmd|linker/F28069_DCL.cmd|2837x_FLASH_lnk_cpu1.cmd|28069_RAM_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="driverlib.lib|linker/2837xD_FLASH_lnk_cpu1.cmd|linker/2837xD_FLASH_CLA_lnk_cpu1.cmd|device/driverlib|theBeast_DCL_PID_compilable.c|linker/F2837xD_DCL_cpu1.cmd|linker/F2837xD_Headers_nonBIOS_cpu2.cmd|linker/F28069_stdmem.cmd|linker/F28069_DCL.cmd|2837x_FLASH_lnk_cpu1.cmd|28069_RAM_lnk.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

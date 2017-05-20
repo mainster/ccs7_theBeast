@@ -35,11 +35,14 @@
  *
  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#include "F28x_Project.h"
+#include "F2837xD_GlobalPrototypes.h"
+//#include "driverlib.h"
+//#include "device.h"
+
 #include "md_beast_uart.h"
 #include "md_globals.h"
 #include "md_circ_buffer.h"
-#include "F28x_Project.h"
-#include "F2837xD_GlobalPrototypes.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Private typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~  Private macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
@@ -61,16 +64,24 @@ static int tx_out;
 // count up and wrap around
 
 void init_uart0(const uint32_t baudrate) {
-	GPIO_SetupPinMux(42, GPIO_MUX_CPU1, 1);
-	GPIO_SetupPinMux(43, GPIO_MUX_CPU1, 1);
+	//!< GPIO43 is the SCI Rx pin.
+//	GPIO_setMasterCore(43, GPIO_CORE_CPU1);
+//	GPIO_setPinConfig(GPIO_43_SCIRXDA);
+//	GPIO_setDirectionMode(43, GPIO_DIR_MODE_IN);
+//	GPIO_setPadConfig(43, GPIO_PIN_TYPE_STD);
+//	GPIO_setQualificationMode(43, GPIO_QUAL_ASYNC);
+//
+//	//!< GPIO42 is the SCI Tx pin.
+//	GPIO_setMasterCore(42, GPIO_CORE_CPU1);
+//	GPIO_setPinConfig(GPIO_42_SCITXDA);
+//	GPIO_setDirectionMode(42, GPIO_DIR_MODE_OUT);
+//	GPIO_setPadConfig(42, GPIO_PIN_TYPE_STD);
+//	GPIO_setQualificationMode(42, GPIO_QUAL_ASYNC);
 
-	GPIO_SetupPinOptions(42, GPIO_OUTPUT, GPIO_PUSHPULL);
-	GPIO_SetupPinOptions(43, GPIO_INPUT, GPIO_ASYNC);
 
-//	GpioCtrlRegs.GPBMUX1.bit.GPIO42 = 3;
-//	GpioCtrlRegs.GPBMUX1.bit.GPIO43 = 3;
-//	GpioCtrlRegs.GPBGMUX1.bit.GPIO42 = 3;
-//	GpioCtrlRegs.GPBGMUX1.bit.GPIO43 = 3;
+
+
+
 	// Interrupts that are used in this example are re-mapped to
 	// ISR functions found within this file.
 	EALLOW;

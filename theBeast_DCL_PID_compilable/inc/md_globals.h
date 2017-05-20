@@ -38,31 +38,30 @@
 #define MD_GLOBALS_H_
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#include <DCL.h>
+//#include <DCL.h>
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+/*!
+ * MDB FIXES:
+ */
+#undef AUTOBAUD
+#if (DEVICE_OSCSRC_FREQ == 20000000U)
+#warning "Wrong OSC Freq defined!"
+#warning "theBeast ControlCard has 20MHz crystal"
+#warning "theBeast LaunchPad has 10MHz crystal!"
+#undef DEVICE_OSCSRC_FREQ
+#define DEVICE_OSCSRC_FREQ 10e6
+#endif
 
- //			Optimization improvements
-
-// always inline function x:
-
-#define AIL(x)   static x __attribute__ ((always_inline)); static x
-
-
-// never inline function x:
-
-#define NIL(x)   x __attribute__ ((noinline)); x
-
-
-// volatile access (reject unwanted removing access):
-
+//!< Optimization improvements
+//!< Volatile access (reject unwanted removing access):
 #define vu16(x) (*(volatile unsigned int*)&(x))
 #define vs16(x) (*(volatile int*)&(x))
 #define vu32(x) (*(volatile unsigned long*)&(x))
@@ -71,10 +70,10 @@
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-extern PID pid1;
+//extern PID pid1;
 
 #ifdef __cplusplus
- }
+}
 #endif
 
 #endif

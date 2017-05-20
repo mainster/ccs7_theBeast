@@ -110,6 +110,8 @@ SECTIONS
    Cla1ToCpuMsgRAM  : > CLA1_MSGRAMLOW,   PAGE = 1
    CpuToCla1MsgRAM  : > CLA1_MSGRAMHIGH,  PAGE = 1
 
+   dclfuncs 		: > RAMGS1,	PAGE = 1		/* Digital Controller Library functions */
+
 #ifdef __TI_COMPILER_VERSION__
    #if __TI_COMPILER_VERSION__ >= 15009000
     .TI.ramfunc : {} LOAD = FLASHD,
