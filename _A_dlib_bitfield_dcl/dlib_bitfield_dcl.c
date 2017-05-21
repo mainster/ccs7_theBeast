@@ -49,16 +49,27 @@
 
 //!< TI Digital Controller Library includes
 #include "DCL.h"
+#include <string.h>
+
+typedef enum {
+	EOL_LF = 0,
+	EOL_NO
+} EOL_t;
 
 interrupt void control_Isr(void);
 void MD_InitDclExample_bf(void);
-void MD_InitDclExample_dl(void);
+void MD_InitDclExample_dl(const uint32_t sampleFreq);
 void MD_InitAdcs(void);
 void MD_InitEpwm(const uint32_t sampleFreq);
 void MD_InitSci(void);
 
 void MD_InitDclExample_bf(void);
 void MD_InitSci(void);
+
+char *int2str (const uint32_t number, char *buff);
+void SCI_writeCharArrayLF(uint32_t base, char *array,
+                          uint16_t length);
+void MD_puts(const char *str, EOL_t EOL);
 
 // global  variables
 long IdleLoopCount = 0;
@@ -67,16 +78,29 @@ float rk = 0.25f, yk, lk, uk;
 PID pid1 = PID_DEFAULTS;
 float Duty;
 
+#define MD_EPWM_UP_START()	EALLOW; \
+		EPwm1Regs.TBCTL.bit.CTRMODE = EPWM_COUNTER_MODE_UP; \
+		EDIS;
+
+#define MD_EPWM_FREEZ()	EALLOW; \
+		EPwm1Regs.TBCTL.bit.CTRMODE = EPWM_COUNTER_MODE_STOP_FREEZE; \
+		EDIS;
+
 volatile int loopCounter;
 
 extern MD_GPIO_t GPIO_config[];
 
+volatile int tfl;
 
 /*
  * ===================== main of _A_dlib_bitfield_dcl =====================
  */
 void main(void) {
-	unsigned char *msg;
+	char msgArr[64];
+	char *msg = &msgArr[0];
+
+	char i2sArr[9];
+	char *i2s = &i2sArr[0];
 
 	// Configure PLL, disable WD, enable peripheral clocks.
 	Device_init();
@@ -97,48 +121,30 @@ void main(void) {
 	SCI_lockAutobaud(SCIA_BASE);
 #endif
 
-	// Send starting message.
-	msg = "\r\n\n\nHello World!\0";
-	SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 17);
-	msg = "\r\nYou will enter a character, and the DSP will echo it back!\n\0";
+	strcpy(msg, "DLIB & BITFIELD & DCL test...\n");
 	SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 62);
 
+//	MD_InitDclExample_dl(10e3);
 	MD_InitEpwm(10e3);
-	MD_InitAdcs();
+	MD_EPWM_UP_START();
+	Interrupt_enableMaster();
 
-	GPIO_setDirectionMode(5, GPIO_DIR_MODE_OUT);
+	int2str(11, i2s);
+	int2str(1541, i2s);
+	int2str(31541, i2s);
 
-
-	/* initialise controller variables */
-	pid1.Kp = 9.0f;
-	pid1.Ki = 0.015f;
-	pid1.Kd = 0.35f;
-	pid1.Kr = 1.0f;
-	pid1.c1 = 188.0296600613396f;
-	pid1.c2 = 0.880296600613396f;
-	pid1.d2 = 0.0f;
-	pid1.d3 = 0.0f;
-	pid1.i10 = 0.0f;
-	pid1.i14 = 1.0f;
-	pid1.Umax = 1.0f;
-	pid1.Umin = -1.0f;
-
-	rk = 0.25f;							// initial value for control reference
-	lk = 1.0f;
-
-
-//	SetDBGIER(0x0001);						// enable real-time debug interupts
-	EINT;
-	// enable global interrupt mask
-
-	EALLOW;
-	EPwm1Regs.TBCTL.bit.CTRMODE = 0;		// PWM1 timer: count up and start
-	EDIS;
+	strcpy(msg, "Loop count: ");
+	volatile int idx = numel(msgArr);
 
 	/* idle loop */
 	while (1) {
 		IdleLoopCount++;					// increment loop counter
-		asm(" NOP");
+		int2str(IdleLoopCount, i2s);
+
+		MD_puts(msg, EOL_NO);
+		MD_puts(i2s, EOL_LF);
+
+		DELAY_US(1000*100);
 	}  // while
 
 //
@@ -157,6 +163,19 @@ void main(void) {
 //		// Increment the loop count variable.
 //		loopCounter++;
 //	}
+}
+void SCI_writeCharArrayLF(uint32_t base, char *array,
+                          uint16_t length) {
+	array[length++] = '\n';
+	array[length] = '\0';
+	SCI_writeCharArray(base, (uint16_t *) array, length+1);
+}
+
+void MD_puts(const char *str, EOL_t EOL) {
+	while (*str != '\0')
+		SCI_writeCharBlockingNonFIFO(SCIA_BASE, (uint16_t) *str++);
+	if (EOL == EOL_LF)
+		SCI_writeCharBlockingFIFO(SCIA_BASE, (uint16_t) '\n');
 }
 /*!
 Initialization sequence for SCI module.
@@ -197,6 +216,7 @@ void MD_InitEpwm(const uint32_t sampleFreq) {
 	uint32_t base = EPWM1_BASE;
 
 	SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
+	SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
 	/* configure EPWM */
     // freeze TB counter        // EPwm1Regs.TBCTL.bit.CTRMODE = 3;
 	EPWM_setTimeBaseCounterMode(base, EPWM_COUNTER_MODE_STOP_FREEZE);
@@ -246,6 +266,7 @@ void MD_InitAdcs(void) {
 	uint32_t base = ADCA_BASE;
 
 	/* configure ADC */
+	SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_ADCA);
 	ADC_enableConverter(base);
 	// EALLOW;
 	// early interrupt generation	// AdcaRegs.ADCCTL1.bit.INTPULSEPOS = 0
@@ -277,17 +298,37 @@ void MD_InitAdcs(void) {
 	// set SOC1 S/H Window to 7 ADC Clock Cycles, (6 ACQPS plus 1)	// AdcaRegs.ADCSOC1CTL.bit.ACQPS = 6
 	ADC_setupSOC(base, ADC_SOC_NUMBER1, ADC_TRIGGER_EPWM1_SOCA, ADC_CH_ADCIN8, 7);
 
-	/* enable interrupts */
-	Interrupt_register(INT_ADCA1, &control_Isr);
-	Interrupt_enable(INT_ADCA1);
-	Interrupt_enableInCPU(M_INT1);
 }
 /*!
 Initialization sequence from DCL example (Driverlib programming model).
 */
-void MD_InitDclExample_dl(void) {
-//	SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
-//	EPWM_setPeriodLoadMode(EPWM1_BASE, )
+void MD_InitDclExample_dl(const uint32_t sampleFreq) {
+
+	MD_InitEpwm(sampleFreq);
+	MD_InitAdcs();
+	/* enable interrupts */
+	Interrupt_register(INT_ADCA1, &control_Isr);
+	Interrupt_enable(INT_ADCA1);
+	Interrupt_enableInCPU(M_INT1);
+
+	/* initialise controller variables */
+	pid1.Kp = 9.0f;
+	pid1.Ki = 0.015f;
+	pid1.Kd = 0.35f;
+	pid1.Kr = 1.0f;
+	pid1.c1 = 188.0296600613396f;
+	pid1.c2 = 0.880296600613396f;
+	pid1.d2 = 0.0f;
+	pid1.d3 = 0.0f;
+	pid1.i10 = 0.0f;
+	pid1.i14 = 1.0f;
+	pid1.Umax = 1.0f;
+	pid1.Umin = -1.0f;
+
+	rk = 0.25f;		// initial value for control reference
+	lk = 1.0f;		// control loop not saturated
+
+	MD_EPWM_UP_START();
 }
 /*!
 Initialization sequence from DCL example (Bitfield programming model).
@@ -382,6 +423,53 @@ void MD_InitDclExample_bf(void) {
 	EDIS;
 }
 #endif
+
+/**
+ * @brief      Simple digit to char converter.
+ *
+ * @param      number   The number
+ * @param[in]  base     The base
+ * @return     character representation of number
+ */
+char makedigit (uint32_t *number, uint32_t base) {
+	static char map[] = "0123456789";
+	uint16_t ix;
+
+	for (ix=0; *number >= base; ix++)
+		*number -= base;
+
+	return map[ix];
+}
+
+/**
+ * @brief      Simple integral to string converter.
+ *
+ * @param[in]  number   The number
+ * @return     Pointer to string representation of number.
+ */
+char *int2str (const uint32_t number, char *buff) {
+//	static char tmp[12] = { " " };
+//	char *p = &tmp[0];
+	uint32_t _number = number;
+	bool firstNonzero = false;
+
+	if (! _number) {
+		*buff++ = '0';
+		*buff = '\0';
+		return buff;
+	}
+
+	for (uint32_t ddec = 1e9; ddec >= 1; ddec /= 10) {
+		*buff = makedigit(&_number, ddec);
+		if ((*buff != '0') || firstNonzero) {
+			firstNonzero = true;
+			buff++;
+		}
+	}
+	*buff = '\0';
+	return buff;
+}
+
 /*!
 Control ISR: triggered by ADC EOC
 */
