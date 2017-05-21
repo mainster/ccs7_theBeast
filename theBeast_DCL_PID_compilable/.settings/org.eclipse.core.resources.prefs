@@ -1,10 +1,6 @@
 eclipse.preferences.version=1
 encoding//DEBUG/bsp/subdir_rules.mk=UTF-8
 encoding//DEBUG/bsp/subdir_vars.mk=UTF-8
-encoding//DEBUG/device/driverlib/ccs/Debug/subdir_rules.mk=UTF-8
-encoding//DEBUG/device/driverlib/ccs/Debug/subdir_vars.mk=UTF-8
-encoding//DEBUG/device/driverlib/subdir_rules.mk=UTF-8
-encoding//DEBUG/device/driverlib/subdir_vars.mk=UTF-8
 encoding//DEBUG/device/subdir_rules.mk=UTF-8
 encoding//DEBUG/device/subdir_vars.mk=UTF-8
 encoding//DEBUG/linker/subdir_rules.mk=UTF-8

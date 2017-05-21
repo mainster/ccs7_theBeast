@@ -74,18 +74,22 @@ main() {
 //	InitaAdc();								// [F2806x_Adc.c]
 	EALLOW;
 	AdcaRegs.ADCCTL1.bit.INTPULSEPOS = 0;	// early interrupt generation
-	AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;		// enabled ADCINT1
+
+	AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;	// enabled ADCINT1
 	AdcaRegs.ADCINTSEL1N2.bit.INT1CONT = 0;	// disable ADCINT1 continuous mode
-	AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 1;		// setup EOC1 to trigger ADCINT1
-	AdcaRegs.ADCINTSEL1N2.bit.INT2E = 0;	    // enable ADCINT2
-	AdcaRegs.ADCINTSEL1N2.bit.INT2CONT = 0;	  // disable ADCINT1 continuous mode
-	AdcaRegs.ADCINTSEL1N2.bit.INT2SEL = 0;	    // setup EOC1 to trigger ADCINT2
-	AdcaRegs.ADCSOC0CTL.bit.CHSEL = 0;	// set SOC0 channel select to ADCINA0
-	AdcaRegs.ADCSOC1CTL.bit.CHSEL = 8;	// set SOC1 channel select to ADCINB0
-	AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 5;// set SOC0 start trigger on EPWM1A, due to round-robin SOC0 converts first then SOC1
-	AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 5;// set SOC1 start trigger on EPWM1A, due to round-robin SOC0 converts first then SOC1
-	AdcaRegs.ADCSOC0CTL.bit.ACQPS = 6;	// set SOC0 S/H Window to 7 ADC Clock Cycles, (6 ACQPS plus 1)
-	AdcaRegs.ADCSOC1CTL.bit.ACQPS = 6;	// set SOC1 S/H Window to 7 ADC Clock Cycles, (6 ACQPS plus 1)
+	AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 1;	// setup EOC1 to trigger ADCINT1
+
+	AdcaRegs.ADCINTSEL1N2.bit.INT2E = 0;	// enable ADCINT2
+	AdcaRegs.ADCINTSEL1N2.bit.INT2CONT = 0;	// disable ADCINT1 continuous mode
+	AdcaRegs.ADCINTSEL1N2.bit.INT2SEL = 0;	// setup EOC1 to trigger ADCINT2
+
+	AdcaRegs.ADCSOC0CTL.bit.CHSEL = 0;		// set SOC0 channel select to ADCINA0
+	AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 5;	// set SOC0 start trigger on EPWM1A, due to round-robin SOC0 converts first then SOC1
+	AdcaRegs.ADCSOC0CTL.bit.ACQPS = 6;		// set SOC0 S/H Window to 7 ADC Clock Cycles, (6 ACQPS plus 1)
+
+	AdcaRegs.ADCSOC1CTL.bit.CHSEL = 8;		// set SOC1 channel select to ADCINB0
+	AdcaRegs.ADCSOC1CTL.bit.TRIGSEL = 5;	// set SOC1 start trigger on EPWM1A, due to round-robin SOC0 converts first then SOC1
+	AdcaRegs.ADCSOC1CTL.bit.ACQPS = 6;		// set SOC1 S/H Window to 7 ADC Clock Cycles, (6 ACQPS plus 1)
 	EDIS;
 
 	/* configure GPIO */

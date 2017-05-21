@@ -2,3 +2,7 @@
 **/.jxbrowser-data/*
 **/.metadata/*
 **/DEBUG/*
+**/CPU1_RAM/*
+**/CPU2_RAM/*
+**/CPU1_FLASH/*
+**/CPU2_FLASH/*
