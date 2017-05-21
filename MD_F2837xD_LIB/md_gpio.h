@@ -42,7 +42,7 @@ extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#include "md_globals.h"
+#include "../md_theBeast/md_globals.h"
 #include "driverlib.h"
 #include "pin_map.h"
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
