@@ -59,7 +59,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.1869922600" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.C99" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL.882586614" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_LEVEL.2" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.1800176150" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.556548971" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.556548971" name="Floating Point mode (--fp_mode)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS.1325663551" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS.1301954083" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS.920307633" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS"/>
@@ -79,6 +79,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DIAG_WRAP.1021428240" name="Wrap diagnostic messages (--diag_wrap)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER.1011228269" name="Emit diagnostic identifier numbers (--display_error_number)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO.1180478884" name="Detailed link information data-base into &lt;file&gt; (--xml_link_info, -xml_link_info)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO" value="&quot;${ProjName}_linkInfo.xml&quot;" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.HEAP_SIZE.1810515395" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.HEAP_SIZE" value="0x400" valueType="string"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS.64298783" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS.495379853" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS.529648234" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS"/>
@@ -109,7 +110,7 @@
 						</tool>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="device/driverlib|linker/F2837xD_Headers_nonBIOS_cpu2.cmd|linker/F2837xD_DCL_cpu1.cmd|linker/F28069_stdmem.cmd|linker/F28069_DCL.cmd|linker/2837xD_FLASH_lnk_cpu1.cmd|linker/2837xD_FLASH_CLA_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="linker/2837xD_FLASH_CLA_lnk_cpu1.cmd|device/driverlib|linker/F2837xD_Headers_nonBIOS_cpu2.cmd|linker/F2837xD_DCL_cpu1.cmd|linker/F28069_stdmem.cmd|linker/F28069_DCL.cmd|linker/2837xD_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -204,4 +205,6 @@
 			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxSource" language="com.ti.ccstudio.core.TIGPPLanguage"/>
 		</project-mappings>
 	</storageModule>
+	<storageModule moduleId="null.devicePreference"/>
+	<storageModule moduleId="cpuFamily"/>
 </cproject>
