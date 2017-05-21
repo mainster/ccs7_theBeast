@@ -59,7 +59,7 @@ typedef enum {
 interrupt void control_Isr(void);
 void MD_InitDclExample_bf(void);
 void MD_InitDclExample_dl(const uint32_t sampleFreq);
-void MD_InitAdcs(void);
+void MD_InitAdcs_dl(void);
 void MD_InitEpwm(const uint32_t sampleFreq);
 void MD_InitSci(void);
 
@@ -101,16 +101,16 @@ void main(void) {
 	char msgArr[64];
 	char *msg = &msgArr[0];
 
-//	char i2sArr[9];
-//	char *i2s = &i2sArr[0];
+	//	char i2sArr[9];
+	//	char *i2s = &i2sArr[0];
 
 	// Configure PLL, disable WD, enable peripheral clocks.
 	Device_init();
 
 #ifdef _FLASH
 	//!< Initialize the FLASH
-    memcpy(&RamfuncsRunStart, &RamfuncsLoadStart, (unsigned long)(&RamfuncsLoadSize));
-    InitFlash();
+	memcpy(&RamfuncsRunStart, &RamfuncsLoadStart, (unsigned long)(&RamfuncsLoadSize));
+	InitFlash();
 #endif
 
 
@@ -127,44 +127,16 @@ void main(void) {
 
 	MD_puts("DLIB & BITFIELD & DCL test...\n", EOL_NO);
 
-//	MD_InitDclExample_dl(10e3);
+	//	MD_InitDclExample_dl(10e3);
 	MD_InitEpwm(10e3);
 	EALLOW;
-    GpioCtrlRegs.GPAMUX1.bit.GPIO0 = 0x01;		//!< Alternate pin function epwm
-    GpioCtrlRegs.GPAPUD.bit.GPIO0 = 1;			//!< Enable pullup
-    EDIS;
-
-    /* ------------------------------------------------------------------------- */
-
-
-	EPwm1Regs.TBCTL.bit.CTRMODE = 3;		// freeze TB counter
-	EPwm1Regs.TBCTL.bit.PRDLD = 1;  		// immediate load
-	EPwm1Regs.TBCTL.bit.PHSEN = 0;	   		// disable phase loading
-	EPwm1Regs.TBCTL.bit.SYNCOSEL = 3;		// disable SYNCOUT signal
-	EPwm1Regs.TBCTL.bit.HSPCLKDIV = 0;		// TBCLK = SYSCLKOUT
-	EPwm1Regs.TBCTL.bit.CLKDIV = 0;			// clock divider = /1
-	EPwm1Regs.TBCTL.bit.FREE_SOFT = 2;		// free run on emulation suspend
-//	EPwm1Regs.TBPRD = 0x2328;	        // set period for ePWM1 (0x2328 = 10kHz)
-	EPwm1Regs.TBPRD = 0x2710;	        // set period for ePWM1 (0x2328 = 10kHz)
-	EPwm1Regs.TBPHS.all = 0;			    // time-base Phase Register
-	EPwm1Regs.TBCTR = 0;					// time-base Counter Register
-	EPwm1Regs.ETSEL.bit.SOCAEN = 1;        	// enable SOC on A group
-	EPwm1Regs.ETSEL.bit.SOCASEL = 1;       	// select SOC from zero match
-	EPwm1Regs.ETPS.bit.SOCAPRD = 1;        	// generate pulse on 1st event
-	EPwm1Regs.CMPCTL.bit.SHDWAMODE = 0;		// enable shadow mode
-	EPwm1Regs.CMPCTL.bit.LOADAMODE = 2; 	// reload on CTR=zero
-	//	EPwm1Regs.CMPA.half.CMPA = 0x0080;	 	// set compare A value
-	EPwm1Regs.CMPA.bit.CMPA = 0x0080;			// set compare A value
-
-	EPwm1Regs.AQCTLA.bit.CAU = AQ_SET;		// HIGH on CMPA up match
-	EPwm1Regs.AQCTLA.bit.ZRO = AQ_CLEAR;	// LOW on zero match
-	EALLOW;
-	CpuSysRegs.PCLKCR0.bit.TBCLKSYNC = 1;
+	GpioCtrlRegs.GPAMUX1.bit.GPIO0 = 0x01;		//!< Alternate pin function epwm
+	GpioCtrlRegs.GPAPUD.bit.GPIO0 = 1;			//!< Enable pullup
 	EDIS;
 
-	EALLOW;
-	EPwm1Regs.TBCTL.bit.CTRMODE = 0;		// PWM1 timer: count up and start
-	EDIS;
+	/* ------------------------------------------------------------------------- */
+
+
 
 
 	Interrupt_enableMaster();
@@ -176,66 +148,34 @@ void main(void) {
 	/* idle loop */
 	while (1) {
 		IdleLoopCount++;					// increment loop counter
-//		int2str(IdleLoopCount, i2s);
-//
-//		MD_puts(msg, EOL_NO);
-//		MD_puts(i2s, EOL_LF);
+		//		int2str(IdleLoopCount, i2s);
+		//
+		//		MD_puts(msg, EOL_NO);
+		//		MD_puts(i2s, EOL_LF);
 		MD_puts("{\"LED\":1}", EOL_LF);
 		DELAY_US(1000*1000);
 		MD_puts("{\"LED\":0}", EOL_LF);
 		DELAY_US(1000*1000);
 	}  // while
 
-//
-//	for (;;) {
-//		msg = "\r\nEnter a character: \0";
-//		SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 22);
-//
-//		// Read a character from the FIFO.
-//		receivedChar = SCI_readCharBlockingFIFO(SCIA_BASE);
-//
-//		// Echo back the character.
-//		msg = "  You sent: \0";
-//		SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 13);
-//		SCI_writeCharBlockingFIFO(SCIA_BASE, receivedChar);
-//
-//		// Increment the loop count variable.
-//		loopCounter++;
-//	}
-}
-void SCI_writeCharArrayLF(uint32_t base, char *array,
-                          uint16_t length) {
-	array[length++] = '\n';
-	array[length] = '\0';
-	SCI_writeCharArray(base, (uint16_t *) array, length+1);
+	//
+	//	for (;;) {
+	//		msg = "\r\nEnter a character: \0";
+	//		SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 22);
+	//
+	//		// Read a character from the FIFO.
+	//		receivedChar = SCI_readCharBlockingFIFO(SCIA_BASE);
+	//
+	//		// Echo back the character.
+	//		msg = "  You sent: \0";
+	//		SCI_writeCharArray(SCIA_BASE, (uint16_t*) msg, 13);
+	//		SCI_writeCharBlockingFIFO(SCIA_BASE, receivedChar);
+	//
+	//		// Increment the loop count variable.
+	//		loopCounter++;
+	//	}
 }
 
-//void MD_SCI_jsonPuts(const char *key, const int32_t value) {
-////	MD_puts("{\"", EOL_NO);
-////	MD_puts(int2str(number, buff))
-////	MD_puts("\":%i}\n", key, (int) value);
-//}
-//
-//void MD_SCI_jsonPuts1(const char *key, const uint32_t value) {
-//	const char *jHead[3];
-//	jHead[0] = "{\"";
-//	jHead[1] = "\":";
-//	jHead[2] = "}\n";
-//
-//
-//	char sValue[10];
-//	int2str(value, &sValue[0]);
-//
-//	char jBuff[strlen(key) + 2 + 2 + 2];
-//
-//	strncat(&jBuff[0], jHead[0], 2);
-//	strncat(&jBuff[0], key, strlen(key));
-//	strncat(&jBuff[0], jHead[1], 2);
-//	strncat(&jBuff[0], &sValue[0], strlen(&sValue[0]));
-//	strncat(&jBuff[0], jHead[2], 2);
-//
-//	MD_puts(&jBuff[0], EOL_NO);
-//}
 void MD_puts(const char *str, EOL_t EOL) {
 	while (*str != '\0')
 		SCI_writeCharBlockingNonFIFO(SCIA_BASE, (uint16_t) *str++);
@@ -244,7 +184,7 @@ void MD_puts(const char *str, EOL_t EOL) {
 }
 /*!
 Initialization sequence for SCI module.
-*/
+ */
 void MD_InitSci(void) {
 	// GPIO43 is the SCI Rx pin.
 	GPIO_setMasterCore(43, GPIO_CORE_CPU1);
@@ -281,52 +221,51 @@ void MD_InitSci(void) {
 #endif
 
 }
-
 /*!
 Initialization sequence for EPWM modules.
-*/
+ */
 void MD_InitEpwm(const uint32_t sampleFreq) {
 	uint32_t base = EPWM1_BASE;
 
 	SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
 	SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
 	/* configure EPWM */
-    // freeze TB counter        // EPwm1Regs.TBCTL.bit.CTRMODE = 3;
+	// freeze TB counter        // EPwm1Regs.TBCTL.bit.CTRMODE = 3;
 	EPWM_setTimeBaseCounterMode(base, EPWM_COUNTER_MODE_STOP_FREEZE);
-    // immediate load           // EPwm1Regs.TBCTL.bit.PRDLD = 1;
+	// immediate load           // EPwm1Regs.TBCTL.bit.PRDLD = 1;
 	EPWM_setPeriodLoadMode(base, EPWM_PERIOD_DIRECT_LOAD);
-    // disable phase loading    // EPwm1Regs.TBCTL.bit.PHSEN = 0;
+	// disable phase loading    // EPwm1Regs.TBCTL.bit.PHSEN = 0;
 	EPWM_disablePhaseShiftLoad(base);
 	// disable SYNCOUT signal   //
 	EPWM_setSyncOutPulseMode(base, EPWM_SYNC_OUT_PULSE_DISABLED);
-    // TBCLK = SYSCLKOUT        // EPwm1Regs.TBCTL.bit.HSPCLKDIV = 0;
-    // clock divider = /1       // EPwm1Regs.TBCTL.bit.CLKDIV = 0;
+	// TBCLK = SYSCLKOUT        // EPwm1Regs.TBCTL.bit.HSPCLKDIV = 0;
+	// clock divider = /1       // EPwm1Regs.TBCTL.bit.CLKDIV = 0;
 	EPWM_setClockPrescaler(base, EPWM_CLOCK_DIVIDER_1, EPWM_HSCLOCK_DIVIDER_1);
-    // free run on emulation suspend            // EPwm1Regs.TBCTL.bit.FREE_SOFT = 2;
+	// free run on emulation suspend            // EPwm1Regs.TBCTL.bit.FREE_SOFT = 2;
 	EPWM_setEmulationMode(base, EPWM_EMULATION_FREE_RUN);
-    // set period for ePWM1 (0x2328 = 10kHz)    // EPwm1Regs.TBPRD = 0x2328;
+	// set period for ePWM1 (0x2328 = 10kHz)    // EPwm1Regs.TBPRD = 0x2328;
 	volatile uint32_t SAMP = (uint32_t) SysCtl_getClock(DEVICE_OSCSRC_FREQ)/sampleFreq;
 	EPWM_setTimeBasePeriod(base, SAMP);
-    // time-base Phase Register                 // EPwm1Regs.TBPHS.all = 0;
+	// time-base Phase Register                 // EPwm1Regs.TBPHS.all = 0;
 	EPWM_setPhaseShift(base, 0);
-    // time-base Counter Register               // EPwm1Regs.TBCTR = 0;
+	// time-base Counter Register               // EPwm1Regs.TBCTR = 0;
 	EPWM_setTimeBaseCounter(base, 0);
-    // enable SOC on A group                    // EPwm1Regs.ETSEL.bit.SOCAEN = 1;
-    // select SOC from zero match               // EPwm1Regs.ETSEL.bit.SOCASEL = 1;
+	// enable SOC on A group                    // EPwm1Regs.ETSEL.bit.SOCAEN = 1;
+	// select SOC from zero match               // EPwm1Regs.ETSEL.bit.SOCASEL = 1;
 	EPWM_setADCTriggerSource(base, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO);
 	// generate pulse on 1st event              // EPwm1Regs.ETPS.bit.SOCAPRD = 1;
 	EPWM_setDigitalCompareBlankingEvent(base, EPWM_DC_WINDOW_START_TBCTR_ZERO);
-    // enable shadow mode                       // EPwm1Regs.CMPCTL.bit.SHDWAMODE = 0;
-    // reload on CTR=zero                       // EPwm1Regs.CMPCTL.bit.LOADAMODE = 2;
+	// enable shadow mode                       // EPwm1Regs.CMPCTL.bit.SHDWAMODE = 0;
+	// reload on CTR=zero                       // EPwm1Regs.CMPCTL.bit.LOADAMODE = 2;
 	EPWM_setCounterCompareShadowLoadMode(base, EPWM_COUNTER_COMPARE_A,
 	                                     EPWM_COMP_LOAD_ON_SYNC_CNTR_ZERO);
-    // set compare A value                      // EPwm1Regs.CMPA.all = 0x0080;
+	// set compare A value                      // EPwm1Regs.CMPA.all = 0x0080;
 	EPWM_setCounterCompareValue(base, EPWM_COUNTER_COMPARE_A, 0x80);
-    // HIGH on CMPA up match                    // EPwm1Regs.AQCTLA.bit.CAU = AQ_SET;
+	// HIGH on CMPA up match                    // EPwm1Regs.AQCTLA.bit.CAU = AQ_SET;
 	EPWM_setActionQualifierAction(base, EPWM_AQ_OUTPUT_A,
 	                              EPWM_AQ_OUTPUT_HIGH,
 	                              EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
-    // EPwm1Regs.AQCTLA.bit.ZRO = AQ_CLEAR;     // LOW on zero match
+	// EPwm1Regs.AQCTLA.bit.ZRO = AQ_CLEAR;     // LOW on zero match
 	EPWM_setActionQualifierActionComplete(base, EPWM_AQ_OUTPUT_A,
 	                                      EPWM_AQ_OUTPUT_LOW_ZERO);
 
@@ -339,10 +278,42 @@ void MD_InitEpwm(const uint32_t sampleFreq) {
 	EPwm1Regs.ETSEL.bit.SOCAEN = 1;        	// enable SOC on A group
 	EPwm1Regs.ETPS.bit.SOCAPRD = 1;        	// generate pulse on 1st event
 }
+#ifdef BF_MODEL
+void MD_InitEpwm_bf(void) {
+	EPwm1Regs.TBCTL.bit.CTRMODE = 3;		// freeze TB counter
+	EPwm1Regs.TBCTL.bit.PRDLD = 1;  		// immediate load
+	EPwm1Regs.TBCTL.bit.PHSEN = 0;	   		// disable phase loading
+	EPwm1Regs.TBCTL.bit.SYNCOSEL = 3;		// disable SYNCOUT signal
+	EPwm1Regs.TBCTL.bit.HSPCLKDIV = 0;		// TBCLK = SYSCLKOUT
+	EPwm1Regs.TBCTL.bit.CLKDIV = 0;			// clock divider = /1
+	EPwm1Regs.TBCTL.bit.FREE_SOFT = 2;		// free run on emulation suspend
+	//	EPwm1Regs.TBPRD = 0x2328;	        // set period for ePWM1 (0x2328 = 10kHz)
+	EPwm1Regs.TBPRD = 0x2710;	        // set period for ePWM1 (0x2328 = 10kHz)
+	EPwm1Regs.TBPHS.all = 0;			    // time-base Phase Register
+	EPwm1Regs.TBCTR = 0;					// time-base Counter Register
+	EPwm1Regs.ETSEL.bit.SOCAEN = 1;        	// enable SOC on A group
+	EPwm1Regs.ETSEL.bit.SOCASEL = 1;       	// select SOC from zero match
+	EPwm1Regs.ETPS.bit.SOCAPRD = 1;        	// generate pulse on 1st event
+	EPwm1Regs.CMPCTL.bit.SHDWAMODE = 0;		// enable shadow mode
+	EPwm1Regs.CMPCTL.bit.LOADAMODE = 2; 	// reload on CTR=zero
+	//	EPwm1Regs.CMPA.half.CMPA = 0x0080;	 	// set compare A value
+	EPwm1Regs.CMPA.bit.CMPA = 0x0080;			// set compare A value
+
+	EPwm1Regs.AQCTLA.bit.CAU = AQ_SET;		// HIGH on CMPA up match
+	EPwm1Regs.AQCTLA.bit.ZRO = AQ_CLEAR;	// LOW on zero match
+	EALLOW;
+	CpuSysRegs.PCLKCR0.bit.TBCLKSYNC = 1;
+	EDIS;
+
+	EALLOW;
+	EPwm1Regs.TBCTL.bit.CTRMODE = 0;		// PWM1 timer: count up and start
+	EDIS;
+}
+#endif
 /*!
 Initialization sequence for ADC modules.
-*/
-void MD_InitAdcs(void) {
+ */
+void MD_InitAdcs_dl(void) {
 	uint32_t base = ADCA_BASE;
 
 	/* configure ADC */
@@ -381,14 +352,14 @@ void MD_InitAdcs(void) {
 }
 /*!
 Initialization sequence from DCL example (Driverlib programming model).
-*/
+ */
 void MD_InitDclExample_dl(const uint32_t sampleFreq) {
 
 	MD_InitEpwm(sampleFreq);
 
 
 
-	MD_InitAdcs();
+	MD_InitAdcs_dl();
 	/* enable interrupts */
 	Interrupt_register(INT_ADCA1, &control_Isr);
 	Interrupt_enable(INT_ADCA1);
@@ -415,7 +386,7 @@ void MD_InitDclExample_dl(const uint32_t sampleFreq) {
 }
 /*!
 Initialization sequence from DCL example (Bitfield programming model).
-*/
+ */
 #ifdef BF_MODEL
 void MD_InitDclExample_bf(void) {
 	EALLOW;
@@ -531,8 +502,8 @@ char makedigit (uint32_t *number, uint32_t base) {
  * @return     Pointer to string representation of number.
  */
 char *int2str (const uint32_t number, char *buff) {
-//	static char tmp[12] = { " " };
-//	char *p = &tmp[0];
+	//	static char tmp[12] = { " " };
+	//	char *p = &tmp[0];
 	uint32_t _number = number;
 	bool firstNonzero = false;
 
@@ -555,7 +526,7 @@ char *int2str (const uint32_t number, char *buff) {
 
 /*!
 Control ISR: triggered by ADC EOC
-*/
+ */
 interrupt void control_Isr(void) {
 	PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
 	AdcaRegs.ADCINTFLGCLR.bit.ADCINT1 = 1;
