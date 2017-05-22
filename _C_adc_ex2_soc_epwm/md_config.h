@@ -45,16 +45,13 @@ extern "C" {
 #include "md_gpio.h"
 
 /* ---------------------------  Private typedefs  -------------------------- */
-extern MD_GPIO_TypeDef_t MD_GPIO_TypeDef;
-
 /* ----------------------------  Private macros  --------------------------- */
 #define GPIO_COUNT_IN_PACKED_INIT_STRUCT	2
-
 #define GPIO_LED_RD 	31
 #define GPIO_LED_BU 	34
 
 /* ----------------------------  Configuration  ---------------------------- */
-MD_GPIO_t MD_GPIO_config[] = {
+MD_GPIO_t 	MD_GPIO_config[ ] = {
 		{ GPIO_LED_BU, GPIO_CORE_CPU1, GPIO_DIR_MODE_OUT, GPIO_34_GPIO34, GPIO_DRIVER_TYPE_PP, GPIO_LOGIC_INVERT, GPIO_OFF },
 		{ GPIO_LED_RD, GPIO_CORE_CPU1, GPIO_DIR_MODE_OUT, GPIO_31_GPIO31, GPIO_DRIVER_TYPE_PP, GPIO_LOGIC_STD, GPIO_OFF }
 };

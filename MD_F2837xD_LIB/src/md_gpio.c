@@ -1,6 +1,5 @@
-
 /**
- * @file        md_gpio_conf.h
+ * @file        md_gpio.c
  * @project		_A_dlib_bitfield_dcl
  *
  * @date        21 May 2017
@@ -9,8 +8,6 @@
  *
  * @ide         Code Composer Studio Version: 7.1.0.00015
  * @license		GNU GPL v3
- *
- * @brief       DESCRIPTION
  *
    @verbatim
 
@@ -35,18 +32,24 @@
    @endverbatim
  *
  */
-/* -------------------------------  Includes  ------------------------------ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #include "md_gpio.h"
 
-/* ----------------------------  Configuration  ---------------------------- */
-MD_GPIO_t MD_GPIO_config[] = {
-		{ LAUNCHPAD_LED_BU, GPIO_CORE_CPU1, GPIO_DIR_MODE_OUT, GPIO_34_GPIO34, GPIO_DRIVER_TYPE_PP, GPIO_LOGIC_INVERT, GPIO_OFF },
-		{ LAUNCHPAD_LED_RD, GPIO_CORE_CPU1, GPIO_DIR_MODE_OUT, GPIO_31_GPIO31, GPIO_DRIVER_TYPE_PP, GPIO_LOGIC_STD, GPIO_OFF }
-};
+int MD_GPIO_Setup(MD_GPIO_t *conf, uint16_t length);
 
-/* ---------------------------  Private typedefs  -------------------------- */
-/* ----------------------------  Private macros  --------------------------- */
-/* --------------------------  Private functions  -------------------------- */
-/* --------------------------  Private variables  -------------------------- */
-/* ----------------------------  Private defines  -------------------------- */
-/* ---------------------  Private function prototypes  --------------------- */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Private typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~  Private macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~  Private variable declaration  ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~  Private function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~  Private function implementations  ~~~~~~~~~~~~~~~~~~ */
+
+int MD_GPIO_Setup(MD_GPIO_t *conf, uint16_t length) {
+	for ( ; length > 0; length--) {
+		MD_GPIO_INIT(
+				conf->Gpiox, conf->MasterCore, conf->Direction, conf->AlternFunc,
+				conf->DriverType, conf->LogicType, conf->PorState
+				);
+		conf++;
+	}
+	return 0;
+}

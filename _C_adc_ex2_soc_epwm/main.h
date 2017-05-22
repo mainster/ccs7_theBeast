@@ -1,8 +1,8 @@
 /**
- * @file        md_globals.h
- * @project		theBeast_DCL_PID_compilable
+ * @file        main.h
+ * @project		_C_adc_ex2_soc_epwm
  * 
- * @date        May 20, 2017
+ * @date        23 May 2017
  * @author      Manuel Del Basso (mainster)
  * @email       manuel.delbasso@gmail.com
  *
@@ -34,47 +34,41 @@
    @endverbatim
  *
  */
-#ifndef MD_GLOBALS_H_
-#define MD_GLOBALS_H_
+#ifndef MAIN_H_
+#define MAIN_H_
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-//#include <DCL.h>
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+//#define EX_ADC_RESOLUTION    ADC_RESOLUTION_12BIT   // Or ADC_RESOLUTION_16BIT
+//#define EX_ADC_SIGNAL_MODE   ADC_MODE_SINGLE_ENDED  // Or ADC_MODE_DIFFERENTIAL
+
+#define RESULTS_BUFFER_SIZE  256
+
+// Globals
+uint16_t adcAResults[RESULTS_BUFFER_SIZE];   // Buffer for results
+volatile uint16_t bufferFull;                // Flag to indicate buffer is full
+uint16_t index;                              // Index into result buffer
+
+
+#define LED_RD(x)	GPIO_writePin(31, x)
+#define LED_BL(x)	GPIO_writePin(34, x)
+
+int gc_slider = 0;
+bool gc_flag = false;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
-
-
-#define numel(b) (sizeof(b)/sizeof(b[0]))
-
-/*!
-MDB FIXES:
-*/
-#undef AUTOBAUD
-#if (DEVICE_OSCSRC_FREQ == 20000000U)
-#warning "Wrong OSC Freq defined!"
-#warning "theBeast ControlCard has 20MHz crystal"
-#warning "theBeast LaunchPad has 10MHz crystal!"
-#undef DEVICE_OSCSRC_FREQ
-#define DEVICE_OSCSRC_FREQ 10e6
-#endif
-
-//!< Optimization improvements
-//!< Volatile access (reject unwanted removing access):
-#define vu16(x) (*(volatile unsigned int*)&(x))
-#define vs16(x) (*(volatile int*)&(x))
-#define vu32(x) (*(volatile unsigned long*)&(x))
-#define vs32(x) (*(volatile long*)&(x))
-
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
-
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-//extern PID pid1;
+__interrupt void adcA1ISR(void);
+__interrupt void epwm1ISR(void);
+void initADC(void);
+void initEPWM(void);
+void initADCSOC(void);
+
 
 #ifdef __cplusplus
 }

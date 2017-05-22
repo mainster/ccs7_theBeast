@@ -1,4 +1,10 @@
 
+_Cla1Prog_Start = _Cla1funcsRunStart;
+
+CLA_SCRATCHPAD_SIZE = 0x100;
+--undef_sym=__cla_scratchpad_end
+--undef_sym=__cla_scratchpad_start
+
 MEMORY
 {
 PAGE 0 :  /* Program Memory */
@@ -88,6 +94,9 @@ SECTIONS
    ramgs0           : > RAMGS0,     PAGE = 1
    ramgs1           : > RAMGS1,     PAGE = 1
 
+
+      dclfuncs 		: > RAMGS1,	PAGE = 1		/* Digital Controller Library functions */
+
 #ifdef __TI_COMPILER_VERSION__
 	#if __TI_COMPILER_VERSION__ >= 15009000
 	.TI.ramfunc : {} LOAD = FLASHD,
@@ -128,11 +137,48 @@ SECTIONS
     }
 
    /* The following section definition are for SDFM examples */
-   Filter1_RegsFile : > RAMGS1,	PAGE = 1, fill=0x1111
-   Filter2_RegsFile : > RAMGS2,	PAGE = 1, fill=0x2222
-   Filter3_RegsFile : > RAMGS3,	PAGE = 1, fill=0x3333
-   Filter4_RegsFile : > RAMGS4,	PAGE = 1, fill=0x4444
-   Difference_RegsFile : >RAMGS5, 	PAGE = 1, fill=0x3333
+#   Filter1_RegsFile : > RAMGS1,	PAGE = 1, fill=0x1111
+#   Filter2_RegsFile : > RAMGS2,	PAGE = 1, fill=0x2222
+#   Filter3_RegsFile : > RAMGS3,	PAGE = 1, fill=0x3333
+#   Filter4_RegsFile : > RAMGS4,	PAGE = 1, fill=0x4444
+#   Difference_RegsFile : >RAMGS5, 	PAGE = 1, fill=0x3333
+
+
+   /* data buffers */
+   PDataLogSection	: > RAMGS1,		PAGE = 1	align(2)
+   QDataLogSection	: > RAMGS2,		PAGE = 1	align(2)
+   RDataLogSection	: > RAMGS3,		PAGE = 1	align(2)
+   SDataLogSection	: > RAMGS4,		PAGE = 1	align(2)
+
+   .scratchpad      : > CLARAM0,   PAGE = 1
+   .bss_cla	    	: > CLARAM0,   PAGE = 1
+   .const_cla	    : > CLARAM0,   PAGE = 1
+
+   Cla1Prog        	: > RAML3,
+                     LOAD_START(_Cla1funcsLoadStart),
+                     LOAD_END(_Cla1funcsLoadEnd),
+                     LOAD_SIZE(_Cla1funcsLoadSize),
+                     RUN_START(_Cla1funcsRunStart),
+                     PAGE = 0
+
+   Cla1ToCpuMsgRAM  : > CLA1_MSGRAMLOW,   PAGE = 1
+   CpuToCla1MsgRAM  : > CLA1_MSGRAMHIGH,  PAGE = 1
+   Cla1DataRam0	    : > CLARAM0,	  PAGE = 1
+   Cla1DataRam1	    : > CLARAM1,	  PAGE = 1
+   Cla1DataRam2	    : > CLARAM2,	  PAGE = 1
+
+   CLA1mathTables	: > CLARAM1,
+                      LOAD_START(_Cla1mathTablesLoadStart),
+                      LOAD_END(_Cla1mathTablesLoadEnd),
+                      LOAD_SIZE(_Cla1mathTablesLoadSize),
+                      RUN_START(_Cla1mathTablesRunStart),
+                      PAGE = 1
+
+   CLAscratch       :
+                     { *.obj(CLAscratch)
+                     . += CLA_SCRATCHPAD_SIZE;
+                     *.obj(CLAscratch_end) } > CLARAM0,
+					 PAGE = 1
 }
 
 /*
