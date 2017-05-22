@@ -42,9 +42,9 @@ extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#include "../md_theBeast/md_globals.h"
+#include "md_globals.h"
 #include "driverlib.h"
-#include "pin_map.h"
+//#include "pin_map.h"
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #define LAUNCHPAD_LED_BU	31		// GPIO31
 #define LAUNCHPAD_LED_RD	34		// GPIO34
