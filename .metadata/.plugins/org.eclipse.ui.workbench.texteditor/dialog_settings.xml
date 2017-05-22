@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.cdt.internal.ui.preferences.CTemplatePreferencePage$CEditTemplateDialog_dialogBounds">
+		<item value="831" key="DIALOG_WIDTH"/>
+		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="807" key="DIALOG_HEIGHT"/>
+		<item value="299" key="DIALOG_X_ORIGIN"/>
+		<item value="154" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="isRegEx"/>
+		<item value="ADC" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="ADC"/>
+			<item value="12bit"/>
+			<item value="TBCLKSYNC"/>
+			<item value="EPWM_setTimeBaseCounterMode"/>
+			<item value="CTRMODE"/>
+			<item value="GPIO_Direction"/>
+			<item value="master"/>
+			<item value="GPIO_SelectPinMux"/>
+		</list>
+		<list key="replacehistory">
+			<item value="\2\t\1\n"/>
+			<item value="\2"/>
+			<item value="// "/>
+			<item value=""/>
+			<item value="CpuSysRegs"/>
+			<item value="AdcaRegs"/>
+			<item value="uint16_t "/>
+			<item value="pidInst-&gt;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="286" key="DIALOG_WIDTH"/>
+		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="437" key="DIALOG_HEIGHT"/>
+		<item value="1420" key="DIALOG_X_ORIGIN"/>
+		<item value="618" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

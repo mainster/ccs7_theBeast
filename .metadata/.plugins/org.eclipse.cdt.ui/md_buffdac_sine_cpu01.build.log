@@ -1,0 +1,12 @@
+
+**** Clean-only build of configuration CPU1_RAM for project md_buffdac_sine_cpu01 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k clean 
+rm -rf  "buffdac_sine_cpu01.out" 
+rm -rf "SINTB360.obj" "buffdac_sine_cpu01.obj" "sghp1c.obj" "sgti1c.obj" "bsp/F2837xD_CodeStartBranch.obj" "bsp/F2837xD_CpuTimers.obj" "bsp/F2837xD_DefaultISR.obj" "bsp/F2837xD_GlobalVariableDefs.obj" "bsp/F2837xD_Gpio.obj" "bsp/F2837xD_PieCtrl.obj" "bsp/F2837xD_PieVect.obj" "bsp/F2837xD_SysCtrl.obj" "bsp/F2837xD_usDelay.obj" 
+rm -rf "buffdac_sine_cpu01.d" "bsp/F2837xD_CpuTimers.d" "bsp/F2837xD_DefaultISR.d" "bsp/F2837xD_GlobalVariableDefs.d" "bsp/F2837xD_Gpio.d" "bsp/F2837xD_PieCtrl.d" "bsp/F2837xD_PieVect.d" "bsp/F2837xD_SysCtrl.d" 
+rm -rf "SINTB360.d" "sghp1c.d" "sgti1c.d" "bsp/F2837xD_CodeStartBranch.d" "bsp/F2837xD_usDelay.d" 
+Finished clean
+ 
+
+**** Build Finished ****

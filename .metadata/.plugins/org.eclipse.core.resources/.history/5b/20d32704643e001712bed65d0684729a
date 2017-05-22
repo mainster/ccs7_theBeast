@@ -1,0 +1,8 @@
+/bsp/
+/device/
+/linker/
+/makefile
+/md_theBeast/
+/objects.mk
+/sources.mk
+/src/

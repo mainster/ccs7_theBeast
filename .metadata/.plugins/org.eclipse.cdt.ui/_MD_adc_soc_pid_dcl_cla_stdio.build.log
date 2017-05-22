@@ -1,0 +1,7 @@
+
+**** Build of configuration CPU1_FLASH for project _MD_adc_soc_pid_dcl_cla_stdio ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****

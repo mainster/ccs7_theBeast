@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;_A_dlib_bitfield_dcl/main.c&apos; to &apos;_A_dlib_bitfield_dcl.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.c" name="_A_dlib_bitfield_dcl.c" stamp="1495312151417" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;_A_dlib_bitfield_dcl/_A_dlib_bitfield_dcl.c&apos; to &apos;dlib_bitfield_dcl.c&apos;" description="Rename resource &apos;_A_dlib_bitfield_dcl.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="_A_dlib_bitfield_dcl.c" name="dlib_bitfield_dcl.c" stamp="1495312155852" updateReferences="true"/>
+</session>

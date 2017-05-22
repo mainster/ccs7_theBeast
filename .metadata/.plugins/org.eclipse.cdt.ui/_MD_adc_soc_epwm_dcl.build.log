@@ -1,0 +1,17 @@
+
+**** Build of configuration CPU1_RAM for project _MD_adc_soc_epwm_dcl ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k all 
+Building file: ../_MD_adc_soc_epwm_dcl.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/libraries/control/DCL/c28/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --define=CPU1 -g --diag_suppress=1311 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="_MD_adc_soc_epwm_dcl.d"  "../_MD_adc_soc_epwm_dcl.c"
+Finished building: ../_MD_adc_soc_epwm_dcl.c
+ 
+Building target: _MD_adc_soc_epwm_dcl.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --fp_mode=relaxed --define=CPU1 -g --diag_suppress=1311 --diag_warning=225 --display_error_number -z -m"_MD_adc_soc_epwm_dcl.map" --stack_size=0x100 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" -i"/opt/ti/c2000ware/device_support/f2837xd/common/cmd" -i"/opt/ti/c2000ware/device_support/f2837xd/headers/cmd" --reread_libs --display_error_number --xml_link_info="_MD_adc_soc_epwm_dcl_linkInfo.xml" --rom_model -o "_MD_adc_soc_epwm_dcl.out" "./DCL_PID_C4.obj" "./DCL_clamp_C1.obj" "./_MD_adc_soc_epwm_dcl.obj" "./bsp/F2837xD_Adc.obj" "./bsp/F2837xD_CodeStartBranch.obj" "./bsp/F2837xD_DefaultISR.obj" "./bsp/F2837xD_GlobalVariableDefs.obj" "./bsp/F2837xD_Gpio.obj" "./bsp/F2837xD_Ipc.obj" "./bsp/F2837xD_PieCtrl.obj" "./bsp/F2837xD_PieVect.obj" "./bsp/F2837xD_SysCtrl.obj" "./bsp/F2837xD_usDelay.obj" "../linker/2837xD_RAM_lnk_cpu1.cmd" "../linker/F2837xD_Headers_nonBIOS_cpu1.cmd"  -lrts2800_fpu32.lib -llibc.a 
+<Linking>
+Finished building target: _MD_adc_soc_epwm_dcl.out
+ 
+
+**** Build Finished ****

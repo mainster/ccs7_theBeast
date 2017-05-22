@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+/media/data/CODES/ccs7_theBeast/MD_F2837xD_LIB/md_gpio.c 
+
+C_DEPS += \
+./MD_LIB/md_gpio.d 
+
+OBJS += \
+./MD_LIB/md_gpio.obj 
+
+OBJS__QUOTED += \
+"MD_LIB/md_gpio.obj" 
+
+C_DEPS__QUOTED += \
+"MD_LIB/md_gpio.d" 
+
+C_SRCS__QUOTED += \
+"/media/data/CODES/ccs7_theBeast/MD_F2837xD_LIB/md_gpio.c" 
+
+

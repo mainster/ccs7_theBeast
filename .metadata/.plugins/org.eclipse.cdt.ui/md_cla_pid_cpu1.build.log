@@ -1,0 +1,17 @@
+
+**** Build of configuration Debug for project md_cla_pid_cpu1 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 all -O 
+Building file: ../main.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --include_path="/media/data/CODES/ccs7_theBeast/md_cla_pid_cpu1" --include_path="/headers/include" --include_path="/common/include" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 10: fatal error #1965: cannot open source file "F28x_Project.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

@@ -1,0 +1,20 @@
+
+**** Build of configuration CPU1_RAM for project sci_ex3_echoback ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 all -O 
+Building file: ../sci_ex3_echoback.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --include_path="/media/data/CODES/ccs7_theBeast/sci_ex3_echoback" --include_path="/media/data/CODES/ccs7_theBeast/sci_ex3_echoback/device" --include_path="/opt/ti/c2000ware/driverlib/f2837xd/driverlib" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="sci_ex3_echoback.d"  "../sci_ex3_echoback.c"
+"../sci_ex3_echoback.c", line 94: warning #1181-D: #warning directive: "Wrong OSC Freq defined!"
+"../sci_ex3_echoback.c", line 95: warning #1181-D: #warning directive: "theBeast ControlCard has 20MHz crystal"
+"../sci_ex3_echoback.c", line 96: warning #1181-D: #warning directive: "theBeast LaunchPad has 10MHz crystal!"
+Finished building: ../sci_ex3_echoback.c
+ 
+Building target: sci_ex3_echoback.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"sci_ex3_echoback.map" --stack_size=0x100 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="sci_ex3_echoback_linkInfo.xml" --rom_model -o "sci_ex3_echoback.out" "./sci_ex3_echoback.obj" "./device/device.obj" "../2837xD_RAM_lnk_cpu1.cmd" "../driverlib.lib"  -llibc.a 
+<Linking>
+Finished building target: sci_ex3_echoback.out
+ 
+
+**** Build Finished ****

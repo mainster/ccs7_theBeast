@@ -1,0 +1,17 @@
+
+**** Build of configuration DEBUG for project F28069_PID_2_theBeast ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 all -O 
+Building file: ../Example_F28069_PID.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --fp_mode=relaxed --include_path="/media/data/CODES/ccs7_theBeast/F28069_PID_2_theBeast" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --include_path="/opt/ti/c2000ware/libraries/control/DCL/c28/include" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --advice:performance=all --define=DEBUG --define=CLA_C --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="Example_F28069_PID.d"  "../Example_F28069_PID.c"
+Finished building: ../Example_F28069_PID.c
+ 
+Building target: F28069_PID_2_theBeast.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --fp_mode=relaxed --advice:performance=all --define=DEBUG --define=CLA_C --define=CPU1 -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"F28069_PID_2_theBeast.map" --heap_size=0x200 --stack_size=0x400 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --reread_libs --define=RAM --diag_wrap=off --display_error_number --xml_link_info="F28069_PID_2_theBeast_linkInfo.xml" --rom_model -o "F28069_PID_2_theBeast.out" "./DCL_PID_C4.obj" "./DCL_clamp_C1.obj" "./Example_F28069_PID.obj" "./bsp/F2837xD_Adc.obj" "./bsp/F2837xD_CodeStartBranch.obj" "./bsp/F2837xD_CpuTimers.obj" "./bsp/F2837xD_DefaultISR.obj" "./bsp/F2837xD_EPwm.obj" "./bsp/F2837xD_GlobalVariableDefs.obj" "./bsp/F2837xD_Gpio.obj" "./bsp/F2837xD_PieCtrl.obj" "./bsp/F2837xD_PieVect.obj" "./bsp/F2837xD_SysCtrl.obj" "./bsp/F2837xD_usDelay.obj" "../linker/2837xD_RAM_CLA_lnk_cpu1.cmd" "../linker/F2837xD_Headers_nonBIOS_cpu1.cmd"  -llibc.a 
+<Linking>
+Finished building target: F28069_PID_2_theBeast.out
+ 
+
+**** Build Finished ****

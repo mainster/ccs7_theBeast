@@ -1,0 +1,20 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Each subdirectory must supply rules for building sources it contributes
+atan.obj: /opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_atan/cpu01/atan.cla $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: C2000 Compiler'
+	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/headers/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/common/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_atan/cpu01/" --define=CPU1 -g --diag_suppress=10068 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="atan.d" --cla_support=cla1 $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+cla_atan_cpu01.obj: /opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_atan/cpu01/cla_atan_cpu01.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: C2000 Compiler'
+	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/headers/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/common/include" --include_path="/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_atan/cpu01/" --define=CPU1 -g --diag_suppress=10068 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="cla_atan_cpu01.d" --cla_support=cla1 $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

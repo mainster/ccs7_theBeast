@@ -1,0 +1,53 @@
+
+**** Build of configuration DEBUG for project F28069_PID ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 all -O 
+Building file: ../DCL_PID_C4.asm
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -Ooff --include_path="/media/data/CODES/ccs7_theBeast/F28069_PID" --include_path="/opt/ti/c2000ware/device_support/f2806x/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2806x/common/include" --include_path="/opt/ti/c2000ware/libraries/control/DCL/c28/include" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --define=DEBUG -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="DCL_PID_C4.d"  "../DCL_PID_C4.asm"
+Finished building: ../DCL_PID_C4.asm
+ 
+Building file: ../DCL_clamp_C1.asm
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -Ooff --include_path="/media/data/CODES/ccs7_theBeast/F28069_PID" --include_path="/opt/ti/c2000ware/device_support/f2806x/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2806x/common/include" --include_path="/opt/ti/c2000ware/libraries/control/DCL/c28/include" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --define=DEBUG -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="DCL_clamp_C1.d"  "../DCL_clamp_C1.asm"
+Finished building: ../DCL_clamp_C1.asm
+ 
+Building file: ../Example_F28069_PID.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -Ooff --include_path="/media/data/CODES/ccs7_theBeast/F28069_PID" --include_path="/opt/ti/c2000ware/device_support/f2806x/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2806x/common/include" --include_path="/opt/ti/c2000ware/libraries/control/DCL/c28/include" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --define=DEBUG -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="Example_F28069_PID.d"  "../Example_F28069_PID.c"
+Finished building: ../Example_F28069_PID.c
+ 
+Building target: F28069_PID.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla0 --float_support=fpu32 --vcu_support=vcu0 -Ooff --define=DEBUG -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"F28069_PID.map" --heap_size=0x200 --stack_size=0x400 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --reread_libs --define=RAM --diag_wrap=off --display_error_number --xml_link_info="F28069_PID_linkInfo.xml" --rom_model -o "F28069_PID.out" "./DCL_PID_C4.obj" "./DCL_clamp_C1.obj" "./Example_F28069_PID.obj" "../F28069_DCL.cmd" "../F28069_stdmem.cmd"  -llibc.a 
+<Linking>
+
+ undefined         first referenced        
+  symbol               in file             
+ ---------         ----------------        
+ _AdcRegs          ./Example_F28069_PID.obj
+ _AdcResult        ./Example_F28069_PID.obj
+ _EPwm1Regs        ./Example_F28069_PID.obj
+ _GpioCtrlRegs     ./Example_F28069_PID.obj
+ _GpioDataRegs     ./Example_F28069_PID.obj
+ _InitAdc          ./Example_F28069_PID.obj
+ _InitEPwm         ./Example_F28069_PID.obj
+ _InitGpio         ./Example_F28069_PID.obj
+ _InitPieCtrl      ./Example_F28069_PID.obj
+ _InitPieVectTable ./Example_F28069_PID.obj
+ _InitSysCtrl      ./Example_F28069_PID.obj
+ _PieCtrlRegs      ./Example_F28069_PID.obj
+ _PieVectTable     ./Example_F28069_PID.obj
+ _SetDBGIER        ./Example_F28069_PID.obj
+ _SysCtrlRegs      ./Example_F28069_PID.obj
+
+error #10234-D: unresolved symbols remain
+
+error #10010: errors encountered during linking; "F28069_PID.out" not built
+>> Compilation failure
+makefile:142: recipe for target 'F28069_PID.out' failed
+gmake[1]: *** [F28069_PID.out] Error 1
+gmake: *** [all] Error 2
+makefile:138: recipe for target 'all' failed
+
+**** Build Finished ****

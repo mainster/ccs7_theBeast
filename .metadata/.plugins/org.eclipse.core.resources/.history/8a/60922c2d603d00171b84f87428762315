@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../src/sci_io.c 
+
+C_DEPS += \
+./src/sci_io.d 
+
+OBJS += \
+./src/sci_io.obj 
+
+OBJS__QUOTED += \
+"src/sci_io.obj" 
+
+C_DEPS__QUOTED += \
+"src/sci_io.d" 
+
+C_SRCS__QUOTED += \
+"../src/sci_io.c" 
+
+

@@ -1,0 +1,17 @@
+
+**** Build of configuration CPU1_RAM for project cla_adc_fir32_cpu01 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k all 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/cla_adc_fir32_cpu01.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --diag_suppress=10063 --diag_suppress=10068 --diag_suppress=1311 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="cla_adc_fir32_cpu01.d"  "/opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/cla_adc_fir32_cpu01.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/cla_adc_fir32_cpu01.c
+ 
+Building target: cla_adc_fir32_cpu01.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --diag_suppress=10063 --diag_suppress=10068 --diag_suppress=1311 --diag_warning=225 --diag_wrap=off --display_error_number -z -m"cla_adc_fir32_cpu01.map" --stack_size=0x100 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" -i"/opt/ti/c2000ware/device_support/f2837xd/common/cmd" -i"/opt/ti/c2000ware/device_support/f2837xd/headers/cmd" --reread_libs --display_error_number --xml_link_info="cla_adc_fir32_cpu01_linkInfo.xml" --rom_model -o "cla_adc_fir32_cpu01.out" "./F2837xD_Adc.obj" "./F2837xD_CodeStartBranch.obj" "./F2837xD_DefaultISR.obj" "./F2837xD_EPwm.obj" "./F2837xD_GlobalVariableDefs.obj" "./F2837xD_Gpio.obj" "./F2837xD_Ipc.obj" "./F2837xD_PieCtrl.obj" "./F2837xD_PieVect.obj" "./F2837xD_SysCtrl.obj" "./F2837xD_usDelay.obj" "./cla_adc_fir32_cpu01.obj" "./fir32.obj"  -llibc.a -lrts2800_fpu32.lib -l2837xD_RAM_CLA_lnk_cpu1.cmd -lF2837xD_Headers_nonBIOS_cpu1.cmd 
+<Linking>
+Finished building target: cla_adc_fir32_cpu01.out
+ 
+
+**** Build Finished ****

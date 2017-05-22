@@ -1,0 +1,4 @@
+BUILD_VERBOSITY_LEVEL=NORMAL
+ENABLE_PINMUX_BUILDER=false
+com.ti.common.project.core.products.ProductDiscoveryManager.INACTIVE_TOOL_DISCOVERY_PATH_ENTRIES=/opt/ti/home_ti;
+eclipse.preferences.version=1

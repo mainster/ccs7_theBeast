@@ -1,0 +1,38 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+ASM_SRCS += \
+/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/fir32.asm 
+
+C_SRCS += \
+/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/cla_adc_fir32_cpu01.c 
+
+C_DEPS += \
+./cla_adc_fir32_cpu01.d 
+
+OBJS += \
+./cla_adc_fir32_cpu01.obj \
+./fir32.obj 
+
+ASM_DEPS += \
+./fir32.d 
+
+OBJS__QUOTED += \
+"cla_adc_fir32_cpu01.obj" \
+"fir32.obj" 
+
+C_DEPS__QUOTED += \
+"cla_adc_fir32_cpu01.d" 
+
+ASM_DEPS__QUOTED += \
+"fir32.d" 
+
+C_SRCS__QUOTED += \
+"/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/cla_adc_fir32_cpu01.c" 
+
+ASM_SRCS__QUOTED += \
+"/opt/ti/C2000Ware_1_00_00_00_Software/device_support/f2837xd/examples/cpu1/cla_adc_fir32/cpu01/fir32.asm" 
+
+

@@ -1,0 +1,32 @@
+
+**** Build of configuration RAM for project 2837x_vcu0_rfft_512 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k all 
+Building file: /opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 --include_path="/media/data/CODES/ccs7_theBeast/2837x_vcu0_rfft_512/bsp" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/media/data/include/vcu0" --include_path="/media/data/include/common" --include_path="/device_support/f2837xd/common/include" --include_path="/device_support/f2837xd/headers/include" --include_path="/media/data/examples/common" --advice:performance=all --define=RAM --define=CPU1 -g --c99 --gcc --printf_support=nofloat --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="examples_setup.d"  "/opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'examples_setup.obj' failed
+"/opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.h", line 23: fatal error #1965: cannot open source file "F28x_Project.h"
+1 catastrophic error detected in the compilation of "/opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.c".
+Compilation terminated.
+gmake: *** [examples_setup.obj] Error 1
+"../main.c", line 25: fatal error #1965: cannot open source file "vcu0_types.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+Building file: ../main.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 --include_path="/media/data/CODES/ccs7_theBeast/2837x_vcu0_rfft_512/bsp" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/media/data/include/vcu0" --include_path="/media/data/include/common" --include_path="/device_support/f2837xd/common/include" --include_path="/device_support/f2837xd/headers/include" --include_path="/media/data/examples/common" --advice:performance=all --define=RAM --define=CPU1 -g --c99 --gcc --printf_support=nofloat --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:14: recipe for target 'main.obj' failed
+Building file: ../rfft_512_data.asm
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 --include_path="/media/data/CODES/ccs7_theBeast/2837x_vcu0_rfft_512/bsp" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/media/data/include/vcu0" --include_path="/media/data/include/common" --include_path="/device_support/f2837xd/common/include" --include_path="/device_support/f2837xd/headers/include" --include_path="/media/data/examples/common" --advice:performance=all --define=RAM --define=CPU1 -g --c99 --gcc --printf_support=nofloat --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="rfft_512_data.d"  "../rfft_512_data.asm"
+Finished building: ../rfft_512_data.asm
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

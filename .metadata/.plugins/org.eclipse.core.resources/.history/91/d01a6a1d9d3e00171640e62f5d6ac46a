@@ -1,0 +1,47 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../2837x_FLASH_lnk_cpu1.cmd 
+
+ASM_SRCS += \
+../rfft_512_data.asm 
+
+C_SRCS += \
+/opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.c \
+../main.c 
+
+C_DEPS += \
+./examples_setup.d \
+./main.d 
+
+OBJS += \
+./examples_setup.obj \
+./main.obj \
+./rfft_512_data.obj 
+
+ASM_DEPS += \
+./rfft_512_data.d 
+
+OBJS__QUOTED += \
+"examples_setup.obj" \
+"main.obj" \
+"rfft_512_data.obj" 
+
+C_DEPS__QUOTED += \
+"examples_setup.d" \
+"main.d" 
+
+ASM_DEPS__QUOTED += \
+"rfft_512_data.d" 
+
+C_SRCS__QUOTED += \
+"/opt/ti/c2000ware/libraries/dsp/VCU/c28/examples/common/examples_setup.c" \
+"../main.c" 
+
+ASM_SRCS__QUOTED += \
+"../rfft_512_data.asm" 
+
+

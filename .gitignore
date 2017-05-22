@@ -1,6 +1,6 @@
 **/.tempFiles/*
 **/.jxbrowser-data/*
-**/.metadata/*
+#**/.metadata/*
 **/DEBUG/*
 **/CPU1_RAM/*
 **/CPU2_RAM/*

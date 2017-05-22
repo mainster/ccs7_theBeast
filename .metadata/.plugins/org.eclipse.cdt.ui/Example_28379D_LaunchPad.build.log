@@ -1,0 +1,87 @@
+
+**** Build of configuration CPU1_Flash for project Example_28379D_LaunchPad ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k all 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/Example_F28379D_LaunchPadDemo.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="Example_F28379D_LaunchPadDemo.d"  "/opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/Example_F28379D_LaunchPadDemo.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/Example_F28379D_LaunchPadDemo.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/sci_io.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="sci_io.d"  "/opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/sci_io.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/examples/cpu1/launchxl_f28379d/cpu01/sci_io.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Adc.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_Adc.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Adc.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Adc.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CodeStartBranch.asm
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_CodeStartBranch.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CodeStartBranch.asm"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CodeStartBranch.asm
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CpuTimers.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_CpuTimers.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CpuTimers.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_CpuTimers.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_DefaultISR.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_DefaultISR.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_DefaultISR.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_DefaultISR.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_GlobalVariableDefs.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Gpio.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_Gpio.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Gpio.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Gpio.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieCtrl.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_PieCtrl.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieCtrl.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieCtrl.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieVect.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_PieVect.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieVect.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_PieVect.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Sci.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_Sci.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Sci.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_Sci.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_SysCtrl.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_SysCtrl.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_SysCtrl.c"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_SysCtrl.c
+ 
+Building file: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_usDelay.asm
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number --preproc_with_compile --preproc_dependency="bsp/F2837xD_usDelay.d" --obj_directory="bsp"  "/opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_usDelay.asm"
+Finished building: /opt/ti/c2000ware/device_support/f2837xd/common/source/F2837xD_usDelay.asm
+ 
+Building target: Example_28379D_LaunchPad.out
+Invoking: C2000 Linker
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=0 --advice:performance=all --define=CPU1 --define=_LAUNCHXL_F28379D -g --printf_support=minimal --diag_suppress=1311 --diag_suppress=552 --diag_warning=225 --display_error_number -z -m"Example_28379D_LaunchPad.map" --heap_size=0x400 --stack_size=0x100 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --reread_libs --display_error_number --xml_link_info="Example_28379D_LaunchPad_linkInfo.xml" --rom_model -o "Example_28379D_LaunchPad.out" "./Example_F28379D_LaunchPadDemo.obj" "./sci_io.obj" "./bsp/F2837xD_Adc.obj" "./bsp/F2837xD_CodeStartBranch.obj" "./bsp/F2837xD_CpuTimers.obj" "./bsp/F2837xD_DefaultISR.obj" "./bsp/F2837xD_GlobalVariableDefs.obj" "./bsp/F2837xD_Gpio.obj" "./bsp/F2837xD_PieCtrl.obj" "./bsp/F2837xD_PieVect.obj" "./bsp/F2837xD_Sci.obj" "./bsp/F2837xD_SysCtrl.obj" "./bsp/F2837xD_usDelay.obj" "../2837xD_FLASH_lnk_cpu1.cmd" "../F2837xD_Headers_nonBIOS_cpu1.cmd"  -lrts2800_fpu32.lib -llibc.a 
+<Linking>
+Finished building target: Example_28379D_LaunchPad.out
+ 
+Invoking: C2000 Hex Utility
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/hex2000"  -o "Example_28379D_LaunchPad.hex"  "Example_28379D_LaunchPad.out" 
+Translating to Extended Tektronix format...
+   "Example_28379D_LaunchPad.out" codestart ==> codestart
+   "Example_28379D_LaunchPad.out" .cinit ==> .cinit
+   "Example_28379D_LaunchPad.out" .text ==> .text
+   "Example_28379D_LaunchPad.out" .TI.ramfunc ==> .TI.ramfunc
+   "Example_28379D_LaunchPad.out" .econst ==> .econst
+Finished building: Example_28379D_LaunchPad.hex
+ 
+
+**** Build Finished ****

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="269" key="DIALOG_X_ORIGIN"/>
+		<item value="41" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+		<item value="true" key="actionSetFilter"/>
+		<item value="true" key="uncategorizedFilter"/>
+		<item value="true" key="internalFilter"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="244" key="dialogHeight"/>
+		<item value="344" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="targetStatusBarPreferencePage">
+		<item value="Router" key="targetStatusBarPreferencePage.processorType"/>
+		<item value="TMS240C1" key="targetStatusBarPreferencePage.processorId"/>
+	</section>
+	<section name="org.eclipse.ui.internal.dialogs.WorkbenchEditorsDialog">
+		<item value="0" key="sort"/>
+		<item value="false" key="allPersp"/>
+		<list key="columns">
+			<item value="306"/>
+			<item value="612"/>
+		</list>
+		<list key="bounds">
+			<item value="489"/>
+			<item value="99"/>
+			<item value="948"/>
+			<item value="644"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.export.Preferences" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="com.ti.ccstudio.project.ui.wizards.importexport.ExternalProjectImportWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="com.ti.common.ui.import"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="PreferencesExportWizard">
+		<item value="/media/data/CODES/ccs7_theBeast/ccs7_theBeast_cfg_20-05-17.epf" key=""/>
+		<item value="true" key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
+		<item value="true" key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/media/data/CODES/ccs7_theBeast/ccs7_theBeast_cfg_20-05-17.epf"/>
+			<item value="/media/data/CODES/ccs7_theBeast/ccs7_theBeast_cfg_06-05-17.epf"/>
+			<item value="/media/data/CODES/ccs7_workspace/ccs7_workspace_cfg_04-05-17.epf"/>
+			<item value="/media/data/CODES/ccs7_theBeast/ccs7_workspace_cfg_04-05-17.epf"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+	</section>
+</section>

@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../inc/md_gpio.c 
+
+C_DEPS += \
+./inc/md_gpio.d 
+
+OBJS += \
+./inc/md_gpio.obj 
+
+OBJS__QUOTED += \
+"inc/md_gpio.obj" 
+
+C_DEPS__QUOTED += \
+"inc/md_gpio.d" 
+
+C_SRCS__QUOTED += \
+"../inc/md_gpio.c" 
+
+

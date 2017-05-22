@@ -1,0 +1,6 @@
+/bsp/
+/driver/
+/linker/
+/makefile
+/objects.mk
+/sources.mk

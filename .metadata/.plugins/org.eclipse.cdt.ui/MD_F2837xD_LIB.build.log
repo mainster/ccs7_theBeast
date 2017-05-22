@@ -1,0 +1,11 @@
+
+**** Clean-only build of configuration Debug for project MD_F2837xD_LIB ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 clean -O 
+rm -rf  "MD_F2837xD_LIB.hex"  "MD_F2837xD_LIB.out" 
+rm -rf "md_gpio.obj" 
+rm -rf "md_gpio.d" 
+Finished clean
+ 
+
+**** Build Finished ****

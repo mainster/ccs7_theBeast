@@ -1,0 +1,40 @@
+
+**** Build of configuration Debug for project ELT131_LAB_07 ****
+
+/opt/ti/ccsv7/utils/bin/gmake -k -j 8 all -O 
+gmake[1]: Entering directory '/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/Debug'
+Building file: ../app_03.cfg
+Invoking: XDCtools
+"/opt/ti/xdctools_3_32_00_06_core/xs" --xdcpath="/opt/ti/tirtos_c2000_2_16_01_14/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/tidrivers_c2000_2_16_01_13/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/ndk_2_25_00_09/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/uia_2_00_05_50/packages;" xdc.tools.configuro -o configPkg -t ti.targets.C28_float -p ti.platforms.tms320x28:TMS320F28379D -r release -c "/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS" --compileOptions "-g --optimize_with_debug" "../app_03.cfg"
+Building file: ../ELT131_LAB_07_01.c
+Invoking: C2000 Compiler
+"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 --include_path="/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/bsp" --include_path="/opt/ti/c2000ware/device_support/f2837xd/common/include" --include_path="/opt/ti/c2000ware/device_support/f2837xd/headers/include" --include_path="/media/data/CODES/ccs7_theBeast/ELT131_LAB_07" --include_path="/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.12.0.STS/include" --advice:performance=all --define=F_CPU=200e6 --define=CPU1 --define=RTOS_DISPATCHER --define=RTOS --define=xdc__strict --define=FLASH -g --c99 --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="ELT131_LAB_07_01.d" --cmd_file="configPkg/compiler.opt" "../ELT131_LAB_07_01.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'ELT131_LAB_07_01.obj' failed
+"/opt/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h", line 39: fatal error #1965: cannot open source file "/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/Debug/configPkg/package/cfg/app_03_p28FP.h"
+1 catastrophic error detected in the compilation of "../ELT131_LAB_07_01.c".
+Compilation terminated.
+gmake: *** [ELT131_LAB_07_01.obj] Error 1
+configuring app_03.x28FP from package/cfg/app_03_p28FP.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making /media/data/CODES/ccs7_theBeast/ELT131_LAB_07/src/sysbios/sysbios.a28FP ...
+gmake[1]: Entering directory `/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/src/sysbios'
+cl28FP /opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.c ...
+asm28FP /opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/c28/Hwi_asm.s28 ...
+asm28FP /opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/c28/Hwi_disp_asm.s28 ...
+asm28FP /opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/c28/IntrinsicsSupport_asm.s28 ...
+asm28FP /opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/family/c28/TaskSupport_asm.s28 ...
+ar28FP BIOS.obj c28_Hwi_asm.obj c28_Hwi_disp_asm.obj c28_IntrinsicsSupport_asm.obj c28_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/src/sysbios'
+Build of libraries done.
+cl28FP package/cfg/app_03_p28FP.c ...
+warning: ti.sysbios.BIOS: "/opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/BIOS.xs", line 856: ti.sysbios.BIOS getTimestampFreqMeta: WARNING: Timestamp provider ti.sysbios.family.c28.f2837x.TimestampProvider does not implement getFreqMeta(). BIOS.getTimestampFreqMeta() is returning 0!
+warning: ti.uia.runtime.UIAMetaData: "/opt/ti/tirtos_c2000_2_16_01_14/products/uia_2_00_05_50/packages/ti/uia/runtime/UIAMetaData.xs", line 1298: [object Object] timestampFreq: BIOS could not determine the timestamp frequency of device. Setting timestamp frequency to cpu frequency.To override this setting, set UIAMetaData.timestampFreq in your configuration (.cfg) file.
+Finished building: ../app_03.cfg
+ 
+gmake[1]: Leaving directory '/media/data/CODES/ccs7_theBeast/ELT131_LAB_07/Debug'
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
