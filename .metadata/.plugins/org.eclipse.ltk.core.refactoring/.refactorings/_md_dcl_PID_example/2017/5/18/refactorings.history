@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;_md_dcl_PID_example/Example_F28069_PID.c&apos; to &apos;Example_F28379D_PID.c&apos;" description="Rename resource &apos;Example_F28069_PID.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Example_F28069_PID.c" name="Example_F28379D_PID.c" stamp="1493997157176" updateReferences="true"/>
-</session>

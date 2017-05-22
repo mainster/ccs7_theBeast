@@ -1,7 +1,0 @@
-eclipse.preferences.version=1
-pathvariable._C2000WARE_C28_DCL=/opt/ti/c2000ware/libraries/control/DCL/c28/include
-pathvariable._C2000WARE_THEBEAST_COMMON=/opt/ti/c2000ware/device_support/f2837xd/common/include
-pathvariable._C2000WARE_THEBEAST_DLIB=/opt/ti/c2000ware/driverlib/f2837xd/driverlib
-pathvariable._C2000WARE_THEBEAST_HEADERS=/opt/ti/c2000ware/device_support/f2837xd/headers/include
-pathvariable._CSUITE_ROOT=/opt/ti/controlSUITE
-version=1

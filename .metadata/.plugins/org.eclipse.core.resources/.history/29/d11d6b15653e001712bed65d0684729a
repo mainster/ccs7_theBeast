@@ -1,5 +1,0 @@
-# FIXED
-
-md_gpio.obj: ../md_gpio.c
-
-../md_gpio.c: 

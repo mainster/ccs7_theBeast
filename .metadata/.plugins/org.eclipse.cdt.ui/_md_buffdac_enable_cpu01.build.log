@@ -1,7 +1,0 @@
-
-**** Build of configuration CPU1_RAM for project _md_buffdac_enable_cpu01 ****
-
-/opt/ti/ccsv7/utils/bin/gmake -k all 
-gmake: Nothing to be done for 'all'.
-
-**** Build Finished ****

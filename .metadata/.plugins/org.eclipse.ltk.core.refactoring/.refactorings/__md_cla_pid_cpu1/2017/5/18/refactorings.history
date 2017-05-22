@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;md_cla_pid_cpu1/empty_driverlib_main_cpu1.c&apos; to &apos;md_cla_pid_cpu1.c&apos;" description="Rename resource &apos;empty_driverlib_main_cpu1.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="empty_driverlib_main_cpu1.c" name="md_cla_pid_cpu1.c" stamp="1493861576472" updateReferences="true"/>
-</session>

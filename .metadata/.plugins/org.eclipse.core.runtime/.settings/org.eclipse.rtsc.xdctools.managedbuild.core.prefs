@@ -1,7 +1,0 @@
-PREVIOUSLY_DISCOVERED_SITES=/opt/ti/tirtos_c2000_2_12_01_33;/opt/ti/xdctools_3_31_00_24_core;
-PRODUCTS=com.ti.rtsc.TIRTOSc2000\:2.16.1.14;
-RTSC_PLATFORM=ti.platforms.tms320x28\:TMS320F335
-RTSC_TARGET=ti.targets.C28_float
-XDC_PATH=/opt/ti/tirtos_c2000_2_16_01_14/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/tidrivers_c2000_2_16_01_13/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/bios_6_45_02_31/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/ndk_2_25_00_09/packages;/opt/ti/tirtos_c2000_2_16_01_14/products/uia_2_00_05_50/packages;
-XDC_VERSION=3.32.0.06_core
-eclipse.preferences.version=1

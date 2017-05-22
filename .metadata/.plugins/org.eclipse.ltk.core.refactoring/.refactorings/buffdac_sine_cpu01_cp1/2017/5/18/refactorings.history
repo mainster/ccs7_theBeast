@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;buffdac_sine_cpu01_cp1/abs&apos; to &apos;bsp&apos;" description="Rename resource &apos;abs&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="abs" name="bsp" stamp="1493994220272" updateReferences="true"/>
-</session>

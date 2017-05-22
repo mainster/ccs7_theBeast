@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Example_28379D_LaunchPad/Example_F28379D_LaunchPadDemo.c&apos; to &apos;F28379D_LaunchPadDemo.c&apos;" description="Rename resource &apos;Example_F28379D_LaunchPadDemo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Example_F28379D_LaunchPadDemo.c" name="F28379D_LaunchPadDemo.c" stamp="1493882143599" updateReferences="true"/>
-</session>

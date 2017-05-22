@@ -1,7 +1,0 @@
-/bsp/
-/device/
-/linker/
-/makefile
-/objects.mk
-/sources.mk
-/subdir_rules.mk
