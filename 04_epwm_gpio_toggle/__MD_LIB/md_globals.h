@@ -1,8 +1,8 @@
 /**
- * @file        md_uart.h
- * @project		MD_F2837xD_LIB
+ * @file        md_globals.h
+ * @project		theBeast_DCL_PID_compilable
  * 
- * @date        22 May 2017
+ * @date        May 20, 2017
  * @author      Manuel Del Basso (mainster)
  * @email       manuel.delbasso@gmail.com
  *
@@ -34,34 +34,48 @@
    @endverbatim
  *
  */
-#ifndef INC_MD_SCI_H_
-#define INC_MD_SCI_H_
+#ifndef MD_GLOBALS_H_
+#define MD_GLOBALS_H_
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-
+//#include <DCL.h>
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#include "md_gpio.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-typedef enum {
-	EOL_LF = 0,
-	EOL_NO
-} EOL_t;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#define numel(b) (sizeof(b)/sizeof(b[0]))
+
+/*!
+MDB FIXES:
+*/
+#undef AUTOBAUD
+#if (DEVICE_OSCSRC_FREQ == 20000000U)
+#warning "Wrong OSC Freq defined!"
+#warning "theBeast ControlCard has 20MHz crystal"
+#warning "theBeast LaunchPad has 10MHz crystal!"
+#undef DEVICE_OSCSRC_FREQ
+#define DEVICE_OSCSRC_FREQ 100000000U
+#endif
+
+//!< Optimization improvements
+//!< Volatile access (reject unwanted removing access):
+#define vu16(x) (*(volatile unsigned int*)&(x))
+#define vs16(x) (*(volatile int*)&(x))
+#define vu32(x) (*(volatile unsigned long*)&(x))
+#define vs32(x) (*(volatile long*)&(x))
 
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-void MD_SCIx_init(const uint32_t SCIx_BASE, const uint32_t baudRate);
-void MD_puts(const char *str, EOL_t EOL);
-void MD_putsJson(const char *key, uint16_t *buff, uint16_t size);
-void MD_printi(const char *prefix, uint32_t arg, const char *posfix);
-void MD_putKeyVal(const char *key, const char *val);
+//extern PID pid1;
 
 #ifdef __cplusplus
 }

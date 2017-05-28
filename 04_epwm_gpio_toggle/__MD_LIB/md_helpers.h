@@ -1,8 +1,8 @@
 /**
- * @file        md_uart.h
+ * @file        md_helpers.h
  * @project		MD_F2837xD_LIB
  * 
- * @date        22 May 2017
+ * @date        23 May 2017
  * @author      Manuel Del Basso (mainster)
  * @email       manuel.delbasso@gmail.com
  *
@@ -34,8 +34,8 @@
    @endverbatim
  *
  */
-#ifndef INC_MD_SCI_H_
-#define INC_MD_SCI_H_
+#ifndef INC_MD_HELPERS_H_
+#define INC_MD_HELPERS_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -43,25 +43,16 @@ extern "C" {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-typedef enum {
-	EOL_LF = 0,
-	EOL_NO
-} EOL_t;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+char *int2str(const uint32_t number, char *buff);
 
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-void MD_SCIx_init(const uint32_t SCIx_BASE, const uint32_t baudRate);
-void MD_puts(const char *str, EOL_t EOL);
-void MD_putsJson(const char *key, uint16_t *buff, uint16_t size);
-void MD_printi(const char *prefix, uint32_t arg, const char *posfix);
-void MD_putKeyVal(const char *key, const char *val);
 
 #ifdef __cplusplus
 }

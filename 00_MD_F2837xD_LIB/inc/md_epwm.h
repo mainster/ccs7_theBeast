@@ -1,8 +1,8 @@
 /**
- * @file        md_uart.h
- * @project		MD_F2837xD_LIB
+ * @file        md_epwm.h
+ * @project		00_MD_F2837xD_LIB
  * 
- * @date        22 May 2017
+ * @date        May 29, 2017
  * @author      Manuel Del Basso (mainster)
  * @email       manuel.delbasso@gmail.com
  *
@@ -34,34 +34,37 @@
    @endverbatim
  *
  */
-#ifndef INC_MD_SCI_H_
-#define INC_MD_SCI_H_
+#ifndef MD_EPWM_H_
+#define MD_EPWM_H_
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
+#include "driverlib.h"
+#include "device.h"
+/* ------------------------------------------------------------------------- */
+#include "F28x_Project.h"
+#include "F2837xD_GlobalPrototypes.h"
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-typedef enum {
-	EOL_LF = 0,
-	EOL_NO
-} EOL_t;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
+#define _TBPRD(tSample_us)	((uint32_t)(tSample_us * (DEVICE_LSPCLK_FREQ * 1e-6)/2))
+#define _CMPA(tHigh_us)		((uint32_t)(tHigh_us * (DEVICE_LSPCLK_FREQ * 1e-6)))
+
+#define ACT_IGNORE			0x00
+#define ACT_FORCE_LOW		0x01
+#define ACT_FORCE_HIGH		0x02
+#define ACT_FORCE_TOGGLE	0x03
 
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-void MD_SCIx_init(const uint32_t SCIx_BASE, const uint32_t baudRate);
-void MD_puts(const char *str, EOL_t EOL);
-void MD_putsJson(const char *key, uint16_t *buff, uint16_t size);
-void MD_printi(const char *prefix, uint32_t arg, const char *posfix);
-void MD_putKeyVal(const char *key, const char *val);
+void MD_EPWM_init(const uint32_t EPWMx_BASE, const uint32_t samplePeriod_us);
 
 #ifdef __cplusplus
 }
