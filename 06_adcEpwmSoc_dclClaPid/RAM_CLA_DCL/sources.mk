@@ -111,6 +111,10 @@ PDE_DEPS__QUOTED :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-src \
-targetConfigs \
+. \
+MD_F2837xD \
+bsp \
+dcl \
+device \
+linker \
 

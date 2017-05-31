@@ -26,6 +26,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src</name>
+			<type>2</type>
+			<location>/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/src</location>
+		</link>
+		<link>
 			<name>bsp/F2837xD_Adc.c</name>
 			<type>1</type>
 			<locationURI>PARENT-5-ORIGINAL_PROJECT_ROOT/common/source/F2837xD_Adc.c</locationURI>

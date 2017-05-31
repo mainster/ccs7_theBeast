@@ -51,6 +51,10 @@ extern "C" {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Configuration  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+typedef enum {
+	START = 0x01,
+	STOP
+} State_t;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~  Public macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
 #define _TBPRD(tSample_us)	((uint32_t)(tSample_us * (DEVICE_LSPCLK_FREQ * 1e-6)/2))
@@ -64,7 +68,13 @@ extern "C" {
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
+//__interrupt void IRQ_EPWM_1(void);
+
 void MD_EPWM_init(const uint32_t EPWMx_BASE, const uint32_t samplePeriod_us);
+void MD_EPWM1_init_mm(const uint32_t tSample_us);
+
+void MD_EPWM1_acquisition(State_t state);
+
 
 #ifdef __cplusplus
 }

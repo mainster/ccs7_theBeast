@@ -73,6 +73,9 @@ SECTIONS
    .ebss            : > RAMLS2,    PAGE = 1
    .econst          : > RAMLS3,    PAGE = 1
    .esysmem         : > RAMLS3,    PAGE = 1
+
+   dclfuncs		    : > RAML4L,	   PAGE = 0			/* Digital Controller Library functions */
+
    Filter_RegsFile  : > RAMGS0,	   PAGE = 1
 
     /* CLA specific sections */
@@ -83,8 +86,6 @@ SECTIONS
 
    Cla1ToCpuMsgRAM  : > CLA1_MSGRAMLOW,   PAGE = 1
    CpuToCla1MsgRAM  : > CLA1_MSGRAMHIGH,  PAGE = 1
-
-   dclfuncs 		: > RAMGS1,	PAGE = 1
 
    /* The following section definition are for SDFM examples */
    Filter1_RegsFile : > RAMGS1,	PAGE = 1, fill=0x1111

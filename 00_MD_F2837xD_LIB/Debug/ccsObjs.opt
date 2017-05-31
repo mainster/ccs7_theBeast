@@ -1,1 +1,1 @@
-"./src/md_gpio.obj" "./src/md_sci.obj" "./targetConfigs/md_gpio.obj" -llibc.a 
+"./src/md_epwm.obj" "./src/md_gpio.obj" "./src/md_helpers.obj" "./src/md_sci.obj" "./targetConfigs/md_gpio.obj" -llibc.a 

@@ -8,7 +8,9 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./src/md_epwm.obj" \
 "./src/md_gpio.obj" \
+"./src/md_helpers.obj" \
 "./src/md_sci.obj" \
 "./targetConfigs/md_gpio.obj" \
 $(GEN_CMDS__FLAG) \
@@ -22,10 +24,8 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir_vars.mk
--include targetConfigs/Debug/subdir_vars.mk
 -include targetConfigs/subdir_vars.mk
 -include src/subdir_rules.mk
--include targetConfigs/Debug/subdir_rules.mk
 -include targetConfigs/subdir_rules.mk
 -include objects.mk
 
@@ -123,41 +123,41 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-MD_F2837xD_LIB.out \
+00_MD_F2837xD_LIB.out \
 
 EXE_OUTPUTS__QUOTED += \
-"MD_F2837xD_LIB.out" \
+"00_MD_F2837xD_LIB.out" \
 
 BIN_OUTPUTS += \
-MD_F2837xD_LIB.hex \
+00_MD_F2837xD_LIB.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"MD_F2837xD_LIB.hex" \
+"00_MD_F2837xD_LIB.hex" \
 
 
 # All Target
 all: $(OBJS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "MD_F2837xD_LIB.out"
+	@$(MAKE) --no-print-directory -Onone "00_MD_F2837xD_LIB.out"
 
 # Tool invocations
-MD_F2837xD_LIB.out: $(OBJS) $(GEN_CMDS)
+00_MD_F2837xD_LIB.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C2000 Linker'
-	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"MD_F2837xD_LIB.map" --stack_size=0x200 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="MD_F2837xD_LIB_linkInfo.xml" --rom_model -o "MD_F2837xD_LIB.out" $(ORDERED_OBJS)
+	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"00_MD_F2837xD_LIB.map" --stack_size=0x200 --warn_sections -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/lib" -i"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="00_MD_F2837xD_LIB_linkInfo.xml" --rom_model -o "00_MD_F2837xD_LIB.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-MD_F2837xD_LIB.hex: $(EXE_OUTPUTS)
+00_MD_F2837xD_LIB.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: C2000 Hex Utility'
-	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/hex2000"  -o "MD_F2837xD_LIB.hex" $(EXE_OUTPUTS__QUOTED)
+	"/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_17.3.0.STS/bin/hex2000"  -o "00_MD_F2837xD_LIB.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "src/md_gpio.obj" "src/md_sci.obj" "targetConfigs/md_gpio.obj" 
-	-$(RM) "src/md_gpio.d" "src/md_sci.d" "targetConfigs/md_gpio.d" 
+	-$(RM) "src/md_epwm.obj" "src/md_gpio.obj" "src/md_helpers.obj" "src/md_sci.obj" "targetConfigs/md_gpio.obj" 
+	-$(RM) "src/md_epwm.d" "src/md_gpio.d" "src/md_helpers.d" "src/md_sci.d" "targetConfigs/md_gpio.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

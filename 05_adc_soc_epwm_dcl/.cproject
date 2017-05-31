@@ -18,74 +18,82 @@
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="RAM Build Configuration w/Debugger Support for CPU1" id="com.ti.ccstudio.buildDefinitions.C2000.Debug.2121059750" name="CPU1_RAM" parent="com.ti.ccstudio.buildDefinitions.C2000.Debug">
 					<folderInfo id="com.ti.ccstudio.buildDefinitions.C2000.Debug.2121059750." name="/" resourcePath="">
-						<toolChain id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.DebugToolchain.993932559" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug.708301848">
-							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.946749581" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+						<toolChain id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.DebugToolchain.641915032" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug.298707738">
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.550035978" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
 								<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=TMS320C28XX.TMS320F28379D"/>
 								<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
 								<listOptionValue builtIn="false" value="OUTPUT_FORMAT=COFF"/>
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
 								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=6.1.3"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=c2000ware_software_package:1.0.0.00;"/>
+								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;c2000ware_software_package&quot;:[&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_INCLUDE_PATH}&quot;,&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_LIBRARY_PATH}&quot;,&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_LIBRARIES}&quot;,&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_SYMBOLS}&quot;]}"/>
 								<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
 							</option>
-							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.575759832" name="Compiler version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="17.3.0.STS" valueType="string"/>
-							<targetPlatform id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.targetPlatformDebug.2067115820" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.targetPlatformDebug"/>
-							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.builderDebug.2032098075" keepEnvironmentInBuildfile="false" name="GNU Make" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.builderDebug"/>
-							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.compilerDebug.1974951849" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.compilerDebug">
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.LARGE_MEMORY_MODEL.962121625" name="Option deprecated, set by default (--large_memory_model, -ml)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.LARGE_MEMORY_MODEL" value="true" valueType="boolean"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNIFIED_MEMORY.946198700" name="Unified memory (--unified_memory, -mt)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNIFIED_MEMORY" value="true" valueType="boolean"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION.1031461692" name="Processor version (--silicon_version, -v)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION.28" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT.1929208073" name="Specify floating point support (--float_support)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT.fpu32" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT.415429350" name="Specify CLA support (--cla_support)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT.cla1" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT.70827695" name="Specify VCU support (--vcu_support)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT.vcu2" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT.1337825484" name="Specify TMU support (--tmu_support)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT.tmu0" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH.1679628983" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH" valueType="includePath">
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1136908808" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="17.3.0.STS" valueType="string"/>
+							<targetPlatform id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.targetPlatformDebug.1282943101" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.targetPlatformDebug"/>
+							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.builderDebug.1506027192" name="GNU Make.CPU1_RAM" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.builderDebug"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.compilerDebug.1998784239" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.compilerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.LARGE_MEMORY_MODEL.2115725127" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.LARGE_MEMORY_MODEL" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNIFIED_MEMORY.1636770986" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.UNIFIED_MEMORY" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION.1789104304" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.SILICON_VERSION.28" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT.424264174" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FLOAT_SUPPORT.fpu32" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT.1837470297" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.CLA_SUPPORT.cla1" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT.1630581941" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.VCU_SUPPORT.vcu2" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT.9263350" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.TMU_SUPPORT.tmu0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.907811811" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH.1859260920" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.INCLUDE_PATH" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_INCLUDE_PATH}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${_C2000WARE_DLIB_ROOT}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${_C2WARE_ROOT}/libraries/control/DCL/c28/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/headers/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/common/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${_MD_F2837xD_LIB}/inc&quot;"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL.257551997" name="Debugging model" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEFINE.1861598090" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEFINE" valueType="definedSymbols">
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEFINE.47702984" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="${COM_TI_C2000WARE_SOFTWARE_PACKAGE_SYMBOLS}"/>
 									<listOptionValue builtIn="false" value="CPU1"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DISPLAY_ERROR_NUMBER.625438811" name="Emit diagnostic identifier numbers (--display_error_number, -pden)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_WARNING.60147427" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_WARNING" valueType="stringList">
-									<listOptionValue builtIn="false" value="225"/>
-								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_SUPPRESS.216396237" name="Suppress diagnostic &lt;id&gt; (--diag_suppress, -pds)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_SUPPRESS" valueType="stringList">
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL.585903234" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.1497376718" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.C_DIALECT.C99" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_SUPPRESS.773549231" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_SUPPRESS" valueType="stringList">
 									<listOptionValue builtIn="false" value="1311"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.868538275" name="Floating Point mode (--fp_mode)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS.488827085" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS.1156383314" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS.1472848922" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM2_SRCS.272734933" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM2_SRCS"/>
-							</tool>
-							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug.708301848" name="C2000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug">
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.STACK_SIZE.1686307693" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.STACK_SIZE" value="0x100" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.MAP_FILE.760788608" name="Link information (map) listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.MAP_FILE" value="&quot;${ProjName}.map&quot;" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.OUTPUT_FILE.1646641974" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.OUTPUT_FILE" value="&quot;${ProjName}.out&quot;" valueType="string"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.LIBRARY.416084742" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.LIBRARY" valueType="libs">
-									<listOptionValue builtIn="false" value="&quot;rts2800_fpu32.lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_WARNING.1943675904" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DIAG_WARNING" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.SEARCH_PATH.1055320890" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.SEARCH_PATH" valueType="libPaths">
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DISPLAY_ERROR_NUMBER.144555982" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS.408689514" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__C_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS.902058818" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__CPP_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS.1870837620" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM2_SRCS.2062693906" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.compiler.inputType__ASM2_SRCS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug.298707738" name="C2000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exe.linkerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.STACK_SIZE.821880407" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.STACK_SIZE" value="0x100" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.MAP_FILE.632036032" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.MAP_FILE" value="&quot;${ProjName}.map&quot;" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.OUTPUT_FILE.167456333" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.OUTPUT_FILE" value="&quot;${ProjName}.out&quot;" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.LIBRARY.918475520" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.LIBRARY" valueType="libs">
+									<listOptionValue builtIn="false" value="${COM_TI_C2000WARE_SOFTWARE_PACKAGE_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="rts2800_fpu32.lib"/>
+									<listOptionValue builtIn="false" value="libc.a"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.SEARCH_PATH.744783876" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.SEARCH_PATH" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_LIBRARY_PATH}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/common/cmd&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${INSTALLROOT_F2837XD}/headers/cmd&quot;"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER.323475122" name="Emit diagnostic identifier numbers (--display_error_number)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO.1715522528" name="Detailed link information data-base into &lt;file&gt; (--xml_link_info, -xml_link_info)" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO" value="&quot;${ProjName}_linkInfo.xml&quot;" valueType="string"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS.935058317" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS.408697824" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS"/>
-								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS.1818107821" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER.1172694214" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO.681714624" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.linkerID.XML_LINK_INFO" value="&quot;${ProjName}_linkInfo.xml&quot;" valueType="string"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS.891391769" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS.1320715532" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__CMD2_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS.48120616" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.exeLinker.inputType__GEN_CMDS"/>
 							</tool>
-							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.hex.1964789295" name="C2000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.hex"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.C2000_17.3.hex.2125808679" name="C2000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_17.3.hex"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="linker/2837xD_RAM_SGEN_lnk_cpu1.cmd|linker/2837xD_RAM_lnk_shared_cpu1.cmd|linker/2837xD_RAM_CLA_lnk_cpu1.cmd|linker/2837xD_FLASH_SGEN_lnk_cpu1.cmd|linker/2837xD_FLASH_lnk_cpu1.cmd|linker/2837xD_FLASH_CLA_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="2837x_FLASH_lnk_cpu1.cmd|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

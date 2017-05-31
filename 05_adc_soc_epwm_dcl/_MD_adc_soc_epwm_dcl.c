@@ -33,18 +33,29 @@
  *
  */
 //!< adc_soc_epwm_cpu01
+/* ------------------------------------------------------------------------- */
+#include "driverlib.h"
+#include "device.h"
+/* ------------------------------------------------------------------------- */
 #include "F28x_Project.h"
 #include "F2837xD_GlobalPrototypes.h"
+/* ------------------------------------------------------------------------- */
 #include "DCL.h"
-//#include "F2837xD_adc.h"
+/* ------------------------------------------------------------------------- */
+#include "md_globals.h"
+#include "md_config.h"
+#include "md_helpers.h"
+#include "md_epwm.h"
+#include "md_sci.h"
+#include "device/device.h"
 
 volatile struct DAC_REGS* DAC_PTR[4] =
 	{ 0x0, &DacaRegs, &DacbRegs, &DaccRegs };
 Uint16 dacVal = 2048;
 short dir = 1;
 
-uint16_t DAC_VALS_DACVALS_M = 4095;
-uint16_t DAC_VALS_DACVALS_S = 1;
+//uint16_t DAC_VALS_DACVALS_M = 4095;
+//uint16_t DAC_VALS_DACVALS_S = 1;
 
 //
 // Defines
@@ -74,13 +85,22 @@ interrupt void ADC_C_EOC_Irq(void);
 //
 #define RESULTS_BUFFER_SIZE 256
 
-//!< ADC channel definition
-#define AIN_CHA_y	2		//!< ADCINB2 plant_a output
-#define AIN_CHA_r	2		//!< ADCINC2 plant_a set-point
-//#define AIN_CHB_y	?		//!< ADCINx3 plant_a output
-//#define AIN_CHB_r	?		//!< ADCINx4 plant_a setpoint
+#define BAUDRATE			230400U
+#define	F_CPU				200000000U
 
-#define TS	4096
+#define LED_RD(x)			GPIO_writePin(31, x)
+#define LED_BL(x)			GPIO_writePin(34, x)
+#define IO_SET_DBG(PIN, x)	GPIO_writePin(PIN, x)
+#define IO_TGL_DBG(PIN)		GPIO_togglePin(PIN)
+
+
+////!< ADC channel definition
+//#define AIN_CHA_y	2		//!< ADCINB2 plant_a output
+//#define AIN_CHA_r	2		//!< ADCINC2 plant_a set-point
+////#define AIN_CHB_y	?		//!< ADCINx3 plant_a output
+////#define AIN_CHB_r	?		//!< ADCINx4 plant_a setpoint
+
+#define  Ts	 25e-6
 
 //
 // Globals
@@ -104,53 +124,34 @@ float uk;					//!< control out
  */
 void main(void) {
 	InitSysCtrl();
-	InitGpio();
-	DINT;									//!< Disable CPU interrupts
-
-	InitPieCtrl();
 
 	// Disable CPU interrupts and clear all CPU interrupt flags:
-//	IER = 0x0000;
+	IER = 0x0000;
 	IFR = 0x0000;
 
+	InitPieCtrl();
 	InitPieVectTable();
+	InitGpio();
+
+	//!< Setup all predefined GPIOs from
+	MD_GPIO_Setup(&MD_GPIO_config[0], GPIO_COUNT_IN_PACKED_INIT_STRUCT);
+	//!< Configure SCIA for UART operation
+	MD_SCIx_init(SCIA_BASE, BAUDRATE);
+
 	EALLOW;
 	PieVectTable.ADCA1_INT = &ADC_EOC_Irq;	//!< function for ADCA interrupt 1
-	PieVectTable.ADCB1_INT = &ADC_B_EOC_Irq;	//!< function for ADCA interrupt 1
-	PieVectTable.ADCC1_INT = &ADC_C_EOC_Irq;	//!< function for ADCA interrupt 1
 	EDIS;
-
-//	ConfigureADC();			//!< Configure the ADC and power it up
 
 	EALLOW;
 	AdcaRegs.ADCCTL2.bit.PRESCALE = 6;  //set ADCCLK divider to /4
-	AdcSetMode(ADC_ADCA, ADC_RESOLUTION_12BIT, ADC_SIGNALMODE_SINGLE);
+	AdcSetMode(ADC_ADCA, ADC_RESOLUTION_12BIT_bf, ADC_SIGNALMODE_SINGLE);
 	AdcaRegs.ADCCTL1.bit.INTPULSEPOS = 1;
 	AdcaRegs.ADCCTL1.bit.ADCPWDNZ = 1;
 	DELAY_US(1000);
-	AdcbRegs.ADCCTL2.bit.PRESCALE = 6;  //set ADCCLK divider to /4
-	AdcSetMode(ADC_ADCB, ADC_RESOLUTION_12BIT, ADC_SIGNALMODE_SINGLE);
-	AdcbRegs.ADCCTL1.bit.INTPULSEPOS = 1;
-	AdcbRegs.ADCCTL1.bit.ADCPWDNZ = 1;
-	DELAY_US(1000);
-	AdccRegs.ADCCTL2.bit.PRESCALE = 6;  //set ADCCLK divider to /4
-	AdcSetMode(ADC_ADCC, ADC_RESOLUTION_12BIT, ADC_SIGNALMODE_SINGLE);
-	AdccRegs.ADCCTL1.bit.INTPULSEPOS = 1;
-	AdccRegs.ADCCTL1.bit.ADCPWDNZ = 1;
-	DELAY_US(1000);
-
 
 	AdcaRegs.ADCSOC0CTL.bit.CHSEL = 3;  //SOC0 will convert pin A0
 	AdcaRegs.ADCSOC0CTL.bit.ACQPS = 19;  //sample window is 100 SYSCLK cycles
 	AdcaRegs.ADCSOC0CTL.bit.TRIGSEL = 5;  //trigger on ePWM1 SOCA/C
-
-	AdcbRegs.ADCSOC0CTL.bit.CHSEL = 2;  //SOC0 will convert pin A0
-	AdcbRegs.ADCSOC0CTL.bit.ACQPS = 19;  //sample window is 100 SYSCLK cycles
-	AdcbRegs.ADCSOC0CTL.bit.TRIGSEL = 5;  //trigger on ePWM1 SOCA/C
-
-	AdccRegs.ADCSOC0CTL.bit.CHSEL = 2;  //SOC0 will convert pin A0
-	AdccRegs.ADCSOC0CTL.bit.ACQPS = 19;  //sample window is 100 SYSCLK cycles
-	AdccRegs.ADCSOC0CTL.bit.TRIGSEL = 5;  //trigger on ePWM1 SOCA/C
 
 	AdcaRegs.ADCINTSEL1N2.bit.INT1SEL = 0;  //end of SOC0 will set INT1 flag
 	AdcaRegs.ADCINTSEL1N2.bit.INT1E = 1;   //enable INT1 flag
@@ -162,13 +163,24 @@ void main(void) {
 	EPwm1Regs.ETSEL.bit.SOCAEN = 0;    // Disable SOC on A group
 	EPwm1Regs.ETSEL.bit.SOCASEL = 4;   // Select SOC on up-count
 	EPwm1Regs.ETPS.bit.SOCAPRD = 1;       // Generate pulse on 1st event
-	EPwm1Regs.CMPA.bit.CMPA = 0.5*TS;     // Set compare A value to 2048 counts
-	EPwm1Regs.TBPRD = TS;             // Set period to 4096 counts
+	EPwm1Regs.CMPA.bit.CMPA = _CMPA(Ts * 1e6);
+	EPwm1Regs.TBPRD = _TBPRD(Ts * 1e6);
 	EPwm1Regs.TBCTL.bit.CTRMODE = 3;      // freeze counter
+	/**
+	 * TBC run mode: UP_DOWN
+	 * - Ignore event TBCTR == CMPA when in up counting direction
+	 * - Do noting when TBCTR == TBPRD
+	 * - Force EPWMxA pin high when TBCTR == CMPA in down counting direction
+	 * - Force EPWMxA pin low when TBCTR == 0!
+	 */
+	EPwm1Regs.AQCTLA.bit.CAD = ACT_FORCE_HIGH;		//!< Event Compare A while down counting
+	EPwm1Regs.AQCTLA.bit.CAU = ACT_IGNORE;			//!< Event Compare A while up counting
+	EPwm1Regs.AQCTLA.bit.PRD = ACT_IGNORE;			//!< Event counter equals period
+	EPwm1Regs.AQCTLA.bit.ZRO = ACT_FORCE_LOW;		//!< Event counter equals zero
 	EDIS;
 
 
-	configureDAC(DAC_NUM);
+//	configureDAC(DAC_NUM);
 	initPIDvariables();
 
 	IER |= M_INT1;  		//!< Enable group 1 interrupts
@@ -182,7 +194,7 @@ void main(void) {
 	EDIS;
 
 	EPwm1Regs.ETSEL.bit.SOCAEN = 1;  		//!< enable SOCA
-	EPwm1Regs.TBCTL.bit.CTRMODE = 0;  		//!< unfreeze, and enter up count mode
+	EPwm1Regs.TBCTL.bit.CTRMODE = EPWM_COUNTER_MODE_UP_DOWN;
 
 	/* idle loop */
 	while (1) {
@@ -230,7 +242,7 @@ void ConfigureADC(void) {
 	//write configurations
 	AdcaRegs.ADCCTL2.bit.PRESCALE = 6;  //set ADCCLK divider to /4
 //	AdcaRegs.ADCCTL2.bit.PRESCALE = 6;  //set ADCCLK divider to /4
-	AdcSetMode(ADC_ADCA, ADC_RESOLUTION_12BIT, ADC_SIGNALMODE_SINGLE);
+	AdcSetMode(ADC_ADCA, ADC_RESOLUTION_12BIT_bf, ADC_SIGNALMODE_SINGLE);
 //	AdcSetMode(ADC_ADCC, ADC_RESOLUTION_12BIT, ADC_SIGNALMODE_SINGLE);
 
 	//Set pulse positions to late
@@ -269,7 +281,7 @@ void SetupADCEpwmSync(Uint16 setpoint, Uint16 plant) {
 	AdcbRegs.ADCSOC0CTL.bit.CHSEL = setpoint; 	//SOC0 will convert ADCINxy
 	AdcbRegs.ADCSOC0CTL.bit.ACQPS = 19; 		//SOC0 will use sample duration of 20 SYSCLK cycles
 	AdcbRegs.ADCSOC0CTL.bit.TRIGSEL = 5; 		//SOC0 will begin conversion on ePWM3 SOCB
-	AdccRegs.ADCSOC0CTL.bit.CHSEL = plant; 	//SOC0 will convert ADCINxy
+	AdccRegs.ADCSOC0CTL.bit.CHSEL = plant; 		//SOC0 will convert ADCINxy
 	AdccRegs.ADCSOC0CTL.bit.ACQPS = 19; 		//SOC0 will use sample duration of 20 SYSCLK cycles
 	AdccRegs.ADCSOC0CTL.bit.TRIGSEL = 5; 		//SOC0 will begin conversion on ePWM3 SOCB
 
@@ -286,7 +298,7 @@ void SetupADCEpwm(Uint16 channel) {
 	Uint16 acqps;
 
 	//determine minimum acquisition window (in SYSCLKS) based on resolution
-	if (ADC_RESOLUTION_12BIT == AdcaRegs.ADCCTL2.bit.RESOLUTION) {
+	if (ADC_RESOLUTION_12BIT_bf == AdcaRegs.ADCCTL2.bit.RESOLUTION) {
 		acqps = 14;  //75ns
 	}
 	else  //resolution is 16-bit
