@@ -1,35 +1,35 @@
 /**
- * @file        main.c
- * @project		_E_epwm_gpio_toggle
+ * @file        adcEpwmSoc_dclClaPid.c
+ * @project		06_adcEpwmSoc_dclClaPid
  *
- * @date        May 28, 2017
+ * @date        May 31, 2017
  * @author      Manuel Del Basso (mainster)
  * @email       manuel.delbasso@gmail.com
  *
  * @ide         Code Composer Studio Version: 7.1.0.00015
  * @license		GNU GPL v3
  *
- @verbatim
+   @verbatim
 
- ------------------------------------------------------------------------
+	------------------------------------------------------------------------
 
- Copyright (C) 2017  Manuel Del Basso
+	Copyright (C) 2017  Manuel Del Basso
 
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
 
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
- ------------------------------------------------------------------------
+	------------------------------------------------------------------------
 
- @endverbatim
+   @endverbatim
  *
  */
 #include <stdint.h>
