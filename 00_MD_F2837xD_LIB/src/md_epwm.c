@@ -59,6 +59,7 @@
 //	Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP3);
 //}
 
+#ifdef LIB
 /**
  * Initialize EPWM module
  *
@@ -133,7 +134,7 @@ void MD_EPWM1_init_mm(const uint32_t tSample_us) {
 
 	EDIS;
 }
-
+#endif
 void MD_EPWM1_acquisition(State_t state) {
 	EPwm1Regs.ETSEL.bit.SOCAEN = (state == START) ? 1 : 0;
 	EPwm1Regs.TBCTL.bit.CTRMODE = (state == START)

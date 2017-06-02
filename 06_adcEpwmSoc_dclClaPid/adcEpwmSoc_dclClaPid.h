@@ -57,17 +57,19 @@ extern "C" {
 #define IO_SET_DBG(PIN, x)	GPIO_writePin(PIN, x)
 #define IO_TGL_DBG(PIN)		GPIO_togglePin(PIN)
 
+#define HALT()				__asm("     ESTOP0")
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
-__interrupt void IRQ_ADC_A1(void);
+//__interrupt void IRQ_ADC_A1(void);
 
-void MD_EPWM_init(const uint32_t EPWMx_BASE, const uint32_t samplePeriod_us);
-void MD_ADC_init(const uint32_t ADCx_BASE, ADC_Channel CH_ADCINx, ADC_IntNumber INTx,
-                 ADC_SOCNumber SOCx, uint32_t sampleWindow_ns);
-void MD_ADCA_init_mm(ADC_Channel CH_ADCINx, uint32_t sampleWindow_ns);
-
-void MD_DAC_init(const uint32_t DACx_BASE, const uint16_t initialOut);
+//void MD_EPWM_init(const uint32_t EPWMx_BASE, const uint32_t samplePeriod_us);
+//void MD_ADC_init(const uint32_t ADCx_BASE, ADC_Channel CH_ADCINx, ADC_IntNumber INTx,
+//                 ADC_SOCNumber SOCx, uint32_t sampleWindow_ns);
+//void MD_ADCA_init_mm(ADC_Channel CH_ADCINx, uint32_t sampleWindow_ns);
+//
+//void MD_DAC_init(const uint32_t DACx_BASE, const uint16_t initialOut);
 
 #ifdef __cplusplus
 }

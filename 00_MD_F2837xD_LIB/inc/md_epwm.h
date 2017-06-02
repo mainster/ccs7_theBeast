@@ -70,8 +70,10 @@ typedef enum {
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */
 //__interrupt void IRQ_EPWM_1(void);
 
+#ifdef LIB
 void MD_EPWM_init(const uint32_t EPWMx_BASE, const uint32_t samplePeriod_us);
 void MD_EPWM1_init_mm(const uint32_t tSample_us);
+#endif
 
 void MD_EPWM1_acquisition(State_t state);
 

@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker Unix v16.9.1                   
 ******************************************************************************
->> Linked Wed May 31 20:49:42 2017
+>> Linked Thu Jun  1 13:21:24 2017
 
 OUTPUT FILE NAME:   <06_adcEpwmSoc_dclClaPid.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 0000b78a
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000b800
 
 
 MEMORY CONFIGURATION
@@ -16,7 +16,7 @@ PAGE 0:
   RAMM0                 00000122   000002de  000002de  00000000  RWIX
   RAMLS4_5              0000a000   00001000  00000000  00001000  RWIX
   RAMD0                 0000b000   00000800  00000800  00000000  RWIX
-  RAMD1                 0000b800   00000800  00000489  00000377  RWIX
+  RAMD1                 0000b800   00000800  000004e6  0000031a  RWIX
   RESET                 003fffc0   00000002  00000000  00000002  RWIX
 
 PAGE 1:
@@ -101,7 +101,7 @@ PAGE 1:
   RAMLS0                00008000   00000800  00000000  00000800  RWIX
   RAMLS1                00008800   00000800  00000000  00000800  RWIX
   RAMLS2                00009000   00000800  00000196  0000066a  RWIX
-  RAMLS3                00009800   00000800  00000407  000003f9  RWIX
+  RAMLS3                00009800   00000800  00000405  000003fb  RWIX
   RAMGS0                0000c000   00001000  00000000  00001000  RWIX
   RAMGS1                0000d000   00001000  0000006e  00000f92  RWIX
   RAMGS2                0000e000   00001000  00000000  00001000  RWIX
@@ -415,22 +415,20 @@ GpioDataRegsFile
                   00009192    00000002                       : _lock.obj (.ebss:__lock)
                   00009194    00000002                       : _lock.obj (.ebss:__unlock)
 
-.econst    1    00009800    00000407     
+.econst    1    00009800    00000405     
                   00009800    000000c8     driverlib.lib : gpio.obj (.econst:.string)
                   000098c8    000000c7                   : sci.obj (.econst:.string)
                   0000998f    00000001     --HOLE-- [fill = 0]
-                  00009990    00000090     adcEpwmSoc_dclClaPid.obj (.econst:.string)
-                  00009a20    00000069     driverlib.lib : interrupt.obj (.econst:.string)
-                  00009a89    00000001     --HOLE-- [fill = 0]
-                  00009a8a    00000066                   : sysctl.obj (.econst:.string)
-                  00009af0    00000063                   : adc.obj (.econst:.string)
-                  00009b53    00000001     --HOLE-- [fill = 0]
-                  00009b54    00000035     md_epwm.obj (.econst:.string)
-                  00009b89    00000001     --HOLE-- [fill = 0]
-                  00009b8a    00000035     md_gpio.obj (.econst:.string)
-                  00009bbf    00000001     --HOLE-- [fill = 0]
-                  00009bc0    00000034     md_sci.obj (.econst:.string)
-                  00009bf4    00000013     device.obj (.econst:.string)
+                  00009990    000000c4     adcEpwmSoc_dclClaPid.obj (.econst:.string)
+                  00009a54    00000069     driverlib.lib : interrupt.obj (.econst:.string)
+                  00009abd    00000001     --HOLE-- [fill = 0]
+                  00009abe    00000066                   : sysctl.obj (.econst:.string)
+                  00009b24    00000063                   : adc.obj (.econst:.string)
+                  00009b87    00000001     --HOLE-- [fill = 0]
+                  00009b88    00000035     md_gpio.obj (.econst:.string)
+                  00009bbd    00000001     --HOLE-- [fill = 0]
+                  00009bbe    00000034     md_sci.obj (.econst:.string)
+                  00009bf2    00000013     device.obj (.econst:.string)
 
 dclfuncs   1    0000d000    0000006e     
                   0000d000    0000005a     DCL_PID_C4.obj (dclfuncs)
@@ -613,65 +611,64 @@ CpuSysRegsFile
                   000003f7    00000009                   : sysctl.obj (.text:_SysCtl_serviceWatchdog)
 
 .text.2    0    0000b000    00000800     
-                  0000b000    0000044d     adcEpwmSoc_dclClaPid.obj (.text)
-                  0000b44d    000001a7     md_sci.obj (.text)
-                  0000b5f4    000000ba     driverlib.lib : sysctl.obj (.text:_SysCtl_setClock)
-                  0000b6ae    0000006e                   : sysctl.obj (.text:_SysCtl_getClock)
-                  0000b71c    0000006e     adcEpwmSoc_dclClaPid.obj (.text:retain)
-                  0000b78a    00000056     rts2800_fpu32.lib : boot28.obj (.text)
-                  0000b7e0    00000020     driverlib.lib : interrupt.obj (.text:_Interrupt_initVectorTable)
+                  0000b000    000004ba     adcEpwmSoc_dclClaPid.obj (.text)
+                  0000b4ba    000001a7     md_sci.obj (.text)
+                  0000b661    000000ba     driverlib.lib : sysctl.obj (.text:_SysCtl_setClock)
+                  0000b71b    0000006e                   : sysctl.obj (.text:_SysCtl_getClock)
+                  0000b789    0000005e     adcEpwmSoc_dclClaPid.obj (.text:retain)
+                  0000b7e7    00000019     driverlib.lib : sci.obj (.text:_SCI_disableModule)
 
-.text.3    0    0000b800    00000489     
-                  0000b800    00000054     driverlib.lib : interrupt.obj (.text:_Interrupt_initModule)
-                  0000b854    00000052                   : gpio.obj (.text:_GPIO_setPadConfig)
-                  0000b8a6    0000004d                   : sysctl.obj (.text:_SysCtl_selectOscSource)
-                  0000b8f3    00000046                   : sci.obj (.text:_SCI_clearInterruptStatus)
-                  0000b939    00000044     md_gpio.obj (.text)
-                  0000b97d    00000044     md_helpers.obj (.text)
-                  0000b9c1    00000040     driverlib.lib : sci.obj (.text:_SCI_setConfig)
-                  0000ba01    0000003d                   : gpio.obj (.text:_GPIO_setPinConfig)
-                  0000ba3e    00000038                   : gpio.obj (.text:_GPIO_setMasterCore)
-                  0000ba76    00000036                   : gpio.obj (.text:_GPIO_setQualificationMode)
-                  0000baac    00000033                   : interrupt.obj (.text:_Interrupt_enable)
-                  0000badf    00000031                   : gpio.obj (.text:_GPIO_setDirectionMode)
-                  0000bb10    00000029     rts2800_fpu32.lib : exit.obj (.text)
-                  0000bb39    00000024                       : cpy_tbl.obj (.text)
-                  0000bb5d    0000001f     driverlib.lib : sci.obj (.text:_SCI_isBaseValid)
-                  0000bb7c    0000001e     rts2800_fpu32.lib : memcpy.obj (.text)
-                  0000bb9a    0000001a     driverlib.lib : sysctl.obj (.text:_SysCtl_getLowSpeedClock)
-                  0000bbb4    00000019                   : sci.obj (.text:_SCI_disableModule)
-                  0000bbcd    00000019                   : sci.obj (.text:_SCI_performSoftwareReset)
-                  0000bbe6    00000019     rts2800_fpu32.lib : args_main.obj (.text)
-                  0000bbff    00000019                       : prolog28.obj (.text)
-                  0000bc18    00000014     driverlib.lib : sci.obj (.text:_SCI_enableModule)
-                  0000bc2c    0000000e                   : gpio.obj (.text:_GPIO_isPinValid)
-                  0000bc3a    0000000e                   : interrupt.obj (.text:_Interrupt_defaultHandler)
-                  0000bc48    0000000d                   : interrupt.obj (.text:_Interrupt_disableMaster)
-                  0000bc55    0000000d                   : interrupt.obj (.text:_Interrupt_enableMaster)
-                  0000bc62    0000000c     rts2800_fpu32.lib : epilog28.obj (.text)
-                  0000bc6e    0000000b     driverlib.lib : sysctl.obj (.text:_SysCtl_isMCDClockFailureDetected)
-                  0000bc79    00000009     rts2800_fpu32.lib : _lock.obj (.text)
-                  0000bc82    00000002     driverlib.lib : interrupt.obj (.text:_Interrupt_illegalOperationHandler)
-                  0000bc84    00000002                   : interrupt.obj (.text:_Interrupt_nmiHandler)
-                  0000bc86    00000002     rts2800_fpu32.lib : pre_init.obj (.text)
-                  0000bc88    00000001                       : startup.obj (.text)
+.text.3    0    0000b800    000004e6     
+                  0000b800    00000056     rts2800_fpu32.lib : boot28.obj (.text)
+                  0000b856    00000054     driverlib.lib : interrupt.obj (.text:_Interrupt_initModule)
+                  0000b8aa    00000052                   : gpio.obj (.text:_GPIO_setPadConfig)
+                  0000b8fc    0000004d                   : sysctl.obj (.text:_SysCtl_selectOscSource)
+                  0000b949    00000046                   : sci.obj (.text:_SCI_clearInterruptStatus)
+                  0000b98f    00000044     md_gpio.obj (.text)
+                  0000b9d3    00000044     md_helpers.obj (.text)
+                  0000ba17    00000040     driverlib.lib : sci.obj (.text:_SCI_setConfig)
+                  0000ba57    0000003d                   : gpio.obj (.text:_GPIO_setPinConfig)
+                  0000ba94    00000038                   : gpio.obj (.text:_GPIO_setMasterCore)
+                  0000bacc    00000036                   : gpio.obj (.text:_GPIO_setQualificationMode)
+                  0000bb02    00000033                   : interrupt.obj (.text:_Interrupt_enable)
+                  0000bb35    00000031                   : gpio.obj (.text:_GPIO_setDirectionMode)
+                  0000bb66    00000029     rts2800_fpu32.lib : exit.obj (.text)
+                  0000bb8f    00000024                       : cpy_tbl.obj (.text)
+                  0000bbb3    00000020     driverlib.lib : interrupt.obj (.text:_Interrupt_initVectorTable)
+                  0000bbd3    0000001f                   : sci.obj (.text:_SCI_isBaseValid)
+                  0000bbf2    0000001e     rts2800_fpu32.lib : memcpy.obj (.text)
+                  0000bc10    0000001a     driverlib.lib : sysctl.obj (.text:_SysCtl_getLowSpeedClock)
+                  0000bc2a    00000019                   : sci.obj (.text:_SCI_performSoftwareReset)
+                  0000bc43    00000019     rts2800_fpu32.lib : args_main.obj (.text)
+                  0000bc5c    00000019                       : prolog28.obj (.text)
+                  0000bc75    00000014     driverlib.lib : sci.obj (.text:_SCI_enableModule)
+                  0000bc89    0000000e                   : gpio.obj (.text:_GPIO_isPinValid)
+                  0000bc97    0000000e                   : interrupt.obj (.text:_Interrupt_defaultHandler)
+                  0000bca5    0000000d                   : interrupt.obj (.text:_Interrupt_disableMaster)
+                  0000bcb2    0000000d                   : interrupt.obj (.text:_Interrupt_enableMaster)
+                  0000bcbf    0000000c     rts2800_fpu32.lib : epilog28.obj (.text)
+                  0000bccb    0000000b     driverlib.lib : sysctl.obj (.text:_SysCtl_isMCDClockFailureDetected)
+                  0000bcd6    00000009     rts2800_fpu32.lib : _lock.obj (.text)
+                  0000bcdf    00000002     driverlib.lib : interrupt.obj (.text:_Interrupt_illegalOperationHandler)
+                  0000bce1    00000002                   : interrupt.obj (.text:_Interrupt_nmiHandler)
+                  0000bce3    00000002     rts2800_fpu32.lib : pre_init.obj (.text)
+                  0000bce5    00000001                       : startup.obj (.text)
 
 MODULE SUMMARY
 
        Module                           code   initialized data   uninitialized data
        ------                           ----   ----------------   ------------------
     ./
-       adcEpwmSoc_dclClaPid.obj         1211   220                384               
+       adcEpwmSoc_dclClaPid.obj         1304   272                384               
     +--+--------------------------------+------+------------------+--------------------+
-       Total:                           1211   220                384               
+       Total:                           1304   272                384               
                                                                                     
     ./MD_F2837xD/
        md_sci.obj                       423    52                 0                 
        md_gpio.obj                      68     53                 0                 
        md_helpers.obj                   68     14                 11                
-       md_epwm.obj                      0      53                 0                 
     +--+--------------------------------+------+------------------+--------------------+
-       Total:                           559    172                11                
+       Total:                           559    119                11                
                                                                                     
     ./bsp/
        F2837xD_GlobalVariableDefs.obj   0      0                  8759              
@@ -716,7 +713,7 @@ MODULE SUMMARY
                                                                                     
        Stack:                           0      0                  1024              
     +--+--------------------------------+------+------------------+--------------------+
-       Grand Total:                     3939   1140               10188             
+       Grand Total:                     4032   1139               10188             
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -917,9 +914,9 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                                      
 ----  -------   ----                                      
 abs   ffffffff  .text                                     
-0     0000bb10  C$$EXIT                                   
-0     0000b403  _ADC_getResolution                        
-0     0000b428  _ADC_getSignalMode                        
+0     0000bb66  C$$EXIT                                   
+0     0000b470  _ADC_getResolution                        
+0     0000b495  _ADC_getSignalMode                        
 0     00000360  _ADC_setMode                              
 1     0005f4c0  _AccessProtectionRegs                     
 1     00007400  _AdcaRegs                                 
@@ -999,29 +996,33 @@ abs   ffffffff  .text
 1     0005f800  _Flash0CtrlRegs                           
 1     0005fb00  _Flash0EccRegs                            
 1     00050024  _FlashPumpSemaphoreRegs                   
-0     0000badf  _GPIO_setDirectionMode                    
-0     0000ba3e  _GPIO_setMasterCore                       
-0     0000b854  _GPIO_setPadConfig                        
-0     0000ba01  _GPIO_setPinConfig                        
-0     0000ba76  _GPIO_setQualificationMode                
+0     0000bb35  _GPIO_setDirectionMode                    
+0     0000ba94  _GPIO_setMasterCore                       
+0     0000b8aa  _GPIO_setPadConfig                        
+0     0000ba57  _GPIO_setPinConfig                        
+0     0000bacc  _GPIO_setQualificationMode                
 1     00007c00  _GpioCtrlRegs                             
 1     00007f00  _GpioDataRegs                             
 1     00007300  _I2caRegs                                 
 1     00007340  _I2cbRegs                                 
-0     0000b71c  _IRQ_ADC_A1                               
-0     0000b737  _IRQ_EPWM1                                
+0     0000b789  _IRQ_ADC_A1                               
+0     0000b7a4  _IRQ_EPWM1                                
 1     00007900  _InputXbarRegs                            
-0     0000baac  _Interrupt_enable                         
-0     0000b800  _Interrupt_initModule                     
-0     0000b7e0  _Interrupt_initVectorTable                
+0     0000bb02  _Interrupt_enable                         
+0     0000b856  _Interrupt_initModule                     
+0     0000bbb3  _Interrupt_initVectorTable                
 1     00050000  _IpcRegs                                  
-0     0000b939  _MD_GPIO_Setup                            
+0     0000b318  _MD_ADC_SOC_config                        
+0     0000b0e3  _MD_ADC_init                              
+0     0000b2c1  _MD_DAC_init                              
+0     0000b166  _MD_EPWM_init                             
+0     0000b98f  _MD_GPIO_Setup                            
 1     00009040  _MD_GPIO_config                           
-0     0000b48c  _MD_SCIx_init                             
-0     0000b5a6  _MD_printi                                
-0     0000b5c1  _MD_putKeyVal                             
-0     0000b54f  _MD_puts                                  
-0     0000b584  _MD_putsJson                              
+0     0000b4f9  _MD_SCIx_init                             
+0     0000b613  _MD_printi                                
+0     0000b62e  _MD_putKeyVal                             
+0     0000b5bc  _MD_puts                                  
+0     0000b5f1  _MD_putsJson                              
 1     00006000  _McbspaRegs                               
 1     00006040  _McbspbRegs                               
 1     0005f400  _MemCfgRegs                               
@@ -1032,8 +1033,8 @@ abs   ffffffff  .text
 1     00000d00  _PieVectTable                             
 1     0005e608  _RomPrefetchRegs                          
 1     0005f540  _RomWaitStateRegs                         
-0     0000b8f3  _SCI_clearInterruptStatus                 
-0     0000b9c1  _SCI_setConfig                            
+0     0000b949  _SCI_clearInterruptStatus                 
+0     0000ba17  _SCI_setConfig                            
 1     00007200  _SciaRegs                                 
 1     00007210  _ScibRegs                                 
 1     00007220  _ScicRegs                                 
@@ -1045,10 +1046,10 @@ abs   ffffffff  .text
 1     00006120  _SpicRegs                                 
 1     00007940  _SyncSocRegs                              
 0     0000019a  _SysCtl_delay                             
-0     0000b6ae  _SysCtl_getClock                          
-0     0000bb9a  _SysCtl_getLowSpeedClock                  
-0     0000b8a6  _SysCtl_selectOscSource                   
-0     0000b5f4  _SysCtl_setClock                          
+0     0000b71b  _SysCtl_getClock                          
+0     0000bc10  _SysCtl_getLowSpeedClock                  
+0     0000b8fc  _SysCtl_selectOscSource                   
+0     0000b661  _SysCtl_setClock                          
 1     00006200  _UppRegs                                  
 1     00007000  _WdRegs                                   
 1     00007920  _XbarRegs                                 
@@ -1068,35 +1069,32 @@ abs   ffffffff  ___c_args__
 abs   ffffffff  ___etext__                                
 abs   ffffffff  ___pinit__                                
 abs   ffffffff  ___text__                                 
-0     0000bbe6  __args_main                               
-0     0000b9b3  __delay_ms                                
+0     0000bc43  __args_main                               
+0     0000ba09  __delay_ms                                
 1     00009192  __lock                                    
-0     0000bc81  __nop                                     
-0     0000bc7d  __register_lock                           
-0     0000bc79  __register_unlock                         
+0     0000bcde  __nop                                     
+0     0000bcda  __register_lock                           
+0     0000bcd6  __register_unlock                         
 1     00000400  __stack                                   
-0     0000bc88  __system_post_cinit                       
-0     0000bc86  __system_pre_init                         
+0     0000bce5  __system_post_cinit                       
+0     0000bce3  __system_pre_init                         
 1     00009194  __unlock                                  
-0     0000bb10  _abort                                    
+0     0000bb66  _abort                                    
 1     00009001  _adcRes                                   
 1     00009080  _adcaRes                                  
-0     0000b78a  _c_int00                                  
-0     0000b2ad  _configADC_SOC                            
-0     0000bb39  _copy_in                                  
-0     0000bc62  _epilog_c28x_1                            
-0     0000bc66  _epilog_c28x_2                            
-0     0000bb12  _exit                                     
-0     0000b0cf  _initADC                                  
-0     0000b152  _initEPWM                                 
-0     0000b989  _int2str                                  
-0     0000b041  _main                                     
-0     0000b97d  _makedigit                                
-0     0000bb7c  _memcpy                                   
+0     0000b800  _c_int00                                  
+0     0000bb8f  _copy_in                                  
+0     0000bcbf  _epilog_c28x_1                            
+0     0000bcc3  _epilog_c28x_2                            
+0     0000bb68  _exit                                     
+0     0000b9df  _int2str                                  
+0     0000b055  _main                                     
+0     0000b9d3  _makedigit                                
+0     0000bbf2  _memcpy                                   
 1     00009006  _pid1                                     
-0     0000bbff  _prolog_c28x_1                            
-0     0000bc03  _prolog_c28x_2                            
-0     0000bc0b  _prolog_c28x_3                            
+0     0000bc5c  _prolog_c28x_1                            
+0     0000bc60  _prolog_c28x_2                            
+0     0000bc68  _prolog_c28x_3                            
 1     00009000  _resultsIndex                             
 abs   ffffffff  binit                                     
 0     00000122  cinit                                     
@@ -1123,54 +1121,55 @@ page  address   name
 0     0000035d  ___error__                                
 0     00000360  _ADC_setMode                              
 0     00000ce0  _Cla1SoftIntRegs                          
-0     0000b041  _main                                     
-0     0000b0cf  _initADC                                  
-0     0000b152  _initEPWM                                 
-0     0000b2ad  _configADC_SOC                            
-0     0000b403  _ADC_getResolution                        
-0     0000b428  _ADC_getSignalMode                        
-0     0000b48c  _MD_SCIx_init                             
-0     0000b54f  _MD_puts                                  
-0     0000b584  _MD_putsJson                              
-0     0000b5a6  _MD_printi                                
-0     0000b5c1  _MD_putKeyVal                             
-0     0000b5f4  _SysCtl_setClock                          
-0     0000b6ae  _SysCtl_getClock                          
-0     0000b71c  _IRQ_ADC_A1                               
-0     0000b737  _IRQ_EPWM1                                
-0     0000b78a  _c_int00                                  
-0     0000b7e0  _Interrupt_initVectorTable                
-0     0000b800  _Interrupt_initModule                     
-0     0000b854  _GPIO_setPadConfig                        
-0     0000b8a6  _SysCtl_selectOscSource                   
-0     0000b8f3  _SCI_clearInterruptStatus                 
-0     0000b939  _MD_GPIO_Setup                            
-0     0000b97d  _makedigit                                
-0     0000b989  _int2str                                  
-0     0000b9b3  __delay_ms                                
-0     0000b9c1  _SCI_setConfig                            
-0     0000ba01  _GPIO_setPinConfig                        
-0     0000ba3e  _GPIO_setMasterCore                       
-0     0000ba76  _GPIO_setQualificationMode                
-0     0000baac  _Interrupt_enable                         
-0     0000badf  _GPIO_setDirectionMode                    
-0     0000bb10  C$$EXIT                                   
-0     0000bb10  _abort                                    
-0     0000bb12  _exit                                     
-0     0000bb39  _copy_in                                  
-0     0000bb7c  _memcpy                                   
-0     0000bb9a  _SysCtl_getLowSpeedClock                  
-0     0000bbe6  __args_main                               
-0     0000bbff  _prolog_c28x_1                            
-0     0000bc03  _prolog_c28x_2                            
-0     0000bc0b  _prolog_c28x_3                            
-0     0000bc62  _epilog_c28x_1                            
-0     0000bc66  _epilog_c28x_2                            
-0     0000bc79  __register_unlock                         
-0     0000bc7d  __register_lock                           
-0     0000bc81  __nop                                     
-0     0000bc86  __system_pre_init                         
-0     0000bc88  __system_post_cinit                       
+0     0000b055  _main                                     
+0     0000b0e3  _MD_ADC_init                              
+0     0000b166  _MD_EPWM_init                             
+0     0000b2c1  _MD_DAC_init                              
+0     0000b318  _MD_ADC_SOC_config                        
+0     0000b470  _ADC_getResolution                        
+0     0000b495  _ADC_getSignalMode                        
+0     0000b4f9  _MD_SCIx_init                             
+0     0000b5bc  _MD_puts                                  
+0     0000b5f1  _MD_putsJson                              
+0     0000b613  _MD_printi                                
+0     0000b62e  _MD_putKeyVal                             
+0     0000b661  _SysCtl_setClock                          
+0     0000b71b  _SysCtl_getClock                          
+0     0000b789  _IRQ_ADC_A1                               
+0     0000b7a4  _IRQ_EPWM1                                
+0     0000b800  _c_int00                                  
+0     0000b856  _Interrupt_initModule                     
+0     0000b8aa  _GPIO_setPadConfig                        
+0     0000b8fc  _SysCtl_selectOscSource                   
+0     0000b949  _SCI_clearInterruptStatus                 
+0     0000b98f  _MD_GPIO_Setup                            
+0     0000b9d3  _makedigit                                
+0     0000b9df  _int2str                                  
+0     0000ba09  __delay_ms                                
+0     0000ba17  _SCI_setConfig                            
+0     0000ba57  _GPIO_setPinConfig                        
+0     0000ba94  _GPIO_setMasterCore                       
+0     0000bacc  _GPIO_setQualificationMode                
+0     0000bb02  _Interrupt_enable                         
+0     0000bb35  _GPIO_setDirectionMode                    
+0     0000bb66  C$$EXIT                                   
+0     0000bb66  _abort                                    
+0     0000bb68  _exit                                     
+0     0000bb8f  _copy_in                                  
+0     0000bbb3  _Interrupt_initVectorTable                
+0     0000bbf2  _memcpy                                   
+0     0000bc10  _SysCtl_getLowSpeedClock                  
+0     0000bc43  __args_main                               
+0     0000bc5c  _prolog_c28x_1                            
+0     0000bc60  _prolog_c28x_2                            
+0     0000bc68  _prolog_c28x_3                            
+0     0000bcbf  _epilog_c28x_1                            
+0     0000bcc3  _epilog_c28x_2                            
+0     0000bcd6  __register_unlock                         
+0     0000bcda  __register_lock                           
+0     0000bcde  __nop                                     
+0     0000bce3  __system_pre_init                         
+0     0000bce5  __system_post_cinit                       
 1     00000400  __stack                                   
 1     00000800  __STACK_END                               
 1     00000b00  _AdcaResultRegs                           
@@ -1297,4 +1296,4 @@ abs   ffffffff  binit
 abs   ffffffff  etext                                     
 abs   ffffffff  pinit                                     
 
-[187 symbols]
+[188 symbols]
