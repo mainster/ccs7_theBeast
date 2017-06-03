@@ -47,17 +47,38 @@ extern "C" {
 #include <stdbool.h>
 #include "driverlib.h"
 #include "device.h"
-//#include "DCL.h"
+#include "F28x_Project.h"
+#include "F2837xD_Cla_defines.h"		//!< Control law accelerator
+#include "md_types.h"
 
-#define BAUDRATE			230400U
-#define	F_CPU				200000000U
+void MD_ADC_init(const uint32_t ADCx_BASE, ADC_Resolution resolution,
+                 ADC_ClkPrescale clk_div);
 
-#define LED_RD(x)			GPIO_writePin(31, x)
-#define LED_BL(x)			GPIO_writePin(34, x)
-#define IO_SET_DBG(PIN, x)	GPIO_writePin(PIN, x)
-#define IO_TGL_DBG(PIN)		GPIO_togglePin(PIN)
+void MD_EPWM_init(const uint32_t EPWMx_BASE, float samplePeriode,
+                  EPWM_ADCStartOfConversionType SOC_AB,
+                  EPWM_CounterCompareModule CounterCompareModule, uint16_t preScaleCount);
 
-#define HALT()				__asm("     ESTOP0")
+void MD_DAC_init(const uint32_t DACx_BASE, const uint16_t initialOut);
+
+void MD_ADC_SOC_config(const uint32_t ADCx_BASE, ADC_Channel CH_ADCINx,
+                       ADC_IntNumber INT_NUMBERx, ADC_SOCNumber SOCx,
+                       uint32_t sampleWindow_ns);
+
+ADC_Resolution ADC_getResolution(const uint32_t ADCx_BASE);
+ADC_SignalMode ADC_getSignalMode(const uint32_t ADCx_BASE);
+
+int cmdIfaceExec(const char *cmd);
+void cmdIfaceHandler(void);
+
+
+__interrupt void Cla1Task1();
+__interrupt void Cla1Task2();
+__interrupt void Cla1Task3();
+__interrupt void Cla1Task4();
+__interrupt void Cla1Task5();
+__interrupt void Cla1Task6();
+__interrupt void Cla1Task7();
+__interrupt void Cla1Task8();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */

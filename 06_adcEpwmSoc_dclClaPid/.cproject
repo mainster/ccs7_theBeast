@@ -106,7 +106,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|linker/2837xD_FLASH_lnk_cpu1.cmd|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -154,10 +154,10 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.FP_MODE.1076761204" name="Floating Point mode (--fp_mode)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.FP_MODE" value="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.FP_MODE.relaxed" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.INCLUDE_PATH.1272337259" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${COM_TI_C2000WARE_SOFTWARE_PACKAGE_INCLUDE_PATH}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_LOC}/CLA&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${_C2000WARE_C28_DCL}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${_MD_F2837xD_LIB}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_LOC}/MD_LIB&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${_MD_F2837xD_LIB}/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${_C2000WARE_THEBEAST_COMMON}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${_C2000WARE_THEBEAST_HEADERS}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/device&quot;"/>
@@ -167,12 +167,11 @@
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.ADVICE__PERFORMANCE.1991684915" name="Provide advice on optimization techniques (--advice:performance)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.ADVICE__PERFORMANCE" value="--advice:performance=all" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.DEFINE.1085579296" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.DEFINE" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="${COM_TI_C2000WARE_SOFTWARE_PACKAGE_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="_FLASH"/>
 									<listOptionValue builtIn="false" value="DEBUG"/>
 									<listOptionValue builtIn="false" value="CPU1"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.UNDEFINE.1990775921" name="Undefine NAME (--undefine, -U)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.UNDEFINE" valueType="stringList">
-									<listOptionValue builtIn="false" value="_FLASH"/>
-								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.UNDEFINE.1990775921" name="Undefine NAME (--undefine, -U)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.UNDEFINE"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.C_DIALECT.343099346" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.C_DIALECT.C99" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.DIAG_SUPPRESS.1793529588" name="Suppress diagnostic &lt;id&gt; (--diag_suppress, -pds)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.DIAG_SUPPRESS" valueType="stringList">
 									<listOptionValue builtIn="false" value="10063"/>
@@ -216,7 +215,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieVect.c|bsp/F2837xD_PieCtrl.c|linker/2837xD_RAM_lnk_cpu1.cmd|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="adc_ex2_soc_epwm_dl.c|linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_EPwm.c|linker/2837xD_RAM_lnk_cpu1.cmd|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -327,7 +326,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="adc_ex2_soc_epwm_dl.c|linker/2837xD_RAM_lnk_cpu1.cmd|2837xD_RAM_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|linker/2837xD_FLASH_lnk_cpu1.cmd|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="adc_ex2_soc_epwm_dl.c|linker/2837xD_RAM_lnk_cpu1.cmd|2837xD_RAM_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
