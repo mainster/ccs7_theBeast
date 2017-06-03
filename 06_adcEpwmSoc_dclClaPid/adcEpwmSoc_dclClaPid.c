@@ -34,6 +34,7 @@
  */
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 /* ------------------------------------------------------------------------- */
 #include "driverlib.h"
 #include "device.h"
@@ -77,6 +78,10 @@ void MD_ADC_SOC_config(const uint32_t ADCx_BASE, ADC_Channel CH_ADCINx,
 ADC_Resolution ADC_getResolution(const uint32_t ADCx_BASE);
 ADC_SignalMode ADC_getSignalMode(const uint32_t ADCx_BASE);
 
+int cmdIfaceExec (const char *cmd);
+void cmdIfaceHandler(void);
+
+
 #define BAUDRATE			230400U
 #define	F_CPU				200000000U
 
@@ -94,14 +99,13 @@ Uint16 resultsIndex;
 static struct iface {
 	char
 	sciRxBuff[SCI_RX_BUFFER_SIZE],
-	*pRxBuff;
+	*pRxBuff,
 	*rxCmdQue[10];
 	short rxNewCmdsCtr;
-	bool cmdRxed, cmdRxBuffFull, cmdQueFull;
-} iface = {
-		.pRxBuff 		= &iface.sciRxBuff[0],
+	bool cmdRxBuffFull, cmdQueFull;
+} i = {
+		.pRxBuff 		= &i.sciRxBuff[0],
 		.cmdRxBuffFull	= false,
-		.cmdRxed 		= false,
 		.cmdQueFull 	= false,
 		.rxNewCmdsCtr	= 0,
 };
@@ -141,6 +145,7 @@ void main(void) {
 
 	Interrupt_enable(INT_ADCA1);	//!< Enable ADC interrupt
 	Interrupt_enable(INT_EPWM1);	//!< Enable EPWM interrupt
+	Interrupt_enable(INT_SCIA_RX);	//!< Enable EPWM interrupt
 
 	//!< Enable Global Interrupt (INTM) and real time interrupt (DBGM)
 	EINT; ERTM;
@@ -150,8 +155,12 @@ void main(void) {
 	EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
 
 	while (1) {
-		_delay_ms(25);
+		_delay_ms(125);
+		cmdIfaceHandler();
 		MD_printi("ADCA1: ", adcRes[ADC_SOC_NUMBER0], " \n");
+
+		SCI_readCharBlockingFIFO(SCIA_BASE);
+
 	}
 }
 /*
@@ -159,58 +168,53 @@ void main(void) {
  */
 
 void cmdIfaceHandler(void) {
-	if (! iface.cmdRxBuffFull) {
-		if (iface.cmdRxed) {
-			iface.cmdRxed = false;
-			iface.pRxBuff = &iface.sciRxBuff[0];
-
-			if (iface.cmdQueFull) {
-				// warn "Que full"
-				return;
-			}
-			else {
-				//copy
-				// inc que ctr
-			}
-
-			Interrupt_enable(INT_SCIA_RX);
+	if (*(i.pRxBuff-1) == '\n') {
+		if (i.cmdQueFull) {
+			MD_puts("Warn: Cmd flushed, Que full", EOL_LF);
 		}
 		else {
-			// warn "long_cmd"
-			iface.pRxBuff = &iface.sciRxBuff[0];
+			strcpy(i.pRxBuff, i.rxCmdQue[i.rxNewCmdsCtr++]);
 		}
 	}
 	else {
+		if (i.cmdRxBuffFull) {
+			MD_puts("Warn: long cmd flushed", EOL_LF);
+			i.cmdRxBuffFull = false;
+		}
+		else {
+			return;
+		}
 
 	}
 
-	if (rxC == '\n') {
-		iface.pRxBuff = '\0';
-	}
-	else HALT();
+	i.pRxBuff = &i.sciRxBuff[0];
+	if (i.rxNewCmdsCtr > 0) {
+		if (cmdIfaceExec(i.rxCmdQue[i.rxNewCmdsCtr--]) != 0) {
+			MD_puts("Warn: cmdIfaceExec returns non-zero", EOL_LF);
+		}
 	}
 	else {
-	if (rxC != '\n')
-		iface.pRxBuff++ = rxC;
-	else {
-		iface.pRxBuff = '\0';
-		iface.cmdRxed = true;
+		return;
 	}
 }
 
+int cmdIfaceExec (const char *cmd) {
+	MD_puts(cmd, EOL_LF);
+	return 0;
+}
 /**
  * SCIA receive FIFO IRQ handler
  */
 __interrupt void IRQ_SCIA_rxFIFO(void) {
     const char rxC = (char) SCI_readCharNonBlocking(SCIA_BASE);
 
-	if ((iface.pRxBuff+1) > &iface.sciRxBuff[0] + SCI_RX_BUFFER_SIZE)
+	if ((i.pRxBuff+1) > &i.sciRxBuff[0] + SCI_RX_BUFFER_SIZE)
 		HALT();
 
-	*iface.pRxBuff++ = rxC;
+	*i.pRxBuff++ = rxC;
 
-	if (iface.pRxBuff == &iface.sciRxBuff[0] + SCI_RX_BUFFER_SIZE) {
-    	iface.cmdRxBuffFull = true;
+	if (i.pRxBuff == &i.sciRxBuff[0] + SCI_RX_BUFFER_SIZE) {
+    	i.cmdRxBuffFull = true;
     	Interrupt_disable(INT_SCIA_RX);
 	}
 

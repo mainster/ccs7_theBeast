@@ -270,7 +270,7 @@
 									<listOptionValue builtIn="false" value="&quot;${C2000WARE_DLIB_ROOT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PROJECT_ROOT}/device&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${_MD_F2837xD_LIB}/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${_MD_F2837xD_x58a}/inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${CG_TOOL_ROOT}/include&quot;"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.ADVICE__PERFORMANCE.154915065" name="Provide advice on optimization techniques (--advice:performance)" superClass="com.ti.ccstudio.buildDefinitions.C2000_16.9.compilerID.ADVICE__PERFORMANCE" value="--advice:performance=all" valueType="string"/>

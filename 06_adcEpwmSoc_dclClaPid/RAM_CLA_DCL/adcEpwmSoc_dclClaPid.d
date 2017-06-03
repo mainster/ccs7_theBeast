@@ -3,6 +3,8 @@
 adcEpwmSoc_dclClaPid.obj: ../adcEpwmSoc_dclClaPid.c
 adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdint.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdbool.h
+adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/string.h
+adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/linkage.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/include/driverlib.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/driverlib/f2837xd/driverlib/adc.h
@@ -75,7 +77,6 @@ adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/includ
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/include/F2837xD_Cla_typedefs.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/headers/include/F2837xD_device.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/assert.h
-adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/linkage.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdarg.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stddef.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/headers/include/F2837xD_adc.h
@@ -128,19 +129,21 @@ adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/includ
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/libraries/control/DCL/c28/include/DCL.h
 adcEpwmSoc_dclClaPid.obj: ../adcEpwmSoc_dclClaPid.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_gpio.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_gpio.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h
 adcEpwmSoc_dclClaPid.obj: ../md_config.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_helpers.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_helpers.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_epwm.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_epwm.h
 adcEpwmSoc_dclClaPid.obj: /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h
-adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_sci.h
+adcEpwmSoc_dclClaPid.obj: /home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_sci.h
 
 ../adcEpwmSoc_dclClaPid.c: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdint.h: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdbool.h: 
+/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/string.h: 
+/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/linkage.h: 
 /opt/ti/c2000ware/device_support/f2837xd/common/include/driverlib.h: 
 /opt/ti/c2000ware/driverlib/f2837xd/driverlib/inc/hw_memmap.h: 
 /opt/ti/c2000ware/driverlib/f2837xd/driverlib/adc.h: 
@@ -213,7 +216,6 @@ adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/
 /opt/ti/c2000ware/device_support/f2837xd/common/include/F2837xD_Cla_typedefs.h: 
 /opt/ti/c2000ware/device_support/f2837xd/headers/include/F2837xD_device.h: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/assert.h: 
-/opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/linkage.h: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stdarg.h: 
 /opt/ti/ccsv7/tools/compiler/ti-cgt-c2000_16.9.1.LTS/include/stddef.h: 
 /opt/ti/c2000ware/device_support/f2837xd/headers/include/F2837xD_adc.h: 
@@ -266,12 +268,12 @@ adcEpwmSoc_dclClaPid.obj: /media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/
 /opt/ti/c2000ware/libraries/control/DCL/c28/include/DCL.h: 
 ../adcEpwmSoc_dclClaPid.h: 
 /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_gpio.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_gpio.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_globals.h: 
 ../md_config.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_helpers.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_helpers.h: 
 /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_epwm.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_epwm.h: 
 /opt/ti/c2000ware/device_support/f2837xd/common/include/device.h: 
-/media/data/CODES/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_sci.h: 
+/home/mainster/CODES_local/ccs7_theBeast/00_MD_F2837xD_LIB/inc/md_sci.h: 

@@ -8,8 +8,8 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU1" value="06_adcEpwmSoc_dclClaPid"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU2" value="06_adcEpwmSoc_dclClaPid"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:06_adcEpwmSoc_dclClaPid}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU1" value="/media/data/CODES/ccs7_theBeast/06_adcEpwmSoc_dclClaPid/RAM_CLA_DCL/06_adcEpwmSoc_dclClaPid.out"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU2" value="/media/data/CODES/ccs7_theBeast/06_adcEpwmSoc_dclClaPid/RAM_CLA_DCL/06_adcEpwmSoc_dclClaPid.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU1" value="/home/mainster/CODES_local/ccs7_theBeast/06_adcEpwmSoc_dclClaPid/RAM_CLA_DCL/06_adcEpwmSoc_dclClaPid.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.Texas Instruments XDS100v2 USB Debug Probe/C28xx_CPU2" value="/home/mainster/CODES_local/ccs7_theBeast/06_adcEpwmSoc_dclClaPid/RAM_CLA_DCL/06_adcEpwmSoc_dclClaPid.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/06_adcEpwmSoc_dclClaPid"/>
 </listAttribute>
