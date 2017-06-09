@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ExportImportMemento.1>
-<VarMeta IMemento.internal.id="voltFilt"/>
-<VarMeta IMemento.internal.id="X"/>
-<VarMeta IMemento.internal.id="A"/>
-<VarMeta IMemento.internal.id="AdcBuf"/>
-</ExportImportMemento.1>

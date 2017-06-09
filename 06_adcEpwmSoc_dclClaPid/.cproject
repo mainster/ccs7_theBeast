@@ -106,7 +106,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|BSP/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|BSP/F2837xD_EPwm.c|BSP/F2837xD_PieVect.c|BSP/F2837xD_PieCtrl.c|linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|BSP/F2837xD_Gpio.c|BSP/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -215,7 +215,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="adc_ex2_soc_epwm_dl.c|linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_EPwm.c|linker/2837xD_RAM_lnk_cpu1.cmd|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="adc_ex2_soc_epwm_dl.c|2837x_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|BSP/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|BSP/F2837xD_EPwm.c|linker/2837xD_RAM_CLA_DCL_lnk_cpu1.cmd|linker/2837xD_RAM_lnk_cpu1.cmd|BSP/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -326,7 +326,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="adc_ex2_soc_epwm_dl.c|linker/2837xD_RAM_lnk_cpu1.cmd|2837xD_RAM_lnk_cpu1.cmd|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|bsp/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|bsp/F2837xD_PieVect.c|bsp/F2837xD_EPwm.c|bsp/F2837xD_PieCtrl.c|bsp/F2837xD_Gpio.c|bsp/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="adc_ex2_soc_epwm_dl.c|2837x_FLASH_lnk_cpu1.cmd|2837xD_FLASH_lnk_cpu1.cmd|linker/2837xD_FLASH_CLA_lnk_cpu1.cmd|2837xD_RAM_lnk_cpu1.cmd|2837xD_RAM_CLA_lnk_cpu1.cmd|BSP/F2837xD_DefaultISR.c|linker/2837xD_FLASH_CLA_DCL_lnk_cpu1.cmd|BSP/F2837xD_PieVect.c|BSP/F2837xD_EPwm.c|BSP/F2837xD_PieCtrl.c|linker/2837xD_RAM_lnk_cpu1.cmd|BSP/F2837xD_Gpio.c|BSP/F2837xD_CpuTimers.c|device/driverlib" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

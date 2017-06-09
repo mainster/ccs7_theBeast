@@ -51,6 +51,17 @@ extern "C" {
 #include "F2837xD_Cla_defines.h"		//!< Control law accelerator
 #include "md_types.h"
 
+#define   BAUDRATE				230400U
+#define	  F_CPU					200000000U
+
+#define   LED_RD(x)				GPIO_writePin(31, x)
+#define   LED_BL(x)				GPIO_writePin(34, x)
+#define   IO_SET_DBG(PIN, x)	GPIO_writePin(PIN, x)
+#define   IO_TGL_DBG(PIN)		GPIO_togglePin(PIN)
+
+#define   WAITSTEP              asm(" RPT #255 || NOP")
+
+
 void MD_ADC_init(const uint32_t ADCx_BASE, ADC_Resolution resolution,
                  ADC_ClkPrescale clk_div);
 
@@ -70,15 +81,11 @@ ADC_SignalMode ADC_getSignalMode(const uint32_t ADCx_BASE);
 int cmdIfaceExec(const char *cmd);
 void cmdIfaceHandler(void);
 
+__interrupt void IRQ_EPWM1(void);
+__interrupt void IRQ_SCIA_rxFIFO(void);
+__interrupt void IRQ_SCIA_txFIFO(void);
+__interrupt void IRQ_ADCA_1(void);
 
-__interrupt void Cla1Task1();
-__interrupt void Cla1Task2();
-__interrupt void Cla1Task3();
-__interrupt void Cla1Task4();
-__interrupt void Cla1Task5();
-__interrupt void Cla1Task6();
-__interrupt void Cla1Task7();
-__interrupt void Cla1Task8();
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Public typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */

@@ -47,16 +47,16 @@
 /* ~~~~~~~~~~~~~~~~~~~  Private function implementations  ~~~~~~~~~~~~~~~~~~ */
 
 #include "cla_shared.h"
+#include "F2837xD_device.h"
 
-//!< Globals (Variables global to all CLA tasks only)
 
 __interrupt void CLA1_PID1_calc(void) {
 	__mdebugstop();
 
 	//!< Read feedback signal.
-//	pid1.mk = ((float) AdcaResultRegs.ADCRESULT0 - 2048.0f) / 2047.0f;
+	pid1.mk = ((float) AdcaResultRegs.ADCRESULT0 - 2048.0f) / 2047.0f;
 	//!< Read set-point signal.
-//	pid1.rk = (float) AdcaResultRegs.ADCRESULT1;
+	pid1.rk = (float) AdcaResultRegs.ADCRESULT1;
 	//!< No external clamping is used for know.
 	pid1.lk = 0.0f;
 
@@ -67,7 +67,7 @@ __interrupt void CLA1_PID1_calc(void) {
 	pid1.uk = DCL_runPID_C4(&(pid1.param), pid1.rk, pid1.mk, pid1.lk);
 
 	//!< Update DACx output register value.
-//	DacaRegs.DACVALS.all = (uint16_t) ((pid1.uk / 2.0f + .5f) * 4095.0f);
+	DacaRegs.DACVALS.all = (uint16_t) ((pid1.uk / 2.0f + .5f) * 4095.0f);
 
 	//	// write u(k) to PWM
 //	Duty = (uk / 2.0f + 0.5f) * (float) EPwm1Regs.TBPRD;
@@ -83,5 +83,7 @@ __interrupt void Cla1Task5(void) { }
 __interrupt void Cla1Task6(void) { }
 __interrupt void Cla1Task7(void) { }
 __interrupt void Cla1Task8(void) {
-
+	for (int k=0; k<ADC_BUF_LEN; k++) {
+		adcaRes[k] = 0;
+	}
 }

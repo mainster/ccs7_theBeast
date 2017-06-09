@@ -37,14 +37,10 @@
 #include "F2837xD_GlobalPrototypes.h"
 #include "DCL.h"
 
-//#include "DSP28x_Project.h"
-
 #include "md_globals.h"
 #include "md_beast_uart.h"
 
-volatile struct DAC_REGS* DAC_PTR[4] = {
-		0x0, &DacaRegs, &DacbRegs, &DaccRegs
-};
+volatile struct DAC_REGS* DAC_PTR[4] = { 0x0, &DacaRegs, &DacbRegs, &DaccRegs };
 
 short dir = 1;
 Uint16 dacVal = 2048;
