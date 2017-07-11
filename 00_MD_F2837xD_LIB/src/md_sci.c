@@ -46,6 +46,8 @@
 /* ~~~~~~~~~~~~~~~~~~~  Private function implementations  ~~~~~~~~~~~~~~~~~~ */
 //#define AUTOBAUD
 
+//#define AUTOBAUD
+
 /**
  * Initialization sequence for SCIx module.
  * @param SCIx_BASE address

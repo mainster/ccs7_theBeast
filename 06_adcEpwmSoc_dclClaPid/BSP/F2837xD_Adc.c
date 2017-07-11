@@ -91,7 +91,7 @@ void AdcSetMode(Uint16 adc, Uint16 resolution, Uint16 signalmode)
             AdcaRegs.ADCCTL2.bit.RESOLUTION = resolution;
             AdcaRegs.ADCCTL2.bit.SIGNALMODE = signalmode;
             AdcaRegs.ADCOFFTRIM.all = adcOffsetTrim;
-            if(ADC_RESOLUTION_12BIT_bf == resolution)
+            if(ADC_RESOLUTION_12BIT_mode == resolution)
             {
                 //
                 //12-bit linearity trim workaround
@@ -106,7 +106,7 @@ void AdcSetMode(Uint16 adc, Uint16 resolution, Uint16 signalmode)
             AdcbRegs.ADCCTL2.bit.RESOLUTION = resolution;
             AdcbRegs.ADCCTL2.bit.SIGNALMODE = signalmode;
             AdcbRegs.ADCOFFTRIM.all = adcOffsetTrim;
-            if(ADC_RESOLUTION_12BIT_bf == resolution)
+            if(ADC_RESOLUTION_12BIT_mode == resolution)
             {
                 //
                 //12-bit linearity trim workaround
@@ -121,7 +121,7 @@ void AdcSetMode(Uint16 adc, Uint16 resolution, Uint16 signalmode)
             AdccRegs.ADCCTL2.bit.RESOLUTION = resolution;
             AdccRegs.ADCCTL2.bit.SIGNALMODE = signalmode;
             AdccRegs.ADCOFFTRIM.all = adcOffsetTrim;
-            if(ADC_RESOLUTION_12BIT_bf == resolution)
+            if(ADC_RESOLUTION_12BIT_mode == resolution)
             {
                 //
                 //12-bit linearity trim workaround
@@ -136,7 +136,7 @@ void AdcSetMode(Uint16 adc, Uint16 resolution, Uint16 signalmode)
             AdcdRegs.ADCCTL2.bit.RESOLUTION = resolution;
             AdcdRegs.ADCCTL2.bit.SIGNALMODE = signalmode;
             AdcdRegs.ADCOFFTRIM.all = adcOffsetTrim;
-            if(ADC_RESOLUTION_12BIT_bf == resolution)
+            if(ADC_RESOLUTION_12BIT_mode== resolution)
             {
                 //
                 //12-bit linearity trim workaround

@@ -125,31 +125,36 @@ void main(void) {
 	ERTM;
 	//!< Enable Global realtime interrupt DBGM
 
+	MD_SCI_init(230400);
 
-	init_uart0(115200);
-	uputs0("Hallo P\n");
-
-	for(;;){
-		if( !ukbhit0()){
-			continue;
-		}
+	while (1) {
+		MD_SCI_puts("Hallo?\n");
 		DELAY_US(1000*100);
-		// to see rx buffer overflow
-		do{
-			uputchar0( ugetchar0());			// send without waiting
-			if( !utx0_ready() ){
-				if( !ukbhit0()){
-					break;
-				}
-				uputchar0( '.' );			// to see tx buffer size
-				do{
-					uputchar0( ugetchar0());		// send with busy waiting
-				}while( ukbhit0());
-			}
-		}while( ukbhit0());
-		uputchar0( '\n' );
-		uputchar0( '\r' );
 	}
+//	init_uart0(115200);
+//	uputs0("Hallo P\n");
+//
+//	for(;;){
+//		if( !ukbhit0()){
+//			continue;
+//		}
+//		DELAY_US(1000*100);
+//		// to see rx buffer overflow
+//		do{
+//			uputchar0( ugetchar0());			// send without waiting
+//			if( !utx0_ready() ){
+//				if( !ukbhit0()){
+//					break;
+//				}
+//				uputchar0( '.' );			// to see tx buffer size
+//				do{
+//					uputchar0( ugetchar0());		// send with busy waiting
+//				}while( ukbhit0());
+//			}
+//		}while( ukbhit0());
+//		uputchar0( '\n' );
+//		uputchar0( '\r' );
+//	}
 
 //	MD_ADC_config();
 //	MD_ADC_configSoc();

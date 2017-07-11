@@ -84,7 +84,9 @@ uint16_t voltFilt;
  */
 void main(void) {
 	//!< Initialize device clock and peripherals
-	Device_init();
+	InitSysCtrl();
+//	Device_init();
+
 	//!< Disable pin locks and enable internal pull-ups.
 	Device_initGPIO();
 	//!< Initialize PIE, clear PIE registers, disable CPU interrupts
@@ -95,6 +97,8 @@ void main(void) {
 	MD_GPIO_Setup(&MD_GPIO_config[0], GPIO_COUNT_IN_PACKED_INIT_STRUCT);
 	//!< Configure SCIA for UART operation
 	MD_SCIx_init(SCIA_BASE, BAUDRATE);
+	MD_puts("TheBeast is back", EOL_LF);
+
 	//!< Register interrupt callback handler
 	Interrupt_register(INT_EPWM1, &IRQ_EPWM1);
 	Interrupt_register(INT_ADCA1, &IRQ_ADCA_1);
@@ -104,9 +108,8 @@ void main(void) {
 	CLA_configClaMemory();
 	CLA_initCpu1Cla1();
 
-	//!< Force CLA task 8 using the IACK instruction. U
-	// Task 8 will initialize the filter input delay
-	// line to zero (X[0] - X[4]).
+	//!< Force CLA task 8 using the IACK instruction.
+	// Task 8 can be used to provide a parallel initialization process...
 	// No need to wait, the task will finish by the time
 	// we configure the ePWM and ADC modules
 	Cla1ForceTask8();
@@ -119,13 +122,12 @@ void main(void) {
 
 	Interrupt_enable(INT_ADCA1);	//!< Enable ADC interrupt
 	Interrupt_enable(INT_EPWM1);	//!< Enable EPWM interrupt
-	Interrupt_enable(INT_SCIA_RX);	//!< Enable EPWM interrupt
+	Interrupt_enable(INT_SCIA_RX);	//!< Enable SCIA Rx interrupt
 
 	//!< Enable Global Interrupt (INTM) and real time interrupt (DBGM)
-	EINT;
-	ERTM;
+	EINT; ERTM;
 
-	//!< Start ePWM1, enable SOCx and putting counter in run mode
+	//!< Start ePWM1, enable SOCx and put counter in run mode
 	EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);
 	EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
 
@@ -134,7 +136,7 @@ void main(void) {
 		cmdIfaceHandler();
 		MD_printi("ADCA1: ", adcaRes[ADC_SOC_NUMBER0], " \n");
 
-		SCI_readCharBlockingFIFO(SCIA_BASE);
+//		SCI_readCharBlockingFIFO(SCIA_BASE);
 
 	}
 }
@@ -159,7 +161,6 @@ void cmdIfaceHandler(void) {
 		else {
 			return;
 		}
-
 	}
 
 	i.pRxBuff = &i.sciRxBuff[0];
@@ -192,11 +193,9 @@ __interrupt void IRQ_SCIA_rxFIFO(void) {
 		Interrupt_disable(INT_SCIA_RX);
 	}
 
-	SCI_clearOverflowStatus(SCIA_BASE);
-	SCI_clearInterruptStatus(SCIA_BASE, SCI_INT_RXFF);
-
-	// Issue PIE ack
-	Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP9);
+	SCI_clearOverflowStatus(SCIA_BASE);					//!< Reset interrupt
+	SCI_clearInterruptStatus(SCIA_BASE, SCI_INT_RXFF);	//!< flags
+	Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP9);		//!< Issue PIE ack
 }
 
 /**

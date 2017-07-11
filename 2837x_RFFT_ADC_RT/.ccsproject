@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<deviceVariant value="TMS320C28XX.TMS320F28377D"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="6.0.1"/>
+	<isElfFormat value="false"/>
+	<rts value="rts2800_fpu32.lib"/>
+	<templateProperties value="id=com.ti.common.project.core.emptyProjectTemplate,"/>
+	<deviceFamily value="C2000"/>
+	<isTargetManual value="false"/>
+	<origin value="/opt/ti/controlSUITE/libs/dsp/FPU/v1_50_00_00/examples/fft/2837x_rfft_adc_rt"/>
+	<connection value="common/targetdb/connections/TIXDS100v2_Connection.xml"/>
+</projectOptions>
