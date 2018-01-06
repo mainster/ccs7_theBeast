@@ -36,7 +36,7 @@
  */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Includes  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #include "md_helpers.h"
-
+#include "md_globals.h"
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~  Private typedefs  ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Private macro definitions  ~~~~~~~~~~~~~~~~~~~~~~ */
@@ -99,4 +99,24 @@ char *int2str(const uint32_t number, char *buff) {
 void _delay_ms(uint16_t ms) {
 	while (ms--)
 		DEVICE_DELAY_US(1000);
+}
+
+/**
+ * Query configured ADCx converter resolution.
+ * @param ADCx_BASE
+ * @return
+ */
+ADC_Resolution ADC_getResolution(const uint32_t ADCx_BASE) {
+	ASSERT(ADC_isBaseValid(ADCx_BASE));
+	return (ADC_Resolution) (HWREGH(ADCx_BASE + ADC_O_CTL2) & ADC_CTL2_RESOLUTION);
+}
+
+/**
+ * Query current ADCx signal mode.
+ * @param ADCx_BASE
+ * @return
+ */
+ADC_SignalMode ADC_getSignalMode(const uint32_t ADCx_BASE) {
+	ASSERT(ADC_isBaseValid(ADCx_BASE));
+	return (ADC_SignalMode) (HWREGH(ADCx_BASE + ADC_O_CTL2) & ADC_CTL2_SIGNALMODE);
 }

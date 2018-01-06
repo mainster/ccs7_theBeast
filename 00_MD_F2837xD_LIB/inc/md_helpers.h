@@ -53,6 +53,10 @@ char *int2str(const uint32_t number, char *buff);
 
 void _delay_ms(uint16_t ms);
 
+ADC_Resolution ADC_getResolution(const uint32_t ADCx_BASE);
+
+ADC_SignalMode ADC_getSignalMode(const uint32_t ADCx_BASE);
+
 /* ~~~~~~~~~~~~~~~~~~~~~  Public variable definitions  ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~  Public function prototypes  ~~~~~~~~~~~~~~~~~~~~~ */

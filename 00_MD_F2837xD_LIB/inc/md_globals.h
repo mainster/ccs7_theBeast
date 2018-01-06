@@ -57,7 +57,7 @@ extern "C" {
 MDB FIXES:
 */
 #undef AUTOBAUD
-#if (DEVICE_OSCSRC_FREQ == 20000000U)
+#if (DEVICE_OSCSRC_FREQ == 20000000)
 #warning "Wrong OSC Freq defined!"
 #warning "theBeast ControlCard has 20MHz crystal"
 #warning "theBeast LaunchPad has 10MHz crystal!"
